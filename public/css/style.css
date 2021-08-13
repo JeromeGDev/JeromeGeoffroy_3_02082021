@@ -4,11 +4,24 @@
   margin: 0;
 }
 
+/*Couleurs de la charte graphique*/
+/*Couleurs supplémentaires*/
+/*originel : #d1d1d1*/
+/*originel : #eaeaea*/
+/*originel : #e5e5e5*/
+/*originel : ##f6f6f6*/
+/*originel : #e5e5e5*/
+/*shadow*/
+/*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
+/*Arrondis des coins des images de la page d'accueil*/
 /*@import "./utils/functions";*/
 /*mixin de la couleur du bouton explorer*/
 /*Mixin ombre*/
 /*Mixin DAJFCC*/
 /*mixin dégradé localisation*/
+/*mixin propriété des images de la page d'accueil*/
+/*Mixin création bouton fonctionnement index.tml*/
+/*Mixin création bouton fonctionnement index.tml*/
 /*@import "./utils/extensions";*/
 /*
 *,
@@ -26,7 +39,7 @@ html {
 */
 body {
   box-sizing: border-box;
-  background: #F6F6F6;
+  background: #FFFFFF;
 }
 
 .container-fluid {
@@ -62,9 +75,17 @@ button {
     font-size: 2.75rem;
 }
 */
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 h1 {
   font-family: "Shrikhand", cursive;
   font-size: 23pts;
+}
+
+*:hover {
+  cursor: url("icn-bck.png"), pointer;
 }
 
 /*@import "./components/buttons";*/
@@ -75,7 +96,6 @@ h1 {
 /*@import "./pages/work";*/
 /*@import "./pages/about";*/
 /*@import "./pages/project";*/
-/*Polices */
 .header {
   display: flex;
   flex-direction: column;
@@ -97,9 +117,9 @@ h1 {
   align-items: center;
   justify-content: center;
   background: #eaeaea;
-  background: -moz-linear-gradient(0deg, #EAEAEA 0%, #EAEAEA 88%, #D0D0D0 100%);
-  background: -webkit-linear-gradient(0deg, #EAEAEA 0%, #EAEAEA 88%, #D0D0D0 100%);
-  background: linear-gradient(0deg, #EAEAEA 0%, #EAEAEA 88%, #D0D0D0 100%);
+  background: -moz-linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
+  background: -webkit-linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
+  background: linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1);
   margin: auto;
   padding: 18px;
@@ -143,7 +163,7 @@ section .section__welcome__description {
 }
 section .section__welcome__button {
   background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #e370da 100%);
+  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
   display: flex;
   border-radius: 50px;
   height: 50px;
@@ -162,6 +182,9 @@ section .section__welcome__button__explore {
   margin: auto;
   color: #fff;
 }
+section .section__welcome__button__explore:hover {
+  cursor: url("icn-bck.png"), pointer;
+}
 section .section-howto {
   display: block;
   width: 100%;
@@ -176,15 +199,19 @@ section .section-howto__secondlevel {
   align-items: center;
   justify-content: center;
 }
-section .section-howto__secondlevel__block {
+section .section-howto__secondlevel__button {
   display: block;
+  background-color: whitesmoke;
   width: px;
   height: px;
   border-radius: px;
   box-shadow: px;
-  cursor: pointer;
+  border-radius: 40px;
 }
-section .section-howto__secondlevel__block__content {
+section .section-howto__secondlevel__button:hover {
+  cursor: url("icn-bck.png"), pointer;
+}
+section .section-howto__secondlevel__button__content {
   display: inline-flex;
 }
 

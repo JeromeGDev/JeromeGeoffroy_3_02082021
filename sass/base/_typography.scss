@@ -22,7 +22,13 @@ button {
     font-size: 2.75rem;
 }
 */
+*{
+    font-family:'Roboto', sans-serif;
+}
 h1 {
     font-family: 'Shrikhand', cursive;;
     font-size: 23pts;
+}
+*:hover{
+    cursor: url("icn-bck.png"), pointer;
 }

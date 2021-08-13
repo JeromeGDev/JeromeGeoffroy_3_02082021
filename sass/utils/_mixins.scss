@@ -26,3 +26,37 @@
     background: linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1); 
 }
+
+/*mixin propriété des images de la page d'accueil*/
+@mixin imgindex{
+    max-width:100%;
+    width:100%;
+    height:auto;
+    border-radius:$radiusimgindex;
+}
+
+/*Mixin création bouton fonctionnement index.tml*/
+@mixin btn-fonctionnement{
+    display:block;
+    background-color:$color-color-bckgr-light-darker;
+    width:px;
+    height:px;
+    border-radius:px;
+    box-shadow:px;
+    border-radius:$rdsbtnfidx;
+    &:hover{
+        cursor: url("icn-bck.png"), pointer;
+        }
+}
+
+/*Mixin création bouton fonctionnement index.tml*/
+@mixin btn-action{
+    font-family : 'Roboto',sans-serif;
+    font-size: 12pt;
+    font-weight:700;
+    margin:auto;
+    color:#fff;
+    &:hover{
+        cursor: url("icn-bck.png"), pointer;
+    }
+}
