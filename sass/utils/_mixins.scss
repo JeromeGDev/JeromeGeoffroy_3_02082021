@@ -1,0 +1,28 @@
+/*mixin de la couleur du bouton explorer*/
+@mixin explorebtndgrd{
+    background: $color-secondary;
+    background: linear-gradient(350deg, $color-secondary 0%, $color-secondary 35%, $color-primary 100%); 
+}
+
+/*Mixin ombre*/
+@mixin boxshadow{
+    -webkit-box-shadow: 3px 3px 10px 5px rgba(230,230,230,1);
+    -moz-box-shadow: 3px 3px 10px 5px rgba(230,230,230,1);
+    box-shadow: 3px 3px 10px 5px rgba(230,230,230,1);
+}
+
+/*Mixin DAJFCC*/
+@mixin dajfcc{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/*mixin dégradé localisation*/
+@mixin locationdgrd{
+    background: rgb(234,234,234);
+    background: -moz-linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
+    background: -webkit-linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
+    background: linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1); 
+}
