@@ -3,16 +3,16 @@ $color-primary: #FF79DA;
 $color-secondary: #9356dc;
 $color-third: #99E2D0;
 /*Couleurs supplémentaires*/
-$color-new:adjust-hue($color-third,35%);
+$color-new:darken($color-third,35);
 $color-fnt: #000;
 $color-fnt-ttl: #101010;
 $color-fnt-ttl: #353535;
-$color-fgray: lighten($color-fnt,82%);/*originel : #d1d1d1*/
-$color-lgray: lighten($color-fnt,92%);/*originel : #eaeaea*/
-$color-shdw:lighten($color-fnt,90%);/*originel : #e5e5e5*/
-$color-color-bckgr-light-darker:lighten($color-fnt,96%);/*originel : ##f6f6f6*/
+$color-fgray: lighten($color-fnt,82);/*originel : #d1d1d1*/
+$color-lgray: lighten($color-fnt,92);/*originel : #eaeaea*/
+$color-shdw:lighten($color-fnt,90);/*originel : #e5e5e5*/
+$color-color-bckgr-light-darker:lighten($color-fnt,96);/*originel : ##f6f6f6*/
 $color-bckgr-light-light: #FFFFFF;
-$bckgrd-btn-cat-hover: lighten($color-secondary,90%);/*originel : #e5e5e5*/
+$bckgrd-btn-cat-hover: lighten($color-secondary,90);/*originel : #e5e5e5*/
 $ccolor-btn-index-hover: #F4EEFB;
 $color-invalid:#DB464B;
 $color-inactive:#BFBFBF;
