@@ -4,6 +4,7 @@
   margin: 0;
 }
 
+/*Taille de la police de référence*/
 /*Couleurs de la charte graphique*/
 /*Couleurs supplémentaires*/
 /*originel : #d1d1d1*/
@@ -14,7 +15,16 @@
 /*shadow*/
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
 /*Arrondis des coins des images de la page d'accueil*/
-/*@import "./utils/functions";*/
+/*
+@function lightness-shift($color) {
+    @if (lightness($color) < 25%){
+        @return lighten($color, 10%);
+    }@else{
+        @return darken($color, 10%);
+    }
+}
+*/
+/* suppression de l'unité pixel*/
 /*mixin de la couleur du bouton explorer*/
 /*Mixin ombre*/
 /*Mixin DAJFCC*/
@@ -33,22 +43,20 @@
 }
 
 html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
 }
 */
 body {
   box-sizing: border-box;
   background: #FFFFFF;
+  width: 100vw;
+  font-size: 31px;
 }
-
-.container-fluid {
-  width: 100%;
-  height: 100%;
-}
-
-section {
+body container-fluid {
   padding: 5.33vw;
+}
+body container-fluid.pagemain section {
+  display: block;
+  clear: both;
 }
 
 /*
@@ -79,23 +87,55 @@ button {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 23pts;
-}
-
 *:hover {
   cursor: url("icn-bck.png"), pointer;
 }
 
-/*@import "./components/buttons";*/
-/*@import "./layout/header";*/
-/*@import "./layout/nav";*/
-/*@import "./layout/container";*/
-/*@import "./layout/form";*/
-/*@import "./pages/work";*/
-/*@import "./pages/about";*/
-/*@import "./pages/project";*/
+h1 {
+  /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
+  font-family: "Shrikhand", cursive;
+  font-size: 1rem;
+}
+h2 {
+  font-size: 0.5806451613rem;
+}
+h3 {
+  font-size: 0.3870967742rem;
+}
+h4 {
+  font-size: 0.4838709677rem;
+}
+h5 {
+  font-size: 0.4193548387rem;
+}
+h6 {
+  font-size: 0.3225806452rem;
+}
+/*Font-Awesome html code for icones :
+full-check-circle : <i class="fas fa-check-circle"></i>
+empty-ckeck-circle: <i class="far fa-check-circle"></i>
+<i class="fas fa-map-marker-alt"></i>
+<i class="fas fa-mobile-alt"></i>
+<i class="fas fa-list"></i>
+<i class="far fa-heart"></i>
+<i class="far fa-hand-point-up"></i>
+*/
+/*
+.header {
+    background: $color-primary;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;   
+    &__logo {
+        font-size: 7rem;
+        color: $color-secondary;
+        margin-left: 10rem;
+        @include heading-shadow($color-white);
+    }
+}
+*/
 .header {
   display: flex;
   flex-direction: column;
@@ -136,32 +176,30 @@ h1 {
   font-weight: 700;
 }
 
-section {
-  display: block;
-  clear: both;
-}
-section .section {
-  display: block;
-  clear: both;
-}
-section .section__welcome {
+/*@import "./layout/nav";*/
+/*@import "./layout/container";*/
+/*@import "./layout/form";*/
+/*@import "./pages/work";*/
+/*@import "./pages/about";*/
+/*@import "./pages/project";*/
+.section__welcome {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   width: 100%;
 }
-section .section__welcome__title {
+.section__welcome__title {
   font-family: "Roboto", sans-serif;
   font-size: 18pt;
   font-weight: 700;
 }
-section .section__welcome__description {
+.section__welcome__description {
   font-family: "Roboto", sans-serif;
   font-size: 13pt;
   font-weight: 500;
 }
-section .section__welcome__button {
+.section__welcome__button {
   background: #9356dc;
   background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
   display: flex;
@@ -175,31 +213,31 @@ section .section__welcome__button {
   -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
   box-shadow: 3px 3px 10px 5px #e6e6e6;
 }
-section .section__welcome__button__explore {
+.section__welcome__button__explore {
   font-family: "Roboto", sans-serif;
   font-size: 12pt;
   font-weight: 700;
   margin: auto;
   color: #fff;
 }
-section .section__welcome__button__explore:hover {
+.section__welcome__button__explore:hover {
   cursor: url("icn-bck.png"), pointer;
 }
-section .section-howto {
+.section__howto {
   display: block;
   width: 100%;
 }
-section .section-howto__title {
+.section__howto__title {
   font-family: "Roboto", sans-serif;
   font-size: 18pt;
   font-weight: 700;
 }
-section .section-howto__secondlevel {
+.section__howto__secondlevel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-section .section-howto__secondlevel__button {
+.section__howto__secondlevel__button {
   display: block;
   background-color: whitesmoke;
   width: px;
@@ -208,11 +246,27 @@ section .section-howto__secondlevel__button {
   box-shadow: px;
   border-radius: 40px;
 }
-section .section-howto__secondlevel__button:hover {
+.section__howto__secondlevel__button:hover {
   cursor: url("icn-bck.png"), pointer;
 }
-section .section-howto__secondlevel__button__content {
+.section__howto__secondlevel__button__content {
   display: inline-flex;
+}
+.section__list__second-level__block {
+  background-color: #FFFFFF;
+  box-shadow: 1.0667vw 1.0667vw #e6e6e6;
+}
+.section__list__second-level__block__img {
+  max-width: 89.333vw;
+  width: 100%;
+  max-height: 46.4vw;
+  overflow: hidden;
+  height: auto;
+  margin: auto;
+  border-radius: 8vw 8vw 0 0;
+}
+.section__list__second-level__block__img img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

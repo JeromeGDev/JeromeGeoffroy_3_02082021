@@ -3,58 +3,21 @@
     margin:0;
 }
 @import "./utils/variables";
-/*@import "./utils/functions";*/
+@import "./utils/functions";
 @import "./utils/mixins";
 /*@import "./utils/extensions";*/
 @import "./base/base";
 @import "./base/typography";
-/*@import "./components/buttons";*/
-/*@import "./layout/header";*/
+@import "./components/visuels";
+@import "./components/button";
+@import "./layout/header";
 /*@import "./layout/nav";*/
 /*@import "./layout/container";*/
 /*@import "./layout/form";*/
 /*@import "./pages/work";*/
 /*@import "./pages/about";*/
 /*@import "./pages/project";*/
-.header{
-display:flex;
-flex-direction:column;
-width:100%;
-&__site-title{
-    padding:5.333vw 5.333vw 0 5.333vw;
-}
-&__logo{
-    display:block;
-    width:100%;
-    height:auto;
-}
-&__location{
-    display:flex;
-    flex-direction:row;
-    width:100%;
-    @include dajfcc;
-    @include locationdgrd;
-    margin:auto;
-    padding:18px;
-    i{
-        display:inline-block;
-        height:17px;
-        width:12px;
-    }
-    &__city{
-    display:inline-block;
-    font-family:'Roboto',sans-serif;
-    font-size: 12pt;
-    font-weight:700;
-    }
-}
-}
-section{
-    display:block;
-    clear:both;
-    .section{
-        display:block;
-        clear:both;
+.section{
         &__welcome{
             @include dajfcc;
             text-align:center;
@@ -64,7 +27,7 @@ section{
                 font-size: 18pt;
                 font-weight:700;
             }
-        &__description{
+            &__description{
                 font-family: 'Roboto',sans-serif;
                 font-size: 13pt;
                 font-weight:500;
@@ -81,33 +44,55 @@ section{
                 @include boxshadow;
                 &__explore{
                     @include btn-action;
-                    }
-            }
-        }
-    }
-    .section-howto{
-        display:block;
-        width:100%;
-        &__title{
-            font-family : 'Roboto',sans-serif;
-            font-size: 18pt;
-            font-weight:700;
-            }
-        &__secondlevel{
-            @include dajfcc;
-            &__button{
-                @include btn-fonctionnement;
-                &__number{
-                    }
-                &__content{
-                display:inline-flex;
-                    &__icone{
-                    }
-                    &__text{
-                    }
                 }
             }
-            
         }
-    }
+        &__howto{
+            display:block;
+            width:100%;
+            &__title{
+                font-family : 'Roboto',sans-serif;
+                font-size: 18pt;
+                font-weight:700;
+                }
+            &__secondlevel{
+                @include dajfcc;
+                &__button{
+                    @include btn-fonctionnement;
+                    &__number{
+                        }
+                    &__content{
+                    display:inline-flex;
+                        &__icone{
+                        }
+                        &__text{
+                        }
+                    }
+                }
+                
+            }
+        }
+        &__list{
+            &__title{
+            }
+            &__second-level{       
+                &__block{
+                    background-color:$color-bckgr-light-light;
+                    box-shadow: 1.0667vw 1.0667vw $color-shdw;
+                    &__img {
+                        @include imgindex;
+                    }
+                    &__content{
+                        &__txt{
+                            &__title{
+
+                            }
+                            &__description{
+
+                            }
+                        }
+                    }
+                } 
+            }
+        }
 }

@@ -25,10 +25,79 @@ button {
 *{
     font-family:'Roboto', sans-serif;
 }
-h1 {
-    font-family: 'Shrikhand', cursive;;
-    font-size: 23pts;
-}
 *:hover{
     cursor: url("icn-bck.png"), pointer;
 }
+h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
+    font-family: 'Shrikhand', cursive;
+    font-size: rem(31);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+h2{
+    font-size: rem(18px);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+h3{
+    font-size: rem(12px);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+h4{
+    font-size: rem(15px);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+h5{
+    font-size: rem(13px);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+h6{
+    font-size: rem(10px);
+	&:link{}
+	&:visited{}
+	&:hover{}
+	&:focus{}
+	&:active{}
+}
+
+p{}
+
+ul{
+	&li{}
+}
+
+ol{
+	&li{}
+}
+
+form{}
+
+table{
+	&tr{}
+	&td{}
+}
+
+a{}

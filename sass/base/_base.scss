@@ -8,18 +8,26 @@
 }
 
 html {
-    // 10px div by def of 16px
-    font-size: 62.5%;
 }
 */
+
 body {
     box-sizing: border-box;
     background: $color-bckgr-light-light;
-}
-.container-fluid{
-    width:100%;
-    height:100%;
-}
-section{
-    padding:5.33vw;
+    width:100vw;
+    font-size:$originfnt;
+    & container-fluid{
+        padding:5.33vw;
+        &.page{
+            &header{
+
+            }
+            &main{
+                & section{       
+                display:block;
+                clear:both;
+                }
+            }
+        }
+    }
 }

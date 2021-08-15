@@ -7,3 +7,9 @@
     }
 }
 */
+/* suppression de l'unité pixel*/
+@function NoUnit($value) {
+    @return $value / (($value * 0) + 1);
+}@function rem($pxsize) {
+    @return #{NoUnit($pxsize) / NoUnit($originfnt)}rem;
+}
