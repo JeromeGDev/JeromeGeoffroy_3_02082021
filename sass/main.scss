@@ -20,12 +20,20 @@
 .section{
         &__welcome{
             @include dajfcc;
+            flex-direction: column;
             text-align:center;
+            width:100%;
+            flex-wrap: nowrap;
             width:100%;
             &__title{
                 font-family : 'Roboto',sans-serif;
                 font-size: 18pt;
                 font-weight:700;
+                text-align: center;
+                & blockquote {
+            		font-size: rem(17.33);
+                    font-weight:500;
+                }
             }
             &__description{
                 font-family: 'Roboto',sans-serif;

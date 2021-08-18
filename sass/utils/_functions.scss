@@ -1,15 +1,19 @@
-/*
-@function lightness-shift($color) {
-    @if (lightness($color) < 25%){
-        @return lighten($color, 10%);
-    }@else{
-        @return darken($color, 10%);
+@use 'sass:math';
+/* fonction rem pour calculer automatiquement les dimensions en rem tout en indiquant les valeurs mesurées en px sur la maquette*/
+/* La fonction appelée rem utilise la valeur indiquée entre les paranthèses
+dans les propriétés. Sans valeur, elle utilise la variable $originfnt
+qui est la variable, facile à changer de la taille de texte de référence inscrite dans le body.
+la fonction unitless permet d'extraire la valeur sans son unité
+pour faire le calcul de la conversions finale en divisant la valeur (sans unité)
+de la taille de la police dans le "context" (donc, la valeur par défaut si rien est indiqué,
+soit la valeur précisée entre paranthèse.
+Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeur équivalente à 15pts en rem)*/
+ @function rem($pixels, $context: $originfnt) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
     }
-}
-*/
-/* suppression de l'unité pixel*/
-@function NoUnit($value) {
-    @return $value / (($value * 0) + 1);
-}@function rem($pxsize) {
-    @return #{NoUnit($pxsize) / NoUnit($originfnt)}rem;
-}
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+    @return math.div($pixels,$context) * 1rem;
+  }

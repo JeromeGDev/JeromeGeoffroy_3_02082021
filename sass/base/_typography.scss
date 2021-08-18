@@ -1,27 +1,3 @@
-/*
-body {
-    font-family: 'Roboto', sans-serif;
-    color: $color-primary;
-    font-size: 2rem;
-    font-weight: 100;
-    line-height: 1.7;
-}
-
-
-
-textarea {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 2rem;
-}
-
-button {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 2.75rem;
-}
-*/
 *{
     font-family:'Roboto', sans-serif;
 }
@@ -31,6 +7,9 @@ button {
 h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
     font-family: 'Shrikhand', cursive;
     font-size: rem(31);
+	font-weight:700;
+	text-align: center;
+	margin:auto;
 	&:link{}
 	&:visited{}
 	&:hover{}
@@ -38,66 +17,67 @@ h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 	&:active{}
 }
 
-h2{
-    font-size: rem(18px);
-	&:link{}
-	&:visited{}
-	&:hover{}
-	&:focus{}
-	&:active{}
+h{
+	&2{
+	font-size: rem(28.67);
+	}
+	&3{
+	font-size: rem(24);
+	font-weight:700;
+	}
+	&4{
+	font-size: rem(16);	
+	}
+	&5{
+	font-size: rem(18);
+		&:last-child &#last-title{
+			font-size: rem(17.73);
+			font-weight:700;
+		}
+	}
+	&6{
+	font-size: rem(16.67);
+		&:last-child &#last-desc{
+			font-size: rem(16.4);
+			font-weight:700;
+		}
+	}
 }
-
-h3{
-    font-size: rem(12px);
-	&:link{}
-	&:visited{}
-	&:hover{}
-	&:focus{}
-	&:active{}
+.section__welcome__title{
+	
 }
-
-h4{
-    font-size: rem(15px);
-	&:link{}
-	&:visited{}
-	&:hover{}
-	&:focus{}
-	&:active{}
+.pricefont{
+	font-size: rem(14,67);
 }
-
-h5{
-    font-size: rem(13px);
-	&:link{}
-	&:visited{}
-	&:hover{}
-	&:focus{}
-	&:active{}
+.meat{
+	font-size: rem(16);
+	font-weight:500;
 }
-
-h6{
-    font-size: rem(10px);
-	&:link{}
-	&:visited{}
-	&:hover{}
-	&:focus{}
-	&:active{}
+.new{
+	font-size: rem(16);
+	font-weight:700;
 }
-
-p{}
-
-ul{
-	&li{}
+.btn{
+	&__nav--lnk{/*Bouton de navigation de la page d'accueil*/
+		font-size: rem(16);
+		font-weight:700;
+	}
+	&__action{/*Bouton d'action - explorer sur index.html et commander sur page restaurant*/
+		font-size: rem(12);
+	}
 }
+footer{
+	&__title{/*logo ohmyfood dans le footer*/
+		font-size: rem(18);
+		font-family: 'Shrikhand', cursive;
+	}
+	&__link{
+		font-size: rem(16.67);
+		&--top{
+			font-weight:700;
+			& i{
 
-ol{
-	&li{}
+			}
+		}
+	}
 }
-
-form{}
-
-table{
-	&tr{}
-	&td{}
-}
-
-a{}
