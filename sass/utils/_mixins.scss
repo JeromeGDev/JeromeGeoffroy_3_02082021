@@ -43,12 +43,13 @@
 
 /*Mixin création bouton fonctionnement index.tml*/
 @mixin btn-fonctionnement{
-    display:block;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     background-color:$color-bckgr-light-dark;
-    width:px;
-    height:px;
-    border-radius:px;
-    box-shadow:px;
+    width:vw(323px);
+    height:vw(72px);
+    box-shadow:vw(5px) vw(5px) $color-shdw;
     border-radius:$rdsbtnfidx;
     &:hover{
         cursor: url("icn-bck.png"), pointer;

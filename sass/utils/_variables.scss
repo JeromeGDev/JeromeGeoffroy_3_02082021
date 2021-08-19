@@ -1,3 +1,4 @@
+@use 'sass:math';
 /*Taille de la police de référence*/
 $originfnt: 16px;
 /*Couleurs de la charte graphique*/
@@ -21,6 +22,6 @@ $color-inactive:#BFBFBF;
 /*shadow*/
 $heading-shadow-size: .55rem;
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
-$rdsbtnfidx:40px;
+$rdsbtnfidx:vw(40px);
 /*Arrondis des coins des images de la page d'accueil*/
-$radiusimgindex:30px;
+$radiusimgindex:vw(30px);

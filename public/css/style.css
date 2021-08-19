@@ -24,6 +24,7 @@ pour faire le calcul de la conversions finale en divisant la valeur (sans unité
 de la taille de la police dans le "context" (donc, la valeur par défaut si rien est indiqué,
 soit la valeur précisée entre paranthèse.
 Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeur équivalente à 15pts en rem)*/
+/*conversion px en vw*/
 /*mixin de la couleur du bouton explorer*/
 /*Mixin ombre*/
 /*Mixin DAJFCC*/
@@ -79,7 +80,7 @@ h2 {
 }
 h3 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 900;
 }
 h4 {
   font-size: 1rem;
@@ -170,17 +171,21 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1);
   margin: auto;
   padding: 18px;
+  height: 13.333vw;
 }
-.header__location i {
-  display: inline-block;
+.header__location.fa-map-marker-alt {
+  display: inline-flex;
   height: 17px;
   width: 12px;
+  margin: 0 4.267vw 0 0;
 }
 .header__location__city {
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: 12pt;
   font-weight: 700;
+  text-align: center;
+  padding: 0 0 0 4.267vw;
 }
 
 /*@import "./layout/nav";*/
@@ -219,8 +224,8 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
   background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
   display: flex;
   border-radius: 50px;
-  height: 50px;
-  width: 217px;
+  height: 5vw;
+  width: 21.7vw;
   padding: 0px;
   margin: auto;
   cursor: pointer;
@@ -253,13 +258,14 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
   justify-content: center;
 }
 .section__howto__secondlevel__button {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   background-color: whitesmoke;
-  width: px;
-  height: px;
-  border-radius: px;
-  box-shadow: px;
-  border-radius: 40px;
+  width: 32.3vw;
+  height: 7.2vw;
+  box-shadow: 0.5vw 0.5vw #e6e6e6;
+  border-radius: vw(40px);
 }
 .section__howto__secondlevel__button:hover {
   cursor: url("icn-bck.png"), pointer;
@@ -269,7 +275,7 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
 }
 .section__list__second-level__block {
   background-color: #FFFFFF;
-  box-shadow: 1.0667vw 1.0667vw #e6e6e6;
+  box-shadow: 0.5vw 0.5vw #e6e6e6;
 }
 .section__list__second-level__block__img {
   max-width: 89.333vw;

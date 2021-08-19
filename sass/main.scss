@@ -44,8 +44,8 @@
                 @include explorebtndgrd;
                 display:flex;
                 border-radius:50px;
-                height:50px;
-                width:217px;
+                height:vw(50px);
+                width:vw(217px);
                 padding:0px;
                 margin:auto;
                 cursor: pointer;
@@ -86,7 +86,7 @@
             &__second-level{       
                 &__block{
                     background-color:$color-bckgr-light-light;
-                    box-shadow: 1.0667vw 1.0667vw $color-shdw;
+                    box-shadow: vw(5px) vw(5px) $color-shdw;
                     &__img {
                         @include imgindex;
                     }
