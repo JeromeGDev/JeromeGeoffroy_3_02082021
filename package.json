@@ -9,10 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
-    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+	  "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "author": "JeromeGdev",
-  "license": "ISC",
-  "browserslist": "last 4 versions"
+  "license": "ISC"
 }

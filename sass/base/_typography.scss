@@ -1,9 +1,6 @@
 *{
     font-family:'Roboto', sans-serif;
 }
-*:hover{
-    cursor: url("icn-bck.png"), pointer;
-}
 h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
     font-family: 'Shrikhand', cursive;
     font-size: rem(31);
@@ -44,12 +41,17 @@ h{
 	}
 }
 .section__welcome__title{
-	
+	& h3{
+	}
+	& span{
+		font-size: rem(17.33);
+		font-weight:700;
+	}	
 }
 .pricefont{
 	font-size: rem(14,67);
 }
-.meat{
+.dish{/*plat*/
 	font-size: rem(16);
 	font-weight:500;
 }

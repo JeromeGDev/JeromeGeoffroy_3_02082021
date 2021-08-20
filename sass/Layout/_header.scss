@@ -4,35 +4,33 @@
     flex-direction:column;
     width:100%;
         &__site-title{
-            padding:5.333vw 5.333vw 0 5.333vw;
+            padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
         }
-        /*&__logo{
-            display:block;
-            width:100%;
-            height:auto;
-        }*/
         &__location{
-            display:flex;
-            flex-direction:row;
-            width:100%;
+            & span{
             @include dajfcc;
             @include locationdgrd;
+            display:inline-flex;
+            flex-direction:row;
+            width:100%;
             margin:auto;
-            padding:vw(18px);
-            height:vw(50px);
-                &__city{
-                display:flex;
+            padding:get-vw(18px);
+            height:get-vw(51px);
+            &__city{
+                display:inline-flex;
+                flex-direction:row-reverse;
                 font-family:'Roboto',sans-serif;
-                font-size: 12pt;
+                font-size: rem(16);
                 font-weight:700;
                 text-align:center;
                 margin:auto;
-                    &.fa-map-marker-alt{
+                    &__icone{
                     display:inline-flex;
-                    height:17px;
-                    width:12px;
-                    padding:0 4.267vw 0 0;
+                    height:get-vw(17px);
+                    width:get-vw(12px);
+                    padding:0 get-vw(18px) 0 0;
                 }
-                }
+            }
         }
+    }
 }

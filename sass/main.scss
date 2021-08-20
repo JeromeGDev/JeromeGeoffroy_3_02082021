@@ -12,7 +12,7 @@
 @import "./components/button";
 @import "./layout/header";
 /*@import "./layout/nav";*/
-/*@import "./layout/container";*/
+@import "./layout/container";
 /*@import "./layout/form";*/
 /*@import "./pages/work";*/
 /*@import "./pages/about";*/
@@ -25,35 +25,23 @@
             width:100%;
             flex-wrap: nowrap;
             width:100%;
-            &__title{
-                font-family : 'Roboto',sans-serif;
-                font-size: 18pt;
-                font-weight:700;
-                text-align: center;
-                & blockquote {
-            		font-size: rem(17.33);
-                    font-weight:500;
+                &__txtcontent{
+                    &__title{
+                        font-family : 'Roboto',sans-serif;
+                        font-weight:700;
+                        text-align: center;
+                    }
+                    &__slug{
+                        font-family: 'Roboto',sans-serif;
+                        font-size: rem(17.33);
+                        font-weight:500;
+                    }
                 }
-            }
-            &__description{
-                font-family: 'Roboto',sans-serif;
-                font-size: 13pt;
-                font-weight:500;
+                & .button-index{                    
+                    &__explore{ 
+                        text-align:center;                  
+                    }
                 }
-            &__button{
-                @include explorebtndgrd;
-                display:flex;
-                border-radius:50px;
-                height:vw(50px);
-                width:vw(217px);
-                padding:0px;
-                margin:auto;
-                cursor: pointer;
-                @include boxshadow;
-                &__explore{
-                    @include btn-action;
-                }
-            }
         }
         &__howto{
             display:block;
@@ -63,23 +51,20 @@
                 font-size: 18pt;
                 font-weight:700;
                 }
-            &__secondlevel{
+            &__level{/*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
                 @include dajfcc;
-                &__button{
-                    @include btn-fonctionnement;
+                @include button-fonctionnement;
                     &__number{
                         }
                     &__content{
-                    display:inline-flex;
+                        display:inline-flex;
                         &__icone{
                         }
                         &__text{
                         }
                     }
                 }
-                
             }
-        }
         &__list{
             &__title{
             }

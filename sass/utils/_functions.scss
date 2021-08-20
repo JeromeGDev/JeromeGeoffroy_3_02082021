@@ -17,8 +17,10 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
     }
     @return math.div($pixels,$context) * 1rem;
   }
-/*conversion px en vw*/
-  @function vw($target) { 
-    $vw-context: (1000*.01) * 1px;
-    @return ($target/$vw-context) * 1vw;
+
+  $vw-viewport: 375;
+  @function get-vw($target){
+    $vw-context: $vw-viewport * 0.01 * 1px;
+    @return math.div($target,$vw-context) * 1vw;
+    @return $target;
   }

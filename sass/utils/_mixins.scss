@@ -1,5 +1,5 @@
-/*mixin de la couleur du bouton explorer*/
-@mixin explorebtndgrd{
+/*mixin de la couleur du bouton action*/
+@mixin actionbtndgrd{
     background: $color-secondary;
     background: linear-gradient(350deg, $color-secondary 0%, $color-secondary 35%, $color-primary 100%); 
 }
@@ -21,10 +21,7 @@
 /*mixin dégradé localisation*/
 @mixin locationdgrd{
     background: rgb(234,234,234);
-    background: -moz-linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
-    background: -webkit-linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
     background: linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1); 
 }
 
 /*mixin propriété des images de la page d'accueil*/
@@ -42,14 +39,14 @@
 }
 
 /*Mixin création bouton fonctionnement index.tml*/
-@mixin btn-fonctionnement{
+@mixin button-fonctionnement{
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     background-color:$color-bckgr-light-dark;
-    width:vw(323px);
-    height:vw(72px);
-    box-shadow:vw(5px) vw(5px) $color-shdw;
+    width:get-vw(323px);
+    height:get-vw(72px);
+    box-shadow:get-vw(5px) get-vw(5px) $color-shdw;
     border-radius:$rdsbtnfidx;
     &:hover{
         cursor: url("icn-bck.png"), pointer;
@@ -57,12 +54,14 @@
 }
 
 /*Mixin création bouton fonctionnement index.tml*/
-@mixin btn-action{
+@mixin button-action{
+    display:block;
     font-family : 'Roboto',sans-serif;
     font-size: 12pt;
     font-weight:700;
     margin:auto;
     color:#fff;
+    height:get-vw(50px);
     &:hover{
         cursor: url("icn-bck.png"), pointer;
     }

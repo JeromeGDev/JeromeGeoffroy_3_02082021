@@ -15,6 +15,7 @@
 /*shadow*/
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
 /*Arrondis des coins des images de la page d'accueil*/
+/*Valeur du device-width*/
 /* fonction rem pour calculer automatiquement les dimensions en rem tout en indiquant les valeurs mesurées en px sur la maquette*/
 /* La fonction appelée rem utilise la valeur indiquée entre les paranthèses
 dans les propriétés. Sans valeur, elle utilise la variable $originfnt
@@ -24,8 +25,7 @@ pour faire le calcul de la conversions finale en divisant la valeur (sans unité
 de la taille de la police dans le "context" (donc, la valeur par défaut si rien est indiqué,
 soit la valeur précisée entre paranthèse.
 Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeur équivalente à 15pts en rem)*/
-/*conversion px en vw*/
-/*mixin de la couleur du bouton explorer*/
+/*mixin de la couleur du bouton action*/
 /*Mixin ombre*/
 /*Mixin DAJFCC*/
 /*mixin dégradé localisation*/
@@ -48,23 +48,13 @@ html {
 body {
   box-sizing: border-box;
   background: #FFFFFF;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   font-size: 16px;
-}
-body container-fluid {
-  padding: 5.33vw;
-}
-body container-fluid.pagemain section {
-  display: block;
-  clear: both;
 }
 
 * {
   font-family: "Roboto", sans-serif;
-}
-
-*:hover {
-  cursor: url("icn-bck.png"), pointer;
 }
 
 h1 {
@@ -100,11 +90,17 @@ h6:last-child h6#last-desc {
   font-weight: 700;
 }
 
+.section__welcome__title span {
+  font-size: 1.083125rem;
+  font-weight: 700;
+}
+
 .pricefont {
   font-size: 0.2089552239rem;
 }
 
-.meat {
+.dish {
+  /*plat*/
   font-size: 1rem;
   font-weight: 500;
 }
@@ -135,61 +131,99 @@ footer__link {
 footer__link--top {
   font-weight: 700;
 }
-/*Font-Awesome html code for icones :
-full-check-circle : <i class="fas fa-check-circle"></i>
-empty-ckeck-circle: <i class="far fa-check-circle"></i>
-<i class="fas fa-map-marker-alt"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-list"></i>
-<i class="far fa-heart"></i>
-<i class="far fa-hand-point-up"></i>
-*/
+/*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
+.button-index {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: whitesmoke;
+  width: 86.1333333333vw;
+  height: 19.2vw;
+  box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
+  border-radius: vw(40px);
+  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  box-shadow: 3px 3px 10px 5px #e6e6e6;
+  display: flex;
+  border-radius: 13.3333333333vw;
+  padding: 0px;
+  margin: auto;
+}
+.button-index:hover {
+  cursor: url("icn-bck.png"), pointer;
+}
+
+.button-action {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+  height: 13.3333333333vw;
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
+  display: flex;
+  height: 13.3333333333vw;
+  border-radius: 13.3333333333vw;
+  padding: 0px;
+  margin: auto;
+}
+.button-action:hover {
+  cursor: url("icn-bck.png"), pointer;
+}
+
 .header {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 .header__site-title {
-  padding: 5.333vw 5.333vw 0 5.333vw;
+  padding: 5.3333333333vw 5.3333333333vw 0 5.3333333333vw;
 }
-.header__logo {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-.header__location {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+.header__location span {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #eaeaea;
-  background: -moz-linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
-  background: -webkit-linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
   background: linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$color-lgray",endColorstr="$color-fgray",GradientType=1);
-  margin: auto;
-  padding: 18px;
-  height: 13.333vw;
-}
-.header__location.fa-map-marker-alt {
   display: inline-flex;
-  height: 17px;
-  width: 12px;
-  margin: 0 4.267vw 0 0;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  padding: 4.8vw;
+  height: 13.3333333333vw;
 }
-.header__location__city {
-  display: inline-block;
+.header__location span__city {
+  display: inline-flex;
+  flex-direction: row-reverse;
   font-family: "Roboto", sans-serif;
-  font-size: 12pt;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
-  padding: 0 0 0 4.267vw;
+  margin: auto;
+}
+.header__location span__city__icone {
+  display: inline-flex;
+  height: 4.5333333333vw;
+  width: 3.2vw;
+  padding: 0 4.8vw 0 0;
 }
 
 /*@import "./layout/nav";*/
-/*@import "./layout/container";*/
+container-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  width: 100vw;
+}
+
+header {
+  margin: vw(20px) vw(20px) 0 vw(20px);
+}
+
 /*@import "./layout/form";*/
 /*@import "./pages/work";*/
 /*@import "./pages/about";*/
@@ -204,44 +238,18 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
   flex-wrap: nowrap;
   width: 100%;
 }
-.section__welcome__title {
+.section__welcome__txtcontent__title {
   font-family: "Roboto", sans-serif;
-  font-size: 18pt;
   font-weight: 700;
   text-align: center;
 }
-.section__welcome__title blockquote {
+.section__welcome__txtcontent__slug {
+  font-family: "Roboto", sans-serif;
   font-size: 1.083125rem;
   font-weight: 500;
 }
-.section__welcome__description {
-  font-family: "Roboto", sans-serif;
-  font-size: 13pt;
-  font-weight: 500;
-}
-.section__welcome__button {
-  background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
-  display: flex;
-  border-radius: 50px;
-  height: 5vw;
-  width: 21.7vw;
-  padding: 0px;
-  margin: auto;
-  cursor: pointer;
-  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  box-shadow: 3px 3px 10px 5px #e6e6e6;
-}
-.section__welcome__button__explore {
-  font-family: "Roboto", sans-serif;
-  font-size: 12pt;
-  font-weight: 700;
-  margin: auto;
-  color: #fff;
-}
-.section__welcome__button__explore:hover {
-  cursor: url("icn-bck.png"), pointer;
+.section__welcome .button-index__explore {
+  text-align: center;
 }
 .section__howto {
   display: block;
@@ -252,30 +260,29 @@ empty-ckeck-circle: <i class="far fa-check-circle"></i>
   font-size: 18pt;
   font-weight: 700;
 }
-.section__howto__secondlevel {
+.section__howto__level {
+  /*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.section__howto__secondlevel__button {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   background-color: whitesmoke;
-  width: 32.3vw;
-  height: 7.2vw;
-  box-shadow: 0.5vw 0.5vw #e6e6e6;
+  width: 86.1333333333vw;
+  height: 19.2vw;
+  box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
   border-radius: vw(40px);
 }
-.section__howto__secondlevel__button:hover {
+.section__howto__level:hover {
   cursor: url("icn-bck.png"), pointer;
 }
-.section__howto__secondlevel__button__content {
+.section__howto__level__content {
   display: inline-flex;
 }
 .section__list__second-level__block {
   background-color: #FFFFFF;
-  box-shadow: 0.5vw 0.5vw #e6e6e6;
+  box-shadow: vw(5px) vw(5px) #e6e6e6;
 }
 .section__list__second-level__block__img {
   max-width: 89.333vw;

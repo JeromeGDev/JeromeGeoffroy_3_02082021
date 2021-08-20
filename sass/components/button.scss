@@ -1,12 +1,19 @@
+/*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
+.button-index{
+    @include button-fonctionnement;                   
+    @include boxshadow;
+    display:flex;
+    border-radius:get-vw(50px);
+    padding:0px;
+    margin:auto;
+}
 
-
-/*Font-Awesome html code for icones :
-full-check-circle : <i class="fas fa-check-circle"></i>
-empty-ckeck-circle: <i class="far fa-check-circle"></i>
-<i class="fas fa-map-marker-alt"></i>
-<i class="fas fa-mobile-alt"></i>
-<i class="fas fa-list"></i>
-<i class="far fa-heart"></i>
-<i class="far fa-hand-point-up"></i>
-*/
-
+.button-action{
+    @include button-action;
+    @include actionbtndgrd;
+    display:flex;
+    height:get-vw(50px);
+    border-radius:get-vw(50px);
+    padding:0px;
+    margin:auto;
+}
