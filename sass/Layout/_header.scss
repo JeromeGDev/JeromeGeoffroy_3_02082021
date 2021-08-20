@@ -7,24 +7,21 @@
             padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
         }
         &__location{
-            & span{
             @include dajfcc;
             @include locationdgrd;
-            display:inline-flex;
-            flex-direction:row;
+            flex-direction:row-reverse;
             width:100%;
             margin:auto;
             padding:get-vw(18px);
-            height:get-vw(51px);
+            height:get-vw(50px);
             &__city{
-                display:inline-flex;
-                flex-direction:row-reverse;
+                display: inline-flex;
                 font-family:'Roboto',sans-serif;
                 font-size: rem(16);
                 font-weight:700;
                 text-align:center;
                 margin:auto;
-                    &__icone{
+                &__icone{
                     display:inline-flex;
                     height:get-vw(17px);
                     width:get-vw(12px);
@@ -33,4 +30,3 @@
             }
         }
     }
-}
