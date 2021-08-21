@@ -68,18 +68,4 @@ h{
 		font-size: rem(12);
 	}
 }
-footer{
-	&__title{/*logo ohmyfood dans le footer*/
-		font-size: rem(18);
-		font-family: 'Shrikhand', cursive;
-	}
-	&__link{
-		font-size: rem(16.67);
-		&--top{
-			font-weight:700;
-			& i{
 
-			}
-		}
-	}
-}

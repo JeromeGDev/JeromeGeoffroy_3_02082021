@@ -53,6 +53,19 @@ body {
   height: 100%;
 }
 
+header {
+  margin: 0;
+}
+
+section {
+  margin: 0;
+}
+
+footer {
+  background: #535353;
+  padding: 5.8666666667vw 1.3333333333vw 3.4666666667vw 1.3333333333vw;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -120,17 +133,6 @@ h6:last-child h6#last-desc {
   font-size: 0.75rem;
 }
 
-footer__title {
-  /*logo ohmyfood dans le footer*/
-  font-size: 1.125rem;
-  font-family: "Shrikhand", cursive;
-}
-footer__link {
-  font-size: 1.041875rem;
-}
-footer__link--top {
-  font-weight: 700;
-}
 /*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
 .button-index {
   display: flex;
@@ -209,7 +211,7 @@ footer__link--top {
 }
 
 /*@import "./layout/nav";*/
-container-fluid {
+.container-fluid {
   width: 100%;
   height: 100%;
 }
@@ -218,15 +220,25 @@ container-fluid {
   width: 100vw;
 }
 
-header {
-  margin: 0;
-}
-
-section {
-  margin: 0;
-}
-
 /*@import "./layout/form";*/
+.footer-logo p {
+  /*logo ohmyfood dans le footer*/
+  font-size: 1.125rem;
+  font-family: "Shrikhand", cursive;
+  color: whitesmoke;
+}
+
+.footer-menu__link-block {
+  display: flex;
+  color: whitesmoke;
+}
+.footer-menu__link-block i {
+  padding-right: 2.6666666667vw;
+}
+.footer-menu__link-block i, .footer-menu__link-block span {
+  font-size: 1.041875rem;
+}
+
 /*@import "./pages/work";*/
 /*@import "./pages/about";*/
 /*@import "./pages/project";*/

@@ -1,2 +1,7 @@
+dart-sass/
+sass/
 .sass-cache/
 node_modules/
+images/
+package-lock.json
+package.json
