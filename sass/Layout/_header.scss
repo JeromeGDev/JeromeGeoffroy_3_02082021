@@ -9,24 +9,26 @@
         &__location{
             @include dajfcc;
             @include locationdgrd;
-            flex-direction:row-reverse;
+            flex-direction:row;
             width:100%;
             margin:auto;
             padding:get-vw(18px);
             height:get-vw(50px);
             &__city{
                 display: inline-flex;
+                flex-direction: row-reverse;
                 font-family:'Roboto',sans-serif;
                 font-size: rem(16);
                 font-weight:700;
                 text-align:center;
                 margin:auto;
-                &__icone{
-                    display:inline-flex;
-                    height:get-vw(17px);
-                    width:get-vw(12px);
-                    padding:0 get-vw(18px) 0 0;
-                }
             }
+            &__icone{
+                display:inline-flex;
+                height:get-vw(17px);
+                width:get-vw(12px);
+                padding:0 get-vw(8px) 0 0;
+            }
+            
         }
     }

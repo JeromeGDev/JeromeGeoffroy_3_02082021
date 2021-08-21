@@ -1,16 +1,12 @@
 {
-  "name": "ohmyfood",
-  "version": "1.0.0",
-  "description": "Site de commande en ligne de plats à emporter",
-  "main": "index.js",
-  "dependencies": {
-    "-": "^0.0.1",
-    "sass": "^1.37.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
-  },
-  "author": "JeromeGdev",
-  "license": "ISC"
+"name": "ohmyfood",
+"version": "1.0.0",
+"description": "Site de commande en ligne de plats à emporter",
+"main": "index.js",
+"scripts": {
+		"sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+},
+"author": "",
+"license": "ISC",
+"dependencies": {}
 }

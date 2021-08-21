@@ -194,17 +194,18 @@ footer__link--top {
 }
 .header__location__city {
   display: inline-flex;
+  flex-direction: row-reverse;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   text-align: center;
   margin: auto;
 }
-.header__location__city__icone {
+.header__location__icone {
   display: inline-flex;
   height: 4.5333333333vw;
   width: 3.2vw;
-  padding: 0 4.8vw 0 0;
+  padding: 0 2.1333333333vw 0 0;
 }
 
 /*@import "./layout/nav";*/
