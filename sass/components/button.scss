@@ -3,7 +3,7 @@
     @include button-fonctionnement;                   
     @include boxshadow;
     display:flex;
-    border-radius:get-vw(50px);
+    border-radius:get-vw(12px);
     padding:0px;
     margin:auto;
 }
@@ -12,7 +12,6 @@
     @include button-action;
     @include actionbtndgrd;
     display:flex;
-    height:get-vw(50px);
     border-radius:get-vw(50px);
     padding:0px;
     margin:auto;

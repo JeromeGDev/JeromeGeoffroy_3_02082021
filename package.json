@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass" : "sass --watch ./sass/main.scss:./public/css/syle.css"
+    "sass" : "sass --watch ./sass/main.scss:./public/css/style.css"
   },
   "author": "JeromeGdev",
   "license": "ISC"

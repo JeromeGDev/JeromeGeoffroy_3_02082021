@@ -41,16 +41,16 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
     padding: 0;
     box-sizing: inherit;
 }
-
-html {
-}
 */
+html {
+  font-size: 16px;
+}
+
 body {
   box-sizing: border-box;
   background: #FFFFFF;
   width: 100%;
   height: 100%;
-  font-size: 16px;
 }
 
 * {
@@ -145,7 +145,7 @@ footer__link--top {
   -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
   box-shadow: 3px 3px 10px 5px #e6e6e6;
   display: flex;
-  border-radius: 13.3333333333vw;
+  border-radius: 3.2vw;
   padding: 0px;
   margin: auto;
 }
@@ -164,7 +164,6 @@ footer__link--top {
   background: #9356dc;
   background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
   display: flex;
-  height: 13.3333333333vw;
   border-radius: 13.3333333333vw;
   padding: 0px;
   margin: auto;
@@ -187,7 +186,7 @@ footer__link--top {
   justify-content: center;
   background: #eaeaea;
   background: linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 100%;
   margin: auto;
   padding: 4.8vw;
@@ -219,7 +218,11 @@ container-fluid {
 }
 
 header {
-  margin: vw(20px) vw(20px) 0 vw(20px);
+  margin: 0;
+}
+
+section {
+  margin: 0;
 }
 
 /*@import "./layout/form";*/
@@ -237,8 +240,6 @@ header {
   width: 100%;
 }
 .section__welcome__txtcontent__title {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
   text-align: center;
 }
 .section__welcome__txtcontent__slug {
@@ -253,11 +254,6 @@ header {
   display: block;
   width: 100%;
 }
-.section__howto__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 18pt;
-  font-weight: 700;
-}
 .section__howto__level {
   /*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
   display: flex;
@@ -271,6 +267,7 @@ header {
   height: 19.2vw;
   box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
   border-radius: vw(40px);
+  flex-direction: column;
 }
 .section__howto__level:hover {
   cursor: url("icn-bck.png"), pointer;
@@ -295,4 +292,4 @@ header {
   width: 100%;
 }
 
-/*# sourceMappingURL=syle.css.map */
+/*# sourceMappingURL=style.css.map */
