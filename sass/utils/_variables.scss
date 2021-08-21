@@ -22,8 +22,8 @@ $color-inactive:#BFBFBF;
 /*shadow*/
 $heading-shadow-size: .55rem;
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
-$rdsbtnfidx:vw(40px);
+$rdsbtnfidx:get-vw(40px);
 /*Arrondis des coins des images de la page d'accueil*/
-$radiusimgindex:vw(30px);
+$radiusimgindex:get-vw(30px);
 /*Valeur du device-width*/
 $width-ref:375px;

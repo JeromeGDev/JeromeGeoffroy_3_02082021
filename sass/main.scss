@@ -63,15 +63,17 @@
                 }
             }
         &__list{
+            margin:get-vw(20px);
             &__title{
-            }
-            &__second-level{       
+            }      
                 &__block{
                     background-color:$color-bckgr-light-light;
                     box-shadow: vw(5px) vw(5px) $color-shdw;
                     &__img {
-                        @include imgindex;
+                        &__image{
+                               @include imgindex;
                     }
+                }
                     &__content{
                         &__txt{
                             &__title{
@@ -83,6 +85,5 @@
                         }
                     }
                 } 
-            }
         }
 }

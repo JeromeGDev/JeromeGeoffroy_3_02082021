@@ -4,8 +4,7 @@
     "description": "Site de commande en ligne de plats à emporter",
     "main": "index.js",
     "dependencies": {
-      "-": "^0.0.1",
-      "sass": "^1.38.0"
+      "-": "^0.0.1"
     },
     "devDependencies": {},
     "scripts": {
