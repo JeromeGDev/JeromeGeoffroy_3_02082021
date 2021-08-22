@@ -36,34 +36,64 @@
                     }
                 }
                 & .button-index{                    
-                    &__explore{ 
-                        text-align:center;                  
+                    &__explore{
+                        @include button-action;                  
                     }
                 }
         }
         &__howto{
+            margin:0 get-vw(20px);
             display:block;
             width:100%;
+            max-width:get-vw(335px);
             &__title{
                 padding-bottom:get-vw(34px);
             }
-            &__level{/*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
+            &__level{
+                display:block;
+                width:get-vw(335px);
+                max-width:100%;
+                padding:get-vw(25px) 0 get-vw(25px) get-vw(0px);
                 
-
                 &__button{
-
-                    
-                    &__content{
-                        display:flex;
-                        flex-direction: row;
-                        flex-wrap: nowrap;
-                        &__icone{
+                    @include button-fonctionnement;
+                    @include boxshadow;
+                    display:flex;
+                    flex-direction:row;
+                    align-items:center;
+                    font-size:rem(16);
+                    font-weight:700;
+                    max-width:get-vw(323px);
+                    &__number{
+                        font-family:'Roboto',sans-serif;
+                        font-size: rem(15);
+                        font-weight:500;
+                        border-radius:50%;
+                        padding: get-vw(8px) get-vw(10px) get-vw(6px) get-vw(10px);
+                        margin:0 get-vw(-12px);
+                        background-color:$color-secondary;
+                        color:$color-bckgr-light-light;
+                    }
+                    &__icone{
+                        margin: 0 get-vw(20px);
+                        & #choose{
+                            width:get-vw(14px);
+                            height:get-vw(20px);
+                            padding: 0 get-vw(6px);
                         }
-                        &__text{
-                            margin:auto;
+                        & #compose{
+                            width:get-vw(19px);
+                            height:get-vw(20px);
+                            padding: 0 get-vw(1px);
                         }
-                        &__number{
+                        & #eat-in{
+                            width:get-vw(19px);
+                            height:get-vw(20px);
+                            padding: 0 get-vw(1px);
                         }
+                    }
+                    &__txt{
+                        text-align:center;
                     }
                 }
             }

@@ -1,11 +1,16 @@
 /*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
-.button-index{
+/*.button-index{
     @include button-fonctionnement;                   
     @include boxshadow;
     display:flex;
     border-radius:get-vw(12px);
     padding:0px;
     margin:auto;
+    height:100%;
+    width:100%;
+    max-height:get-vw(72px);
+    max-width:get-vw(323px);
+
 }
 
 .button-action{
@@ -15,4 +20,4 @@
     border-radius:get-vw(50px);
     padding:0px;
     margin:auto;
-}
+}*/

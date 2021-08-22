@@ -38,18 +38,25 @@
 
 /*Mixin création bouton fonctionnement index.tml*/
 @mixin button-fonctionnement{
-    @include boxshadow;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color:$color-bckgr-light-dark;
-    width:get-vw(323px);
+    height:100%;
+    width:100%;
     height:get-vw(72px);
+    width:get-vw(323px);
+    padding:0px;
+    margin:auto;
+    background-color:$color-bckgr-light-dark;
     box-shadow:get-vw(5px) get-vw(5px) $color-shdw;
     border-radius:$rdsbtnfidx;
+    border-radius:get-vw(12px);
+    align-items:center;
+    background:$color-lgray;
     &:hover{
         cursor: url("icn-bck.png"), pointer;
-        }
+        background-color:$color-primary;
+    }
 }
 
 /*Mixin création bouton fonctionnement index.tml*/
@@ -65,5 +72,6 @@
     max-height:69%;
     &:hover{
         cursor: url("icn-bck.png"), pointer;
+        background-color:$color-primary;
     }
 }

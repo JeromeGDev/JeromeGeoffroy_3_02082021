@@ -18,6 +18,16 @@
 /*Arrondis des coins des images de la page d'accueil*/
 /*arrondis des blocs de la liste des restaurant */
 /*Valeur du device-width*/
+/* map di'cones font-awesome)*/
+/*$mapfaicones:(
+    choose:fas fa-mobile-alt,
+    compose:fas fa-list,
+    eat-in:fas fa-store,
+    emptyheart:far fa-heart,
+    fullheart:fas fa-heart,
+    food:fas fa-utensils,
+    hands:fas fa-hands-helping
+);*/
 /* fonction rem pour calculer automatiquement les dimensions en rem tout en indiquant les valeurs mesurées en px sur la maquette*/
 /* La fonction appelée rem utilise la valeur indiquée entre les paranthèses
 dans les propriétés. Sans valeur, elle utilise la variable $originfnt
@@ -161,53 +171,45 @@ img {
   max-width: 100vw;
 }
 
+.fas {
+  margin: 0 20px;
+}
+
+.fa-heart {
+  margin: 0;
+}
+
+.fas-after {
+  color: #f0f0f0;
+  border: solid 2px #0000;
+}
+.fas-after:hover {
+  color: #9356dc 0.15s ease-;
+}
+
 /*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
-.button-index {
-  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  box-shadow: 3px 3px 10px 5px #e6e6e6;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  background-color: whitesmoke;
-  width: 86.1333333333vw;
-  height: 19.2vw;
-  box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
-  border-radius: 20px;
-  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
-  box-shadow: 3px 3px 10px 5px #e6e6e6;
-  display: flex;
-  border-radius: 3.2vw;
-  padding: 0px;
-  margin: auto;
-}
-.button-index:hover {
-  cursor: url("icn-bck.png"), pointer;
+/*.button-index{
+    @include button-fonctionnement;                   
+    @include boxshadow;
+    display:flex;
+    border-radius:get-vw(12px);
+    padding:0px;
+    margin:auto;
+    height:100%;
+    width:100%;
+    max-height:get-vw(72px);
+    max-width:get-vw(323px);
+
 }
 
-.button-action {
-  background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-size: 12pt;
-  font-weight: 700;
-  margin: auto;
-  color: #fff;
-  height: 13.3333333333vw;
-  max-height: 69%;
-  background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
-  display: flex;
-  border-radius: 13.3333333333vw;
-  padding: 0px;
-  margin: auto;
-}
-.button-action:hover {
-  cursor: url("icn-bck.png"), pointer;
-}
-
+.button-action{
+    @include button-action;
+    @include actionbtndgrd;
+    display:flex;
+    border-radius:get-vw(50px);
+    padding:0px;
+    margin:auto;
+}*/
 .header {
   display: flex;
   flex-direction: column;
@@ -225,7 +227,7 @@ img {
   flex-direction: row;
   width: 100%;
   margin: auto;
-  padding: 4.8vw;
+  padding: 4.2666666667vw 0;
   height: 13.3333333333vw;
 }
 .header__location__city {
@@ -248,6 +250,8 @@ img {
 .container-fluid {
   width: 100%;
   height: 100%;
+  margin: auto;
+  padding: 0;
 }
 
 .page {
@@ -260,6 +264,7 @@ img {
   font-size: 1.125rem;
   font-family: "Shrikhand", cursive;
   color: whitesmoke;
+  margin-bottom: 6.4vw;
 }
 
 .footer-menu ul li {
@@ -300,25 +305,96 @@ img {
   font-weight: 500;
 }
 .section__welcome .button-index__explore {
-  text-align: center;
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
+  display: block;
+  font-family: "Roboto", sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  margin: auto;
+  color: #fff;
+  height: 13.3333333333vw;
+  max-height: 69%;
+}
+.section__welcome .button-index__explore:hover {
+  cursor: url("icn-bck.png"), pointer;
+  background-color: #FF79DA;
 }
 .section__howto {
+  margin: 0 5.3333333333vw;
   display: block;
   width: 100%;
+  max-width: 89.3333333333vw;
 }
 .section__howto__title {
   padding-bottom: 9.0666666667vw;
 }
 .section__howto__level {
-  /*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
+  display: block;
+  width: 89.3333333333vw;
+  max-width: 100%;
+  padding: 6.6666666667vw 0 6.6666666667vw 0vw;
 }
-.section__howto__level__button__content {
+.section__howto__level__button {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-}
-.section__howto__level__button__content__text {
+  height: 100%;
+  width: 100%;
+  height: 19.2vw;
+  width: 86.1333333333vw;
+  padding: 0px;
   margin: auto;
+  background-color: whitesmoke;
+  box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
+  border-radius: 20px;
+  border-radius: 3.2vw;
+  align-items: center;
+  background: #ebebeb;
+  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  box-shadow: 3px 3px 10px 5px #e6e6e6;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 700;
+  max-width: 86.1333333333vw;
+}
+.section__howto__level__button:hover {
+  cursor: url("icn-bck.png"), pointer;
+  background-color: #FF79DA;
+}
+.section__howto__level__button__number {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2.1333333333vw 2.6666666667vw 1.6vw 2.6666666667vw;
+  margin: 0 -3.2vw;
+  background-color: #9356dc;
+  color: #FFFFFF;
+}
+.section__howto__level__button__icone {
+  margin: 0 5.3333333333vw;
+}
+.section__howto__level__button__icone #choose {
+  width: 3.7333333333vw;
+  height: 5.3333333333vw;
+  padding: 0 1.6vw;
+}
+.section__howto__level__button__icone #compose {
+  width: 5.0666666667vw;
+  height: 5.3333333333vw;
+  padding: 0 0.2666666667vw;
+}
+.section__howto__level__button__icone #eat-in {
+  width: 5.0666666667vw;
+  height: 5.3333333333vw;
+  padding: 0 0.2666666667vw;
+}
+.section__howto__level__button__txt {
+  text-align: center;
 }
 .section__list {
   max-width: 100%;
