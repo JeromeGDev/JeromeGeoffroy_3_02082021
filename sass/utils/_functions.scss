@@ -8,15 +8,6 @@ pour faire le calcul de la conversions finale en divisant la valeur (sans unité
 de la taille de la police dans le "context" (donc, la valeur par défaut si rien est indiqué,
 soit la valeur précisée entre paranthèse.
 Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeur équivalente à 15pts en rem)*/
- @function rem($pixels, $context: $originfnt) {
-    @if (unitless($pixels)) {
-      $pixels: $pixels * 1px;
-    }
-    @if (unitless($context)) {
-      $context: $context * 1px;
-    }
-    @return math.div($pixels,$context) * 1rem;
-  }
 
   $vw-viewport: 375;
   @function get-vw($target){
@@ -24,3 +15,11 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
     @return math.div($target,$vw-context) * 1vw;
     @return $target;
   }
+ 
+  @function rem($pixel,$px-context:$originfnt){
+    @if (unitless($px-context)){
+    $px-context:($originfnt) * 1px;}
+    @if (unitless($pixel)){
+      $pixel:($pixel) * 1px;}
+    @return math.div($pixel,$px-context) * 1rem;
+    }

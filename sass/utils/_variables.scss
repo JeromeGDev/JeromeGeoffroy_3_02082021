@@ -1,10 +1,11 @@
 @use 'sass:math';
 /*Taille de la police de référence*/
-$originfnt: 16px;
+$originfnt: 16;
 /*Couleurs de la charte graphique*/
 $color-primary: #FF79DA;
 $color-secondary: #9356dc;
 $color-third: #99E2D0;
+$color-thirdtxt: darken($color-third,40);/*originel : #d1d1d1*/
 /*Couleurs supplémentaires*/
 $color-new:darken($color-third,35);
 $color-fnt: #000;
@@ -22,8 +23,10 @@ $color-inactive:#BFBFBF;
 /*shadow*/
 $heading-shadow-size: .55rem;
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
-$rdsbtnfidx:get-vw(40px);
+$rdsbtnfidx:20px;
 /*Arrondis des coins des images de la page d'accueil*/
-$radiusimgindex:get-vw(30px);
+$radiusimgindex:13px 13px 0 0;
+/*arrondis des blocs de la liste des restaurant */
+$radiusblklist:13px;
 /*Valeur du device-width*/
 $width-ref:375px;

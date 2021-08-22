@@ -25,7 +25,6 @@
             text-align:center;
             width:100%;
             flex-wrap: nowrap;
-            width:100%;
                 &__txtcontent{
                     &__title{
                         text-align: center;
@@ -46,42 +45,85 @@
             display:block;
             width:100%;
             &__title{
-                }
+                padding-bottom:get-vw(34px);
+            }
             &__level{/*Second levele est le contenteur des trois boutons de la section Fonctionnement sur la page index*/
-                @include dajfcc;
-                @include button-fonctionnement;
-                flex-direction: column;
-                    &__number{
-                        }
+                
+
+                &__button{
+
+                    
                     &__content{
-                        display:inline-flex;
+                        display:flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
                         &__icone{
                         }
                         &__text{
+                            margin:auto;
+                        }
+                        &__number{
                         }
                     }
                 }
             }
+        }
         &__list{
-            margin:get-vw(20px);
+            max-width:100%;
+            margin:get-vw(23px) get-vw(20px);
+            padding:get-vw(9px) 0;
             &__title{
+                margin-bottom:get-vw(9px);
             }      
                 &__block{
                     background-color:$color-bckgr-light-light;
                     box-shadow: vw(5px) vw(5px) $color-shdw;
+                    height:get-vw(252px);
+                    margin:get-vw(18px) 0 0  0;
+                    @include boxshadow;
+                    border-radius:$radiusblklist;
+                    &:last-child{
+                        margin-bottom:get-vw(18px);
+                    }
                     &__img {
                         &__image{
                                @include imgindex;
+                               z-index:1;
+                               max-width:100%;
+                        }
+                        &__new{
+                            position: relative;
+                            bottom: get-vw(232px);
+                            left: get-vw(244px);
+                            z-index: 2;
+                            color:$color-third;
+                            padding: get-vw(9px) get-vw(13px);
+                            background:$color-thirdtxt;
+                            margin:get-vw(10px) get-vw(32px) get-vw(10px) get-vw(12px);
+                            max-width:get-vw(80px);
+                            font-size: rem(14);
+                        }
                     }
-                }
                     &__content{
+                        min-height: 31%;
+                        padding-left: get-vw(14px);
+                        display: grid;
+                        grid-template-columns: 9fr 1fr;
+                        align-items: center;
                         &__txt{
+                            text-decoration: none;
                             &__title{
-
+                                padding:0;margin:0;
                             }
                             &__description{
 
                             }
+                        }
+                        &__btnheart{
+                            width:get-vw(22px);
+                            height:get-vw(22px);
+                            right:22px;
+                            z-index: 3;
                         }
                     }
                 } 

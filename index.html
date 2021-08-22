@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
 	<head>
-		<meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" media="all" href="./public/css/style.css">
@@ -40,26 +40,33 @@
 							</div>
 						</div>
 					</section>
+
 					<section>
 						<div class="section__howto">
 							<div class="section__howto__title">
 								<h3>Fonctionnement</h3>
 							</div>
 							<div class="section__howto__level">
-								<div class="section__howto button-index" id="choose">
-									<div class="section__howto__level__number"><p class="circle-number">1</p>
-									</div>
-									<div class="section__howto__level__content">
-										<div class="section__howto__level__content__txt">
-											<div class="section__howto__level__content__icone">
-											<i class="fas fa-mobile-alt"></i>
+								<div class="section__howto__level__button">
+									<div class="section__howto__level__button button-index" id="choose">
+										<div class="section__howto__level__button__content">
+											<div class="section__howto__level__button__content__txt">
+												<div class="button-index-txt">
+													<p>Choisissez un restaurant</p>
+												</div>
+												<div class="section__howto__level__button__content__icone">
+													<i class="fas fa-mobile-alt"></i>
+												</div>
+												<div class="section__howto__level__button__number">
+													<p class="circle-number">1</p>
+												</div>
 											</div>
-											<p class="button-index-txt">Choisissez un restaurant</p>
 										</div>
 									</div>
 								</div>
-								<div class="section__howto button-index" id="compose">
-									<div class="section__howto__level__number"><p class="circle-number">2</p>
+								<div class="section__howto__level button-index" id="compose">
+									<div class="section__howto__level__number">
+										<p class="circle-number">2</p>
 									</div>
 									<div class="section__howto__level__content">
 										<div class="section__howto__level__content__txt">
@@ -70,8 +77,9 @@
 										</div>
 									</div>
 								</div>
-								<div class="section__howto button-index" id="eat-in">
-									<div class="section__howto__level__number"><p class="circle-number">3</p>
+								<div class="section__howto__level button-index" id="eat-in">
+									<div class="section__howto__level__number">
+										<p class="circle-number">3</p>
 									</div>
 									<div class="section__howto__level__content">
 										<div class="section__howto__level__content__txt">
@@ -85,23 +93,29 @@
 							</div>
 						</div>
 					</section>
+
 					<section>
 						<div class="section__list">
 							<div class="section__list__title">
-								<h2>Restaurants</h2>
+								<h3>Restaurants</h3>
 							</div>
+							
 							<div class="section__list__block" id="palette">
 								<div class="section__list__block__img">
-									<span class="section__list__block__img__new">Nouveau</span>
-									<img class="section__list__block__img__image" src="public/img/restaurants/la-palette-du-gout.jpg" alt="la palette du gout" />
+									<div class="section__list__block__img__image">
+										<img src="public/img/restaurants/la-palette-du-gout.jpg" alt="la palette du gout" />
+										<div class="section__list__block__img__new">
+											Nouveau
+										</div>
+									</div>
 								</div>
 								<div class="section__list__block__content">
 									<div class="section__list__lblock__content__txt">
 										<div class="section__list__block__content__txt__title">
-											<h3><a href="/carte_plats_cuisines_la_palette_du_gout.html">La palette du goût</a></h3>
+											<h5><a href="/carte_plats_cuisines_la_palette_du_gout.html">La palette du goût</a></h5>
 										</div>
 										<div class="section__list__block__content__txt__description">
-											<p class="section__list__block__content__txt__description__origin">Ménilmontant</p>
+											<h6 class="section__list__block__content__txt__description__origin">Ménilmontant</h6>
 										</div>
 									</div>
 									<div class="section__list__block__content__btnheart">
@@ -109,18 +123,23 @@
 									</div>
 								</div>
 							</div>
-							<div class="section__listl__block" id="note">
+							
+							<div class="section__list__block" id="note">
 								<div class="section__list__block__img">
-									<span class="section__list__block__img__new">Nouveau</span>
-									<img class="section__list__block__img__image" src="/img/restaurants/la-note-enchantee.jpg" alt="la note enchantee" />
+									<div class="section__list__block__img__image">
+										<img src="public/img/restaurants/la-note-enchantee.jpg" alt="la note enchantee" />
+										<div class="section__list__block__img__new">
+											Nouveau
+										</div>
+									</div>
 								</div>
 								<div class="section__list__block__content">
 									<div class="section__list__lblock__content__txt">
 										<div class="section__list__block__content__txt__title">
-											<h3><a href="/carte_plats_cuisines_la_note_enchantee.html">La note enchantée</a></h3>
+											<h5><a href="/carte_plats_cuisines_la_palette_du_gout.html">La note enchantée</a></h5>
 										</div>
 										<div class="section__list__block__content__txt__description">
-											<p class="section__list__block__content__txt__description__origin">Charonne</p>
+											<h6 class="section__list__block__content__txt__description__origin">Charonne</h6>
 										</div>
 									</div>
 									<div class="section__list__block__content__btnheart">
@@ -128,18 +147,20 @@
 									</div>
 								</div>
 							</div>
-							<div class="section__listl__block" id="francaise">
+							
+							<div class="section__list__block" id="francaise">
 								<div class="section__list__block__img">
-									<span class="section__list__block__img__new">Nouveau</span>
-									<img class="section__list__block__img__image" src="public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
+									<div class="section__list__block__img__image">
+										<img src="public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
+									</div>
 								</div>
 								<div class="section__list__block__content">
 									<div class="section__list__lblock__content__txt">
 										<div class="section__list__block__content__txt__title">
-											<h3><a href="/carte_plats_cuisines_a_la_francaise.html">A la française</a></h3>
+											<h5><a href="/carte_plats_cuisines_la_palette_du_gout.html">A la française</a></h5>
 										</div>
 										<div class="section__list__block__content__txt__description">
-											<p class="section__list__block__content__txt__description__origin">Cité rouge</p>
+											<h6 class="section__list__block__content__txt__description__origin">Cité rouge</h6>
 										</div>
 									</div>
 									<div class="section__list__block__content__btnheart">
@@ -147,18 +168,20 @@
 									</div>
 								</div>
 							</div>
-							<div class="section__listl__block" id="delice">
+
+							<div class="section__list__block" id="delice">
 								<div class="section__list__block__img">
-									<span class="section__list__block__img__new">Nouveau</span>
-									<img class="section__list__block__img__image" src="/public/img/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" />
+									<div class="section__list__block__img__image">
+										<img src="/public/img/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" />
+									</div>
 								</div>
 								<div class="section__list__block__content">
-									<div class="section__list__lblock__content__txt">
+									<div class="section__list__block__content__txt">
 										<div class="section__list__block__content__txt__title">
-											<h3><a href="/carte_plats_cusines_le_délice_des_sens.html">Le délice des sens</a></h3>
+											<h5><a href="/carte_plats_cuisines_la_palette_du_gout.html">Le délice des sens</a></h5>
 										</div>
 										<div class="section__list__block__content__txt__description">
-											<p class="section__list__block__content__txt__description__origin">Folie-Méricourt</p>
+											<h6 class="section__list__block__content__txt__description__origin">Folie-Méricourt</h6>
 										</div>
 									</div>
 									<div class="section__list__block__content__btnheart">
@@ -166,6 +189,7 @@
 									</div>
 								</div>
 							</div>
+							
 						</div>
 					</section>
 				</main>
