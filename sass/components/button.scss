@@ -1,31 +1,7 @@
-/*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
-/*.button-index{
-    @include button-fonctionnement;                   
-    @include boxshadow;
-    display:flex;
-    border-radius:get-vw(12px);
-    padding:0px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    max-height:get-vw(72px);
-    max-width:get-vw(323px);
-    &:hover{
-        cursor:$cursor;
-    }
-}
-
 .button-action{
-    @include button-action;
+    @include mix-button-action;
     @include actionbtndgrd;
-    display:flex;
-    border-radius:get-vw(50px);
-    padding:0px;
-    margin:auto;
-    &:hover{
-        cursor:$cursor;
-    }
-}*/
+}
 .btnheart{
     position:relative;
     width:get-vw(22px);
@@ -44,7 +20,7 @@
         position:absolute;
         top:0;
         left:0;
-        color:$color-secondary;
+        color:$color-primary;
         opacity:0;
   
     }

@@ -13,7 +13,6 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
   @function get-vw($target){
     $vw-context: $vw-viewport * 0.01 * 1px;
     @return math.div($target,$vw-context) * 1vw;
-    @return $target;
   }
  
   @function rem($pixel,$px-context:$originfnt){
@@ -22,4 +21,4 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
     @if (unitless($pixel)){
       $pixel:($pixel) * 1px;}
     @return math.div($pixel,$px-context) * 1rem;
-    }
+  }

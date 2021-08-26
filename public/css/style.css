@@ -183,34 +183,35 @@ img {
   margin: 0;
 }
 
-/*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
-/*.button-index{
-    @include button-fonctionnement;                   
-    @include boxshadow;
-    display:flex;
-    border-radius:get-vw(12px);
-    padding:0px;
-    margin:auto;
-    height:100%;
-    width:100%;
-    max-height:get-vw(72px);
-    max-width:get-vw(323px);
-    &:hover{
-        cursor:$cursor;
-    }
+.button-action {
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
+  -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
+  box-shadow: 3px 3px 10px 5px #e6e6e6;
+  height: 13.3333333333vw;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  width: 57.8666666667vw;
+  position: relative;
+  background: #9356dc;
+  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
+}
+.button-action__explore a {
+  display: block;
+  margin: auto;
+  color: #fff;
+  vertical-align: middle;
+  position: relative;
+}
+.button-action:hover {
+  cursor: pointer;
+  background-color: #FF79DA;
 }
 
-.button-action{
-    @include button-action;
-    @include actionbtndgrd;
-    display:flex;
-    border-radius:get-vw(50px);
-    padding:0px;
-    margin:auto;
-    &:hover{
-        cursor:$cursor;
-    }
-}*/
 .btnheart {
   position: relative;
   width: 5.8666666667vw;
@@ -344,22 +345,6 @@ img {
   font-size: 1.083125rem;
   font-weight: 500;
 }
-.section__welcome .button-index__explore {
-  background: #9356dc;
-  background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
-  display: block;
-  font-family: "Roboto", sans-serif;
-  font-size: 12pt;
-  font-weight: 700;
-  margin: auto;
-  color: #fff;
-  height: 13.3333333333vw;
-  max-height: 69%;
-}
-.section__welcome .button-index__explore:hover {
-  cursor: pointer;
-  background-color: #FF79DA;
-}
 .section__howto {
   margin: 0 5.3333333333vw;
   display: block;
@@ -379,16 +364,13 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 100%;
-  width: 100%;
   height: 19.2vw;
   width: 86.1333333333vw;
   padding: 0px;
   margin: auto;
   background-color: whitesmoke;
   box-shadow: 1.3333333333vw 1.3333333333vw #e6e6e6;
-  border-radius: 20px;
-  border-radius: 3.2vw;
+  border-radius: 12px;
   align-items: center;
   background: #ebebeb;
   -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
@@ -397,13 +379,12 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 1rem;
   font-weight: 700;
   max-width: 86.1333333333vw;
 }
 .section__howto__level__button:hover {
   cursor: pointer;
-  background-color: #FF79DA;
+  background-color: #F4EEFB;
 }
 .section__howto__level__button__number {
   font-family: "Roboto", sans-serif;
@@ -453,10 +434,13 @@ img {
   -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
   -moz-box-shadow: 3px 3px 10px 5px #e6e6e6;
   box-shadow: 3px 3px 10px 5px #e6e6e6;
-  border-radius: 13px;
+  border-radius: 12px;
 }
 .section__list__block:last-child {
   margin-bottom: 4.8vw;
+}
+.section__list__block__img {
+  position: relative;
 }
 .section__list__block__img__image {
   max-width: 89.333vw;
@@ -466,14 +450,16 @@ img {
   overflow: hidden;
   height: auto;
   margin: auto;
-  border-radius: 13px 13px 0 0;
+  border-radius: 12px 12px 0 0;
   z-index: 1;
   max-width: 100%;
 }
 .section__list__block__img__new {
-  position: relative;
-  bottom: 61.8666666667vw;
-  left: 65.0666666667vw;
+  position: absolute;
+  top: 7.428571%;
+  /* 13/175 */
+  right: 3.283582%;
+  /* 11/335 */
   z-index: 2;
   color: #99E2D0;
   padding: 2.4vw 3.4666666667vw;
@@ -481,6 +467,7 @@ img {
   margin: 2.6666666667vw 8.5333333333vw 2.6666666667vw 3.2vw;
   max-width: 21.3333333333vw;
   font-size: 0.875rem;
+  font-weight: 500;
 }
 .section__list__block__content {
   min-height: 31%;
