@@ -9,7 +9,7 @@ h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 	margin:auto;
 	&:link{}
 	&:visited{}
-	&:hover{}
+	&:hover{cursor:$cursor};
 	&:focus{}
 	&:active{}
 }

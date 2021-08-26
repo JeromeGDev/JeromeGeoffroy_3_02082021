@@ -28,6 +28,7 @@
     food:fas fa-utensils,
     hands:fas fa-hands-helping
 );*/
+/*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
 /* fonction rem pour calculer automatiquement les dimensions en rem tout en indiquant les valeurs mesurées en px sur la maquette*/
 /* La fonction appelée rem utilise la valeur indiquée entre les paranthèses
 dans les propriétés. Sans valeur, elle utilise la variable $originfnt
@@ -90,6 +91,9 @@ h1 {
   font-weight: 700;
   text-align: center;
   margin: auto;
+}
+h1:hover {
+  cursor: pointer;
 }
 h2 {
   font-size: 1.791875rem;
@@ -179,14 +183,6 @@ img {
   margin: 0;
 }
 
-.fas-after {
-  color: #f0f0f0;
-  border: solid 2px #0000;
-}
-.fas-after:hover {
-  color: #9356dc 0.15s ease-;
-}
-
 /*Bouton de navigation de la page d'accueil de la catégorie "Fonctionnement"*/
 /*.button-index{
     @include button-fonctionnement;                   
@@ -199,7 +195,9 @@ img {
     width:100%;
     max-height:get-vw(72px);
     max-width:get-vw(323px);
-
+    &:hover{
+        cursor:$cursor;
+    }
 }
 
 .button-action{
@@ -209,7 +207,40 @@ img {
     border-radius:get-vw(50px);
     padding:0px;
     margin:auto;
+    &:hover{
+        cursor:$cursor;
+    }
 }*/
+.btnheart {
+  position: relative;
+  width: 5.8666666667vw;
+  height: 5.8666666667vw;
+  right: 22px;
+  z-index: 3;
+}
+.btnheart .far {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  opacity: 1;
+}
+.btnheart .fas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #9356dc;
+  opacity: 0;
+}
+.btnheart:hover .fas {
+  opacity: 1;
+  transition: opacity 1500ms ease-in;
+}
+.btnheart:hover .far {
+  opacity: 0;
+  transition: opacity 1500ms ease-in;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -275,13 +306,22 @@ img {
   color: whitesmoke;
   margin-bottom: 3.2vw;
 }
+.footer-menu__link-block:hover {
+  cursor: pointer;
+}
 .footer-menu__link-block i {
   padding-right: 2.6666666667vw;
   width: get-wv(14px);
   height: get-wv(14px);
 }
+.footer-menu__link-block i:hover {
+  cursor: pointer;
+}
 .footer-menu__link-block i, .footer-menu__link-block span {
   font-size: 1.041875rem;
+}
+.footer-menu__link-block i:hover, .footer-menu__link-block span:hover {
+  cursor: pointer;
 }
 
 /*@import "./pages/work";*/
@@ -317,7 +357,7 @@ img {
   max-height: 69%;
 }
 .section__welcome .button-index__explore:hover {
-  cursor: url("icn-bck.png"), pointer;
+  cursor: pointer;
   background-color: #FF79DA;
 }
 .section__howto {
@@ -362,7 +402,7 @@ img {
   max-width: 86.1333333333vw;
 }
 .section__howto__level__button:hover {
-  cursor: url("icn-bck.png"), pointer;
+  cursor: pointer;
   background-color: #FF79DA;
 }
 .section__howto__level__button__number {
@@ -370,12 +410,13 @@ img {
   font-size: 0.9375rem;
   font-weight: 500;
   border-radius: 50%;
+  transform: translate(-50%, 0);
   padding: 2.1333333333vw 2.6666666667vw 1.6vw 2.6666666667vw;
-  margin: 0 -3.2vw;
   background-color: #9356dc;
   color: #FFFFFF;
 }
 .section__howto__level__button__icone {
+  transform: scale(1.5);
   margin: 0 5.3333333333vw;
 }
 .section__howto__level__button__icone #choose {
@@ -460,6 +501,10 @@ img {
   height: 5.8666666667vw;
   right: 22px;
   z-index: 3;
+}
+.section__list__block__content__btnheart:hover {
+  background-color: #9356dc;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

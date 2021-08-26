@@ -10,7 +10,9 @@
     width:100%;
     max-height:get-vw(72px);
     max-width:get-vw(323px);
-
+    &:hover{
+        cursor:$cursor;
+    }
 }
 
 .button-action{
@@ -20,4 +22,38 @@
     border-radius:get-vw(50px);
     padding:0px;
     margin:auto;
+    &:hover{
+        cursor:$cursor;
+    }
 }*/
+.btnheart{
+    position:relative;
+    width:get-vw(22px);
+    height:get-vw(22px);
+    right:22px;
+    z-index: 3;
+    .far{
+        position:absolute;
+        top:0;
+        left:0;
+        color:$color-fnt;
+        opacity: 1;
+       
+    }
+    .fas{
+        position:absolute;
+        top:0;
+        left:0;
+        color:$color-secondary;
+        opacity:0;
+  
+    }
+    &:hover .fas{
+            opacity:1;
+            transition:opacity 1500ms ease-in;
+    }
+    &:hover .far{
+            opacity:0;
+            transition:opacity 1500ms ease-in;
+    }
+}

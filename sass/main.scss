@@ -69,17 +69,19 @@
                         font-size: rem(15);
                         font-weight:500;
                         border-radius:50%;
+                        transform: translate(-50%,0);
                         padding: get-vw(8px) get-vw(10px) get-vw(6px) get-vw(10px);
-                        margin:0 get-vw(-12px);
                         background-color:$color-secondary;
                         color:$color-bckgr-light-light;
                     }
                     &__icone{
+                        transform: scale(1.5);
                         margin: 0 get-vw(20px);
                         & #choose{
                             width:get-vw(14px);
                             height:get-vw(20px);
                             padding: 0 get-vw(6px);
+                            
                         }
                         & #compose{
                             width:get-vw(19px);
@@ -154,6 +156,10 @@
                             height:get-vw(22px);
                             right:22px;
                             z-index: 3;
+                            &:hover{
+                                background-color: $color-secondary;
+                                cursor:$cursor;
+                            }
                         }
                     }
                 } 
