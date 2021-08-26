@@ -1,4 +1,4 @@
-.header{
+.header-index{
     display:flex;
     flex-direction:column;
     width:100%;
@@ -29,5 +29,18 @@
             padding:0 get-vw(8px) 0 0;
         }
         
+    }
+}
+
+.header-restaurant{
+    &__site-title{
+    }
+    &__resto-image{
+    }
+    &__bottom{
+        &__resto-name{
+        }
+        &__resto-clic{
+        }
     }
 }
