@@ -51,7 +51,7 @@
     align-items:center;
     background:$color-lgray;
     &:hover{
-        cursor:pointer;
+        cursor:$cursor;
         background-color:$ccolor-btn-index-hover;
     }
 }
@@ -79,7 +79,7 @@
         position: relative;
     }
     &:hover{
-        cursor: $cursor;
+        cursor:$cursor;
         background-color:$color-secondary;
     }
 }

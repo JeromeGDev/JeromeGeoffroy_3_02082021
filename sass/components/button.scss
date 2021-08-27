@@ -27,9 +27,16 @@
     &:hover .fas{
             opacity:1;
             transition:opacity 1500ms ease-in;
+            cursor:$cursor
     }
     &:hover .far{
             opacity:0;
             transition:opacity 1500ms ease-in;
+            cursor:$cursor;
+    }
+}
+.link{
+    &:hover{
+        cursor:$cursor;
     }
 }
