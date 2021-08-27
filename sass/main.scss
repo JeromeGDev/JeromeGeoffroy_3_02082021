@@ -15,9 +15,42 @@
 @import "./layout/container";
 /*@import "./layout/form";*/
 @import "./layout/footer";
-/*@import "./pages/work";*/
+@import "./pages/restos";
 /*@import "./pages/about";*/
 /*@import "./pages/project";*/
+.top-index{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    &__site-title{
+        padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
+    }
+    &__location{
+        @include dajfcc;
+        @include locationdgrd;
+        flex-direction:row;
+        width:100%;
+        margin:auto;
+        padding:get-vw(16px) 0;
+        height:get-vw(50px);
+        &__city{
+            display: inline-flex;
+            flex-direction: row-reverse;
+            font-family:'Roboto',sans-serif;
+            font-size: rem(16);
+            font-weight:700;
+            text-align:center;
+            margin:auto;
+        }
+        &__icone{
+            display:inline-flex;
+            height:get-vw(17px);
+            width:get-vw(12px);
+            padding:0 get-vw(8px) 0 0;
+        }
+        
+    }
+}
 .section{
         &__welcome{
             @include dajfcc;
@@ -42,7 +75,7 @@
             width:100%;
             max-width:get-vw(335px);
             &__title{
-                padding-bottom:get-vw(34px);
+                padding:0 get-vw(35px);
             }
             &__level{
                 display:block;

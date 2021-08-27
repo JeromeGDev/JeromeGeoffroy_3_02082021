@@ -28,6 +28,8 @@ $rdsbtnfidx:12px;
 $radiusimgindex:12px 12px 0 0;
 /*arrondis des blocs de la liste des restaurant */
 $radiusblklist:12px;
+/*Arrondi fond page restaurant (sous image entete)*/
+$radiusresto:40px;
 /*Valeur du device-width*/
 $width-ref:375px;
 /* map di'cones font-awesome)*/
@@ -50,4 +52,4 @@ $mapfaicones:(
     (hands:"public\img\visu\hands-helping-solid.svg")
 );
 /*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
-$cursor: pointer/*,help,grab,crosshair,not-allowed,zoom-in,grab*/
+$cursor: pointer/*,help,grab,crosshair,not-allowed,zoom-in,grab*/;

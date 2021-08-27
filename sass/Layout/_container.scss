@@ -3,7 +3,12 @@
     height:100%;
     margin:auto;
     padding:0;
+    background-color: $color-bckgr-light-dark;   
 }
 .page{
     width:100vw;
+    & #page-restaurant{
+        display: flex;
+        flex-direction: column;
+    }
 }

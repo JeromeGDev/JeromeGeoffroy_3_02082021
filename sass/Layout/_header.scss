@@ -1,46 +1,25 @@
-.header-index{
+.header-site{
     display:flex;
     flex-direction:column;
     width:100%;
     &__site-title{
         padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
     }
-    &__location{
-        @include dajfcc;
-        @include locationdgrd;
-        flex-direction:row;
-        width:100%;
-        margin:auto;
-        padding:get-vw(16px) 0;
-        height:get-vw(50px);
-        &__city{
-            display: inline-flex;
-            flex-direction: row-reverse;
-            font-family:'Roboto',sans-serif;
-            font-size: rem(16);
-            font-weight:700;
-            text-align:center;
-            margin:auto;
-        }
-        &__icone{
-            display:inline-flex;
-            height:get-vw(17px);
-            width:get-vw(12px);
-            padding:0 get-vw(8px) 0 0;
-        }
-        
-    }
-}
 
 .header-restaurant{
+    display:flex;
+    flex-wrap: nowrap;
+    padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
+    align-items: center; 
     &__site-title{
-    }
-    &__resto-image{
-    }
-    &__bottom{
-        &__resto-name{
+        & i{
+            color:black;
+            opacity:1;
         }
-        &__resto-clic{
-        }
-    }
+        & .fas .fa-arrow-left{
+            opacity:1;
+            color:black;
+        }  
+    }        
+    
 }

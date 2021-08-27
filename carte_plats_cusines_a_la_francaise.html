@@ -12,45 +12,53 @@
     <title>Restaurant en ligne : a la française</title>
 	</head>
     <body>
-		<div class="container-fluid">
-			<div class="page">
+		<div class="container-fluid" >
+			<div class="page" id="page-restaurant">
 				<header>
-					<div class="header-restaurant">
-						<h1 class="header-restaurant__site-title">ohmyfood</h1>
-						<img class="header-restaurant__resto-image" src="./public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
-						<div class="header-restaurant__bottom">
-							<div class="header-restaurant__bottom__resto-name">
-								<h2>A la Française</h2>
-							</div>
-							<div class="header-restaurant__bottom__resto-clic btnheart">
-								<i class="far fa-heart"></i><i class="fas-after fas fa-heart"></i>
-							</div>
+					<div class="header-restaurant">	
+						<div class="header-restaurant__site-title">
+							<i class="fas fa-arrow-left"></i>	
+							<h1 >ohmyfood</h1>
 						</div>
 					</div>
                 </header>
 				
 				<body>
 					<section>
-						<div class="Menus">
-
-							<div class="Menus__blocks" id="entrees">
-								<div class="Menus__blocks__content">
-									<div class="Menus__blocks__content_recipe" id="tartare">
-										<div class="Menus__blocks__content">
-											<h5>Tartare de poulpe acidulé</h5>
-										</div>
-										<div class="Menus__blocks__content">
-											<h6 class="Menus__blocks__content">Aux zests d'orange</h6>
-										</div>
-									</div>
-									<div class="Menus__blocks__content__price">
-										<span>25€</span>
-										<span class="Menus__blocks__content__validate">
-											<i class="fas fa-check"></i>
-										</span>
-									</div>
+						<div class="top-index">
+							<div class="top-index__resto-image">
+								<img  src="./public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
+							</div>
+							<div class="top-index__bottom">
+								<div class="top-index__bottom__resto-name">
+									<h2>A la Française</h2>
 								</div>
-							
+								<div class="top-index__bottom__resto-clic btnheart">
+									<i class="far fa-heart"></i><i class="fas-after fas fa-heart"></i>
+								</div>
+							</div>
+						</div>
+							<div class="menus">
+
+								<div class="menus__blocks" id="entrees">
+									<div class="menus__blocks__content" id="tartare">
+										<div class="menus__blocks__content__recipe">
+											<div class="menus__blocks__content_recipe__title">
+												<h5>Tartare de poulpe acidulé</h5>
+											</div>
+											<div class="menus__blocks__content_recipe__desc">
+												<h6>Aux zests d'orange</h6>
+											</div>
+										</div>
+										<div class="menus__blocks__content__price">
+											<span>25€</span>
+										</div>
+									</div>
+									<div class="menus__blocks__content__validate">
+										<i class="fas fa-check"></i>
+									</div>
+								
+								</div>
 							</div>
 
 					</section>
@@ -88,5 +96,6 @@
                 </body>
             </div>
         </div>
+		<script src="https://kit.fontawesome.com/fcbd6e51f1.js" crossorigin="anonymous"></script>
     </body>
 </html>
