@@ -63,6 +63,9 @@ a{
 		font-weight:700;
 	}	
 }
+li{
+	list-style: none;
+}
 .pricefont{
 	color:$color-fnt;
 	font-size: rem(14.67);

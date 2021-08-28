@@ -158,6 +158,10 @@ a {
   font-weight: 700;
 }
 
+li {
+  list-style: none;
+}
+
 .pricefont {
   color: #000;
   font-size: 0.916875rem;
@@ -304,7 +308,7 @@ img {
 }
 
 /*@import "./layout/form";*/
-.footer-logo p {
+.footer-logo a {
   /*logo ohmyfood dans le footer*/
   font-size: 1.125rem;
   font-family: "Shrikhand", cursive;
@@ -316,6 +320,7 @@ img {
   list-style: none;
 }
 .footer-menu__link-block {
+  list-style: none;
   display: flex;
   color: whitesmoke;
   margin-bottom: 3.2vw;
