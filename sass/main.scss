@@ -175,9 +175,13 @@
                             text-decoration: none;
                             &__title{
                                 padding:0;margin:0;
+                                 & a{
+                                color:$color-fnt;
+                            }
                             }
                             &__description{
-
+                                margin:0;
+                                padding:0;
                             }
                         }
                         &__btnheart{

@@ -9,12 +9,12 @@ de la taille de la police dans le "context" (donc, la valeur par défaut si rien
 soit la valeur précisée entre paranthèse.
 Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeur équivalente à 15pts en rem)*/
 
-  $vw-viewport: 375;
-  @function get-vw($target){
-    $vw-context: $vw-viewport * 0.01 * 1px;
-    @return math.div($target,$vw-context) * 1vw;
-  }
- 
+$vp:375px;
+@function get-vw($pixel,$px-context:$vp){
+  $px-context:($vp) * 0.01;
+@return math.div($pixel,$px-context) * 1vw;
+}
+
   @function rem($pixel,$px-context:$originfnt){
     @if (unitless($px-context)){
     $px-context:($originfnt) * 1px;}
@@ -22,3 +22,9 @@ Pour l'utiliser, ecrire par exemple : font-size: rem(15) ce qui fournir la valeu
       $pixel:($pixel) * 1px;}
     @return math.div($pixel,$px-context) * 1rem;
   }
+
+$animations:(
+  animation1:scale,
+  animation2:rotate
+);
+

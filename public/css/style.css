@@ -201,6 +201,10 @@ img {
   margin: 0;
 }
 
+.ficone {
+  margin-left: 0;
+}
+
 .button-action {
   background: #9356dc;
   background: linear-gradient(350deg, #9356dc 0%, #9356dc 35%, #FF79DA 100%);
@@ -308,29 +312,43 @@ img {
 }
 
 /*@import "./layout/form";*/
+.footer-logo {
+  margin-bottom: 6.4vw;
+}
 .footer-logo a {
   /*logo ohmyfood dans le footer*/
   font-size: 1.125rem;
   font-family: "Shrikhand", cursive;
   color: whitesmoke;
-  margin-bottom: 6.4vw;
 }
 
+.footer-menu {
+  margin: 0;
+  padding: 0;
+}
+.footer-menu ul {
+  margin: 0;
+  padding: 0;
+}
 .footer-menu ul li {
-  list-style: none;
+  margin-bottom: 0.75rem;
 }
 .footer-menu__link-block {
   list-style: none;
   display: flex;
   color: whitesmoke;
-  margin-bottom: 3.2vw;
+  margin-left: 0;
+  padding-left: 0;
 }
-.footer-menu i {
-  padding-right: 2.6666666667vw;
+.footer-menu__link-block__icone i {
+  margin: 0 get-wv(10px) 0 0 0;
   width: get-wv(14px);
   height: get-wv(14px);
+  font-size: 1.041875rem;
+  color: #FFFFFF;
+  padding-left: 0;
 }
-.footer-menu i, .footer-menu span {
+.footer-menu__link-block__icone a {
   font-size: 1.041875rem;
 }
 
@@ -632,6 +650,13 @@ img {
 .section__list__block__content__txt__title {
   padding: 0;
   margin: 0;
+}
+.section__list__block__content__txt__title a {
+  color: #000;
+}
+.section__list__block__content__txt__description {
+  margin: 0;
+  padding: 0;
 }
 .section__list__block__content__btnheart {
   width: 5.8666666667vw;
