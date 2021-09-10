@@ -1,16 +1,15 @@
 .header-site{
     display:flex;
-    flex-direction:column;
     width:100%;
     &__site-title{
-        padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
+        padding:20px 20px 0 20px;
     }
 }
 
 .header-restaurant{
     display:flex;
     flex-wrap: nowrap;
-    padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
+    padding:20px 20px 0 20px;
     align-items: center; 
     &__site-title{
         & i{

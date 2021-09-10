@@ -22,6 +22,7 @@ header{
 }
 section{
      margin:auto;
+     padding:43px 0 57px 0;
 }
 main{
     margin:0;
@@ -29,6 +30,5 @@ main{
 }
 footer{
     background:#535353;
-    padding:get-vw(22px) get-vw(25px) get-vw(32px) get-vw(25px);
-    margin-top:get-vw(35px);
+    padding:22px 25px 32px 25px;
 }

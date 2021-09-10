@@ -1,9 +1,12 @@
 @use 'sass:math';
+
 /*Taille de la police de référence*/
 $originfnt: 16;
 /*Couleurs de la charte graphique*/
 $color-primary: #9356dc;
-$color-secondary: #FF79DA;
+$color-secondary: #ff79da;
+$rgba-0-50-color-primary: rgba(147, 86, 220,1);
+$rgba-50-0-color-secondary: rgba(255, 121, 218,1);
 $color-third: #99E2D0;
 $color-thirdtxt: darken($color-third,40);/*originel : #d1d1d1*/
 /*Couleurs supplémentaires*/
@@ -14,6 +17,7 @@ $color-fnt-ttl: #353535;
 $color-fgray: lighten($color-fnt,82);/*originel : #d1d1d1*/
 $color-lgray: lighten($color-fnt,92);/*originel : #eaeaea*/
 $color-shdw:lighten($color-fnt,90);/*originel : #e5e5e5*/
+$color-shdwhvr:darken($color-shdw,10);/*originel : #e5e5e5*/
 $color-bckgr-light-dark:lighten($color-fnt,96);/*originel : ##f6f6f6*/
 $color-bckgr-light-light: #FFFFFF;
 $bckgrd-btn-cat-hover: lighten($color-secondary,90);/*originel : #e5e5e5*/
@@ -53,3 +57,20 @@ $mapfaicones:(
 );
 /*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
 $cursor: pointer/*,help,grab,crosshair,not-allowed,zoom-in,grab*/;
+
+//Variables d'animation
+//Animation bouton "fonctionnement
+$duration:1800ms;
+$ecart-a:250ms;
+$ecart-t:$ecart-a * 3;
+
+$delay-a-0:0ms;
+$delay-a-1:$delay-a-0+$ecart-t;
+$delay-a-2:$delay-a-1+$ecart-t;
+
+$delay-t-0:$delay-a-0+$ecart-a;
+$delay-t-1:$delay-a-1+$ecart-a;
+$delay-t-2:$delay-a-2+$ecart-a;
+
+
+$colour: linear-gradient(175deg,  #ff79da 1%,#9356dc 61%);    

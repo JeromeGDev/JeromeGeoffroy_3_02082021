@@ -1,5 +1,5 @@
 .footer-logo{
-    margin-bottom:get-vw(24px);
+    margin-bottom:24px;
 	& a{/*logo ohmyfood dans le footer*/
 		font-size: rem(18);
 		font-family: 'Shrikhand', cursive;
@@ -25,9 +25,9 @@
         padding-left:0;
         &__icone{
             & i{
-            margin:0 get-wv(10px) 0 0 0;
-            width:get-wv(14px);
-            height:get-wv(14px);
+            margin:0 10px 0 0 0;
+            width:14px;
+            height:14px;
             font-size: rem(16.67);
             color:$color-bckgr-light-light;
             padding-left:0;

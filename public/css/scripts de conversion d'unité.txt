@@ -1,0 +1,48 @@
+Fonctions SASS de conversion :
+$originfnt:16px;
+
+PX TO REM :
+********************************************************
+@function rem($pixels, $context: $originfnt) {
+    @if (unitless($pixels)) {
+      $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+      $context: $context * 1px;
+    }
+    @return math.div($pixels,$context) * 1rem;
+  }
+ ******************************************************** 
+PX TO REM :
+
+$html-font-size: 16px;@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+********************************************************
+@mixin width($value) {
+    width: ($value / $originfnt) + rem;
+
+}
+
+********************************************************
+@function rem($pixel,$px-context:$originfnt){
+  @if (unitless($px-context)){
+  $px-context:($originfnt) * 1px;}
+  @if (unitless($pixel)){
+    $pixel:($pixel) * 1px;}
+  @return math.div($pixel,$px-context) * 1rem;
+  }
+********************************************************
+@function rem($pixel) {
+    $rempixel: @return math.div($pixel,$px-context) * 1rem; 
+    @return $rempixel;
+}
+********************************************************
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+********************************************************

@@ -1,7 +1,7 @@
 /*mixin de la couleur du bouton action*/
 @mixin actionbtndgrd{
-    background: $color-primary;
-    background: linear-gradient(350deg, $color-primary 0%, $color-primary 35%, $color-secondary 100%); 
+    background: #ff79da;
+    background: linear-gradient(175deg,  #ff79da 1%,#9356dc 61%);    
 }
 
 /*Mixin ombre*/
@@ -37,49 +37,55 @@
 }
 
 /*Mixin création bouton fonctionnement index.tml*/
-@mixin button-fonctionnement{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height:get-vw(72px);
-    width:get-vw(323px);
-    padding:0px;
-    margin:auto;
-    background-color:$color-bckgr-light-dark;
-    box-shadow:get-vw(5px) get-vw(5px) $color-shdw;
-    border-radius:$rdsbtnfidx;
-    align-items:center;
-    background:$color-lgray;
-    &:hover{
-        cursor:$cursor;
-        background-color:$ccolor-btn-index-hover;
-    }
-}
-
-/*Mixin création bouton fonctionnement index.tml*/
 @mixin mix-button-action{
     @include actionbtndgrd;
     @include boxshadow;
-
-    height:get-vw(50px);
+    display:block;
+    position: relative;
+    width:64.776119%; /* 217/335 */
+    height:50px;
     margin:auto;
-
-    font-family : 'Roboto',sans-serif;
-    font-size: rem(16);
-    font-weight:700;
-
     border-radius:50px;
-    width:get-vw(217px);
     position:relative;
+    flex-wrap: nowrap;
     &__explore a{
-        display: block;
+        display:inline-block;
+        font-family : 'Roboto',sans-serif;
+        font-weight:500;
         margin:auto;
         color:#fff;
-        vertical-align: middle;
-        position: relative;
+        font-size: rem(16);
+        line-height:50px;
+        text-align: center;
     }
     &:hover{
         cursor:$cursor;
         background-color:$color-secondary;
+        transition: all 1000ms ease-in;
+    }
+}
+
+/*Mixin création bouton fonctionnement index.tml*/
+@mixin button-fonctionnement{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height:72px;
+    width:323px;
+    padding:0px;
+    margin:auto;
+    background-color:$color-bckgr-light-dark;
+    box-shadow:5px 5px 5px $color-shdw;
+    border-radius:$rdsbtnfidx;
+    align-items:center;
+    background:$color-lgray;
+    opacity: 1;
+    font-weight:700;
+    max-width:323px;
+    &:hover{
+        cursor:$cursor;
+        background-color:$ccolor-btn-index-hover;
+        transition: all 400ms ease-in;
+        box-shadow:5px 5px 25px $color-shdwhvr;
     }
 }

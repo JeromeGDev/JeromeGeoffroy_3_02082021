@@ -5,120 +5,135 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-/*@import "./utils/extensions";*/
+@import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
 @import "./components/visuels";
 @import "./components/button";
 @import "./layout/header";
-/*@import "./layout/nav";*/
+@import "./layout/nav";
 @import "./layout/container";
-/*@import "./layout/form";*/
+@import "./layout/form";
 @import "./layout/footer";
 @import "./pages/restos";
-/*@import "./pages/about";*/
-/*@import "./pages/project";*/
+
 .top-index{
     display:flex;
     flex-direction:column;
     width:100%;
-    &__site-title{
-        padding:get-vw(20px) get-vw(20px) 0 get-vw(20px);
-    }
     &__location{
-        @include dajfcc;
         @include locationdgrd;
-        flex-direction:row;
+        display:blcok;
         width:100%;
-        margin:auto;
-        padding:get-vw(16px) 0;
-        height:get-vw(50px);
+        height:50px;
+        position: relative;
+        line-height:50px;
+        text-align: center;
         &__city{
-            display: inline-flex;
-            flex-direction: row-reverse;
+            display:inline-block;
             font-family:'Roboto',sans-serif;
             font-size: rem(16);
             font-weight:700;
-            text-align:center;
-            margin:auto;
-        }
-        &__icone{
-            display:inline-flex;
-            height:get-vw(17px);
-            width:get-vw(12px);
-            padding:0 get-vw(8px) 0 0;
+            line-height:50px;
+            transform:translate(-20px);
+            &__icone{
+                display:inline-block;
+                line-height:50px;
+                font-size: rem(17);
+                transform:translate(2px);
+            }
         }
         
     }
 }
 .section{
         &__welcome{
+            background-color: $color-bckgr-light-dark;
             @include dajfcc;
             flex-direction: column;
             text-align:center;
             width:100%;
             flex-wrap: nowrap;
                 &__txtcontent{
+                    margin:auto;
+                    margin-bottom:30px;
+                    
                     &__title{
                         text-align: center;
+                        padding-bottom:20px;
                     }
                     &__slug{
                         font-family: 'Roboto',sans-serif;
-                        font-size: rem(17.33);
-                        font-weight:500;
+                        font-size: rem(17);
+                        font-weight:400;
+                        
                     }
                 }
         }
         &__howto{
-            margin:0 get-vw(20px);
+            background-color: $color-bckgr-light-light;
+            padding:8px 20px 0 20px;
             display:block;
             width:100%;
-            max-width:get-vw(335px);
+            width:335px;
             &__title{
-                padding:0 get-vw(35px);
+                padding:0 20px 57px 20px;
             }
             &__level{
                 display:block;
-                width:get-vw(335px);
+                width:335px;
                 max-width:100%;
-                padding:get-vw(25px) 0 get-vw(25px) get-vw(0px);
-                
+                padding:25px 0 25px 0;
+                position:relative;
+                #choose{
+                    opacity: 0;
+                    top:100px;
+                    transition:transform $duration $delay-t-0;
+                    animation: howtoshow $duration ease-in forwards $delay-a-0;
+                }
+                #compose{
+                    top:100px;
+                    opacity: 0;
+                    transition:transform $duration $delay-t-1;
+                    animation: howtoshow $duration ease-in forwards $delay-a-1;
+                }
+                #eat-in{
+                    top:100px;
+                    opacity: 0;
+                    transition:translate $duration $delay-t-2;
+                    animation: howtoshow $duration ease-in forwards $delay-a-2;
+                }
                 &__button{
                     @include button-fonctionnement;
                     @include boxshadow;
-                    display:flex;
-                    flex-direction:row;
-                    align-items:center;
-                    font-weight:700;
-                    max-width:get-vw(323px);
+                    
                     &__number{
                         font-family:'Roboto',sans-serif;
                         font-size: rem(15);
                         font-weight:500;
                         border-radius:50%;
                         transform: translate(-50%,0);
-                        padding: get-vw(8px) get-vw(10px) get-vw(6px) get-vw(10px);
+                        padding: 8px 10px 6px 10px;
                         background-color:$color-primary;
                         color:$color-bckgr-light-light;
                     }
                     &__icone{
                         transform: scale(1.5);
-                        margin: 0 get-vw(20px);
+                        margin: 0 20px;
                         & #choose{
-                            width:get-vw(14px);
-                            height:get-vw(20px);
-                            padding: 0 get-vw(6px);
-                            
+                            width:14px;
+                            height:20px;
+                            padding: 0 6px;
                         }
                         & #compose{
-                            width:get-vw(19px);
-                            height:get-vw(20px);
-                            padding: 0 get-vw(1px);
+                            width:19px;
+                            height:20px;
+                            padding: 0 1px;
                         }
                         & #eat-in{
-                            width:get-vw(19px);
-                            height:get-vw(20px);
-                            padding: 0 get-vw(1px);
+                            width:19px;
+                            height:20px;
+                            padding: 0 1px;
                         }
                     }
                     &__txt{
@@ -128,73 +143,90 @@
             }
         }
         &__list{
+            margin:18px 20px 0 20px;
+            background-color: $color-bckgr-light-dark;
             max-width:100%;
-            margin:get-vw(23px) get-vw(20px);
-            padding:get-vw(9px) 0;
+            padding:9px 0;
             &__title{
-                margin-bottom:get-vw(9px);
+                margin-bottom:27px;
             }      
-                &__block{
-                    background-color:$color-bckgr-light-light;
-                    box-shadow: vw(5px) vw(5px) $color-shdw;
-                    height:get-vw(252px);
-                    margin:get-vw(18px) 0 0  0;
-                    @include boxshadow;
-                    border-radius:$radiusblklist;
-                    &:last-child{
-                        margin-bottom:get-vw(18px);
+            &__block{
+                background-color:$color-bckgr-light-light;
+                box-shadow: 5px 5px $color-shdw;
+                height:252px;
+                margin:18px 0 0  0;
+                @include boxshadow;
+                border-radius:$radiusblklist;
+                &:last-child{
+                    margin-bottom:18px;
+                }
+                &__img {
+                    position: relative;
+                    overflow:hidden;
+                    width: 335px;
+                    height: 174px ;
+                    border-radius:12px 12px 0 0;
+                    align-items: baseline;
+                    display: flex;
+                    &__image{
+                        position: absolute;
+                        right:0;
+                        bottom:0;
+                        @include imgindex;
+                        z-index:1;
+                        max-width:100%;
                     }
-                    &__img {
-                        position: relative;
-                        &__image{
-                               @include imgindex;
-                               z-index:1;
-                               max-width:100%;
+                    &__new{
+                        position: absolute;
+                        top: 7.4285%; /* 13/175 */
+                        right: 3.2835%; /* 11/335 */
+                        z-index: 2;
+                        color:$color-third;
+                        background:$color-thirdtxt;
+                        margin:10px 32px 10px 12px;
+                        font-size: rem(14);
+                        font-weight:500;
+                        line-height: 30px;
+                        text-align: center;
+                        vertical-align: middle;
+                        width:80px;
+                        height:30px;
+                    }
+                }
+                &__content{
+                    min-height: 31%;
+                    padding-left: 14px;
+                    display: grid;
+                    grid-template-columns: 9fr 1fr;
+                    align-items: center;
+                    &__txt{
+                        text-decoration: none;
+                        &__title{
+                            padding:0;margin:0;
+                                & a{
+                            color:$color-fnt;
                         }
-                        &__new{
-                            position: absolute;
-                            top: 7.428571%; /* 13/175 */
-                            right: 3.283582%; /* 11/335 */
-                            z-index: 2;
-                            color:$color-third;
-                            padding: get-vw(9px) get-vw(13px);
-                            background:$color-thirdtxt;
-                            margin:get-vw(10px) get-vw(32px) get-vw(10px) get-vw(12px);
-                            max-width:get-vw(80px);
-                            font-size: rem(14);
-                            font-weight:500;
+                        }
+                        &__description{
+                            margin:0;
+                            padding:0;
                         }
                     }
-                    &__content{
-                        min-height: 31%;
-                        padding-left: get-vw(14px);
-                        display: grid;
-                        grid-template-columns: 9fr 1fr;
-                        align-items: center;
-                        &__txt{
-                            text-decoration: none;
-                            &__title{
-                                padding:0;margin:0;
-                                 & a{
-                                color:$color-fnt;
-                            }
-                            }
-                            &__description{
-                                margin:0;
-                                padding:0;
-                            }
-                        }
-                        &__btnheart{
-                            width:get-vw(22px);
-                            height:get-vw(22px);
-                            right:22px;
-                            z-index: 3;
-                            &:hover{
-                                background-color: $color-secondary;
-                                cursor:$cursor;
-                            }
-                        }
+                    &__btnheart{
+                        z-index: 0;
+                        margin:0;
+                        position:relative;
+                        width:22px;
+                        height:22px;
+                        line-height: 22px;
+                        //overflow:hidden;
+                        background:linear-gradient($rgba-0-50-color-primary , $rgba-50-0-color-secondary);
                     }
-                } 
-        }
+                }
+    }
 }
+}
+
+        
+
+
