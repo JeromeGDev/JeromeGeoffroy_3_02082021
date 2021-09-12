@@ -49,7 +49,7 @@ h6{
 }
 
 a{
-	color:$color-bckgr-light-light;
+	color:$color-fnt;
 	text-decoration: none;
 }
 
@@ -61,6 +61,9 @@ a{
 		color:$color-fnt;
 		font-size: rem(17.33);
 		font-weight:700;
+	}
+	& a{
+		color:$color-fnt;
 	}	
 }
 li{
@@ -88,4 +91,13 @@ li{
 		font-size: rem(12);
 	}
 }
-
+footer{
+	& a{
+		color:$color-bckgr-light-dark;
+		&:hover{
+			cursor:$cursor;
+			//text-decoration: underline;
+			text-shadow: rem(3px) rem(3px) rem(3px) $ccolor-btn-index-hover;
+		}
+	}
+}

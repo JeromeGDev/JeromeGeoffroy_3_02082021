@@ -1,76 +1,17 @@
 .button-action{
     @include mix-button-action;
     @include actionbtndgrd;
-}
-/*.btnheart{
-    position:relative;
-    @include actionbtndgrd;
-    width: 15px;
-    height:15px;
-    display: grid;
-    grid-template-columns: 1fr;
-    g
-    .far{
-
-        width: 22px;
-    height:22px;
-        background-color: white;
-        &::after{
-        content:'';
-        position:absolute;
-        color:black;
-       &:hover{
-        width: 22px;
-        height:22px;
-           position:absolute;
-           background-color: transparent;
-           z-index: 5;
-           transition: all 300ms linear;
-       }
-      
-       }
+    &:hover{
+        @include boxshadowhover2;
     }
-}*/
+}
+
 .link{
     &:hover{
         cursor:$cursor;
     }
 }
 
-
-.first{
-    z-index: 1108;
-    //display: none;
-    position:absolute;
-    opacity: 1;
-    margin:0;
-    padding:0;
-    font-size: 20px;
-    top:0px;
-    right:0;
-    bottom:0;
-    left:0;
-    color:#fff;
-    background-color:#fff;
-    &:hover + .second{
-        transform: translate(0,-50px);
-        cursor:pointer;
-        transition:all 500ms ease-in;
-        opacity: 0;
+.btnheart{
+    @include btnheart;
 }
-
-.second{
-    z-index: 1107;
-    position:absolute;
-    margin:0;
-    padding:0;
-    font-size: 20px;
-    top:50px;
-    right:0;
-    bottom:0;
-    left:0;
-    color:#fff;
-    opacity : 0;
-    background:#fff;
-    transform: translate(0,-50px)
-}}
