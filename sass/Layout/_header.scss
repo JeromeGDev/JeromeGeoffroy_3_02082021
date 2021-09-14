@@ -1,25 +1,12 @@
-.header-site{
-    display:flex;
-    width:100%;
-    &__site-title{
-        padding:20px 20px 0 20px;
-    }
-}
-
-.header-restaurant{
-    display:flex;
-    flex-wrap: nowrap;
-    padding:20px 20px 0 20px;
-    align-items: center; 
-    &__site-title{
-        & i{
-            color:black;
-            opacity:1;
+header{
+    &.header-site{
+        &__site-title{
+            
         }
-        & .fas .fa-arrow-left{
-            opacity:1;
-            color:black;
-        }  
-    }        
-    
+        &__backicone{
+                position:absolute;
+                top: 25px;
+                left: 23px;;
+        }
+    }
 }

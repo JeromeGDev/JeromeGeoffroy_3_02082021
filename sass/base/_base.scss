@@ -1,4 +1,3 @@
-/*
 *,
 *::after,
 *::before {
@@ -6,23 +5,34 @@
     padding: 0;
     box-sizing: inherit;
 }
-*/
-html {
+html{
+    width: 100%;
+    height: 100%;
     font-size:16px;
+    margin:0;
+    padding:0;
+    overflow:auto;
 }
-body {
-    box-sizing: border-box;
+body{
     background: $color-bckgr-light-dark;
     width:100%;
     height:100%;
     margin:auto;
+    overflow:auto;
 }
 header{
+    width: 100vw;;
     margin:auto;
+    width:100%;
+    height: 40px;
+    padding:20px 20px 10px 20px;
 }
 section{
      margin:auto;
      padding:43px 0 57px 0;
+     &#top-resto{
+    padding:0;
+     }
 }
 main{
     margin:0;
@@ -31,4 +41,5 @@ main{
 footer{
     background:#535353;
     padding:22px 25px 32px 25px;
+    margin:0;
 }

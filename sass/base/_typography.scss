@@ -7,11 +7,7 @@ h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 	font-weight:700;
 	text-align: center;
 	margin:auto;
-	&:link{}
-	&:visited{}
 	&:hover{cursor:$cursor};
-	&:focus{}
-	&:active{}
 }
 
 h2{
@@ -97,7 +93,7 @@ footer{
 		&:hover{
 			cursor:$cursor;
 			//text-decoration: underline;
-			text-shadow: rem(3px) rem(3px) rem(3px) $ccolor-btn-index-hover;
+			text-shadow: rem(3) rem(3) rem(3) $ccolor-btn-index-hover;
 		}
 	}
 }

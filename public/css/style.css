@@ -54,45 +54,48 @@
     top: -22px;
   }
 }
-@keyframes desctruncate {
-  0% {
-    width: 283px;
-  }
-  100% {
-    width: 220px;
-  }
-}
 /*Mise en page automatique DAJFCC : Flex / centrage horizontal / centrage vertical */
 /*Mixin création bouton fonctionnement index.tml*/
 /* - */
-/*
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
-*/
+
 html {
+  width: 100%;
+  height: 100%;
   font-size: 16px;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
 }
 
 body {
-  box-sizing: border-box;
   background: whitesmoke;
   width: 100%;
   height: 100%;
   margin: auto;
+  overflow: auto;
 }
 
 header {
+  width: 100vw;
   margin: auto;
+  width: 100%;
+  height: 40px;
+  padding: 20px 20px 10px 20px;
 }
 
 section {
   margin: auto;
   padding: 43px 0 57px 0;
+}
+section#top-resto {
+  padding: 0;
 }
 
 main {
@@ -103,6 +106,7 @@ main {
 footer {
   background: #535353;
   padding: 22px 25px 32px 25px;
+  margin: 0;
 }
 
 * {
@@ -120,6 +124,7 @@ h1 {
 h1:hover {
   cursor: pointer;
 }
+
 h2 {
   font-size: 1.791875rem;
   color: #000;
@@ -219,11 +224,12 @@ footer a:hover {
 }
 
 img {
-  max-width: 100vw;
+  max-width: 100%;
 }
 
 .fas {
   margin: 0 20px;
+  display: inline-block;
 }
 
 .fa-heart {
@@ -281,18 +287,18 @@ img {
   transform: translateY(-22px);
   z-index: 5;
   position: absolute;
-  padding: 0;
   margin: 0;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   line-height: 22px;
   font-size: 22px;
   background: none;
   color: #000;
+  overflow: hidden;
 }
 .btnheart .kfar:hover {
   cursor: pointer;
@@ -303,6 +309,7 @@ img {
 }
 .btnheart .kfas {
   margin-top: 22px;
+  overflow: hidden;
   z-index: 3;
   position: absolute;
   padding: 0;
@@ -330,8 +337,8 @@ img {
   position: absolute;
   margin: -22px 0 0 0;
   top: 0;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   line-height: 22px;
   font-size: 22px;
   background-color: #fff;
@@ -340,53 +347,21 @@ img {
 
 .header-site {
   display: flex;
-  width: 100%;
-}
-.header-site__site-title {
-  padding: 20px 20px 0 20px;
-}
-
-.header-restaurant {
-  display: flex;
   flex-wrap: nowrap;
-  padding: 20px 20px 0 20px;
+  justify-content: space-between;
+  align-items: flex-start;
   align-items: center;
 }
-.header-restaurant__site-title i {
-  color: black;
-  opacity: 1;
+.header-site__site-title {
+  padding: 0 0 12px 0;
+  margin: auto;
 }
-.header-restaurant__site-title .fas .fa-arrow-left {
-  opacity: 1;
-  color: black;
+.header-site__site-title__backicone {
+  position: relative;
+  top: 25px;
+  left: 23px;
 }
 
-/*
-.nav {
-    padding-right: $layout-margin;
-    flex: 2 1 auto;
-    text-align: right;
-    &__link {
-        display: inline;
-        font-size: 3rem;
-        padding-left: 1.5rem;
-        & a{
-        text-decoration: none;
-        color: $color-accent;
-        }
-        &--active {
-            color: $color-secondary;
-            &:hover{
-                cursor:default;
-                color: $colou-secondary;
-            }
-        }
-        & a:hover{
-            color: $color-white;
-        }
-    }
-}
-*/
 .container-fluid {
   width: 100%;
   height: 100%;
@@ -398,9 +373,11 @@ img {
 .page {
   width: 100vw;
 }
-.page #page-restaurant {
+.page#page-restaurant {
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
 /*
@@ -489,11 +466,9 @@ img {
   font-size: 1.041875rem;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+.top-index {
+  overflow: hidden;
 }
-
 .top-index__resto-image img {
   max-width: 100vw;
 }
@@ -519,9 +494,12 @@ img {
   opacity: 1;
   position: relative;
   left: 95px;
+  padding: 3px;
+  margin: 3px;
 }
 .top-index__bottom__resto-clic i {
   font-size: 1.5625rem;
+  overflow: hidden;
 }
 
 .menus {
@@ -645,7 +623,7 @@ img {
 .top-index__location {
   background: #eaeaea;
   background: linear-gradient(0deg, #ebebeb 0%, #ebebeb 88%, #d1d1d1 100%);
-  display: blcok;
+  display: block;
   width: 100%;
   height: 50px;
   position: relative;
@@ -889,18 +867,18 @@ img {
   transform: translateY(-22px);
   z-index: 5;
   position: absolute;
-  padding: 0;
   margin: 0;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   line-height: 22px;
   font-size: 22px;
   background: none;
   color: #000;
+  overflow: hidden;
 }
 .section__list__block__content__btnheart .kfar:hover {
   cursor: pointer;
@@ -911,6 +889,7 @@ img {
 }
 .section__list__block__content__btnheart .kfas {
   margin-top: 22px;
+  overflow: hidden;
   z-index: 3;
   position: absolute;
   padding: 0;
@@ -938,8 +917,8 @@ img {
   position: absolute;
   margin: -22px 0 0 0;
   top: 0;
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   line-height: 22px;
   font-size: 22px;
   background-color: #fff;

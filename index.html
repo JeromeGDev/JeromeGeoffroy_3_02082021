@@ -1,245 +1,267 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
-	<head>
+
+<head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" media="all" href="./public/css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
-	<meta name="desciption" content="Commande de repas en ligne.Consultez nos plats, composez votre menu, et passez plus de temps avec vos invités qu'en cuisine">
-	<meta name="keywords" content="ohmyfood,restaurant haut de gamme,plats cusinés,à domicile,commander,en ligne repas,repas raffiné,à emporter,réservation">
-    <title>OhMyFood</title>
-	</head>
-	<body>
-		<div class="container-fluid">
-			<div class="page">
-				<header>
-					<!--<img class="header__logo" src="images/logo/logo-ohmyfood.png" alt="omyfood" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+	<meta name="desciption"
+		content="Commande de repas en ligne.Consultez nos plats, composez votre menu, et passez plus de temps avec vos invités qu'en cuisine">
+	<meta name="keywords"
+		content="ohmyfood,restaurant haut de gamme,plats cusinés,à domicile,commander,en ligne repas,repas raffiné,à emporter,réservation">
+	<title>OhMyFood</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="page">
+			<header>
+				<!--<img class="header__logo" src="images/logo/logo-ohmyfood.png" alt="omyfood" />
 					Etant donné que le logo est contitué de la police non modifiée,j'ai opté pour réécrire le logoc directement avec la police adéquat.
 					Procéder ainsi, permet d'alléger le fichier à charger et de gagner du temps de chargement, et donc, du positionnement internet.
 					Le chargement de la page étant accélé l'expérience client n'en sera qu'améliorée.-->
-					
-					<div class="header-site">
-						<h1 class="header-site__site-title">ohmyfood</h1>
+				<div class="header-site">
+					<h1 class="header-site__site-title">ohmyfood</h1>
+				</div>
+			</header>
+			<main>
+				<div class="top-index">
+					<div class="top-index__location">
+						<div class="top-index__location__city">
+							<div class="top-index__location__city__icone">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							Paris, Bellevile
+						</div>
 					</div>
-				</header>
-				<main>
-						<div class="top-index">
-							<div class="top-index__location">
-								<div class="top-index__location__city">
-									<div class="top-index__location__city__icone">
-										<i class="fas fa-map-marker-alt"></i>
+				</div>
+				<section class="section__welcome" id="welcome">
+					<div class="section__welcome__txtcontent">
+						<h3 class="section__welcome__txtcontent__title">Réservez le menu qui vous convient</h3>
+						<span class="section__welcome__txtcontent__slug">Découvrez des restaurants d'exeption
+							sélectionnés par nos soins</span>
+					</div>
+					<div class="button-action">
+						<div class="button-action__explore">
+							<a href="index.html">Explorer nos restaurants</a>
+						</div>
+					</div>
+				</section>
+
+				<section class="section__howto" id="howto">
+					<!--/ section howto test/-->
+					<div class="section__howto__title">
+						<h3>Fonctionnement</h3>
+					</div>
+					<div class="section__howto__level">
+						<a href="index.html" title="Choisissez un restaurant">
+							<div class="section__howto__level__button" id="choose">
+								<div class="section__howto__level__button__number">
+									1
+								</div>
+								<div class="section__howto__level__button__icone">
+									<i class="fas fa-mobile-alt"></i>
+								</div>
+								<div class="section__howto__level__button__text">
+									Choisissez un restaurant
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="section__howto__level">
+						<a href="index.html" title="Composez votre menu">
+							<div class="section__howto__level__button" id="compose">
+								<div class="section__howto__level__button__number">
+									2
+								</div>
+								<div class="section__howto__level__button__icone">
+									<i class="fas fa-list"></i>
+								</div>
+								<div class="section__howto__level__button__text">
+									Composez votre menu
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="section__howto__level">
+						<a href="index.html" title="Dégustez au restaurant">
+							<div class="section__howto__level__button" id="eat-in">
+								<div class="section__howto__level__button__number">
+									3
+								</div>
+								<div class="section__howto__level__button__icone">
+									<i class="fas fa-store-alt"></i>
+								</div>
+								<div class="section__howto__level__button__text">
+									Dégustez au restaurant
+								</div>
+							</div>
+						</a>
+					</div>
+				</section>
+
+				<section>
+					<div class="section__list" id="restaurant-list">
+						<div class="section__list__title">
+							<h3>Restaurants</h3>
+						</div>
+
+						<div class="section__list__block" id="palette">
+							<div class="section__list__block__img">
+								<div class="section__list__block__img__image">
+									<a href="carte_plats_cuisine_la_palette_du_gout.html">
+										<img src="public/img/restaurants/la-palette-du-gout.jpg"
+											alt="la palette du gout" />
+									</a>
+								</div>
+								<div class="section__list__block__img__new">
+									Nouveau
+								</div>
+							</div>
+							<div class="section__list__block__content">
+								<div class="section__list__lblock__content__txt">
+									<div class="section__list__block__content__txt__title">
+										<h5><a href="carte_plats_cuisines_la_palette_du_gout.html">La palette du
+												goût</a></h5>
 									</div>
-								Paris, Bellevile
+									<div class="section__list__block__content__txt__description">
+										<h6 class="section__list__block__content__txt__description__origin">Ménilmontant
+										</h6>
+									</div>
+								</div>
+								<div class="section__list__block__content__btnheart">
+									<div class="kfar"><i class="far fa-heart"></i></div>
+									<div class="kfas"><i class="fas fa-heart"></i></div>
 								</div>
 							</div>
 						</div>
-					<section class="section__welcome" id="welcome">
-							<div class="section__welcome__txtcontent">
-								<h3 class="section__welcome__txtcontent__title">Réservez le menu qui vous convient</h3>
-								<span class="section__welcome__txtcontent__slug">Découvrez des restaurants d'exeption sélectionnés par nos soins</span>
-							</div>
-							<div class="button-action">
-								<div class="button-action__explore">
-									<a href="index.html">Explorer nos restaurants</a>
-								</div>
-							</div>
-					</section>
 
-					<section class="section__howto" id="howto"><!--/ section howto test/-->
-							<div class="section__howto__title">
-								<h3>Fonctionnement</h3>
-							</div>
-							<div class="section__howto__level">
-								<a href="index.html" title="Choisissez un restaurant">
-									<div class="section__howto__level__button" id="choose">
-										<div class="section__howto__level__button__number">
-											1
-										</div>
-										<div class="section__howto__level__button__icone">
-											<i class="fas fa-mobile-alt"></i>
-										</div>
-										<div class="section__howto__level__button__text">
-											Choisissez un restaurant
-										</div>
-									</div>
-								</a>
-							</div>
-							
-							<div class="section__howto__level">
-								<a href="index.html" title="Composez votre menu">
-									<div class="section__howto__level__button" id="compose">
-										<div class="section__howto__level__button__number">
-											2
-										</div>
-										<div class="section__howto__level__button__icone">
-											<i class="fas fa-list"></i>
-										</div>
-										<div class="section__howto__level__button__text">
-											Composez votre menu
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="section__howto__level">
-								<a href="index.html" title="Dégustez au restaurant">
-									<div class="section__howto__level__button" id="eat-in">
-										<div class="section__howto__level__button__number">
-											3
-										</div>
-										<div class="section__howto__level__button__icone">
-											<i class="fas fa-store-alt"></i>
-										</div>
-										<div class="section__howto__level__button__text">
-											Dégustez au restaurant
-										</div>
-									</div>
-								</a>
-							</div>
-					</section>
-					
-					<section>
-						<div class="section__list" id="restaurant-list">
-							<div class="section__list__title">
-								<h3>Restaurants</h3>
-							</div>
-							
-							<div class="section__list__block" id="palette">
-								<div class="section__list__block__img">
-									<div class="section__list__block__img__image">
-										<a href="carte_plats_cuisine_la_palette_du_gout.html">
-										<img src="public/img/restaurants/la-palette-du-gout.jpg" alt="la palette du gout" />
-										</a>
-									</div>
-									<div class="section__list__block__img__new">
-										Nouveau
-									</div>
+						<div class="section__list__block" id="note">
+							<div class="section__list__block__img">
+								<div class="section__list__block__img__image">
+									<a href="carte_plats_cusines_la_note_enchantee.html">
+										<img src="public/img/restaurants/la-note-enchantee.jpg"
+											alt="la note enchantee" /></a>
 								</div>
-								<div class="section__list__block__content">
-									<div class="section__list__lblock__content__txt">
-										<div class="section__list__block__content__txt__title">
-											<h5><a href="carte_plats_cuisines_la_palette_du_gout.html">La palette du goût</a></h5>
-										</div>
-										<div class="section__list__block__content__txt__description">
-											<h6 class="section__list__block__content__txt__description__origin">Ménilmontant</h6>
-										</div>
-									</div>
-									<div class="section__list__block__content__btnheart">
-										<div class="kfar"><i class="far fa-heart"></i></div><div class="kfas"><i class="fas fa-heart"></i></div>
-									</div>
+								<div class="section__list__block__img__new">
+									Nouveau
 								</div>
 							</div>
+							<div class="section__list__block__content">
+								<div class="section__list__lblock__content__txt">
+									<div class="section__list__block__content__txt__title">
+										<h5><a href="carte_plats_cusines_la_note_enchantee.html">La note enchantée</a>
+										</h5>
+									</div>
+									<div class="section__list__block__content__txt__description">
+										<h6 class="section__list__block__content__txt__description__origin">Charonne
+										</h6>
+									</div>
+								</div>
+								<div class="section__list__block__content__btnheart">
+									<div class="kfar"><i class="far fa-heart"></i></div>
+									<div class="kfas"><i class="fas fa-heart"></i></div>
+								</div>
+							</div>
+						</div>
 
-							<div class="section__list__block" id="note">
-								<div class="section__list__block__img">
-									<div class="section__list__block__img__image">
-										<a href="carte_plats_cusines_la_note_enchantee.html">
-										<img src="public/img/restaurants/la-note-enchantee.jpg" alt="la note enchantee" /></a>
-									</div>
-									<div class="section__list__block__img__new">
-										Nouveau
-									</div>
-								</div>
-								<div class="section__list__block__content">
-									<div class="section__list__lblock__content__txt">
-										<div class="section__list__block__content__txt__title">
-											<h5><a href="carte_plats_cusines_la_note_enchantee.html">La note enchantée</a></h5>
-										</div>
-										<div class="section__list__block__content__txt__description">
-											<h6 class="section__list__block__content__txt__description__origin">Charonne</h6>
-										</div>
-									</div>
-									<div class="section__list__block__content__btnheart">
-										<div class="kfar"><i class="far fa-heart"></i></div><div class="kfas"><i class="fas fa-heart"></i></div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="section__list__block" id="francaise">
-								<div class="section__list__block__img">
-									<div class="section__list__block__img__image">
-										<a href="carte_plats_cusines_a_la_francaise.html">
+						<div class="section__list__block" id="francaise">
+							<div class="section__list__block__img">
+								<div class="section__list__block__img__image">
+									<a href="carte_plats_cusines_a_la_francaise.html">
 										<img src="public/img/restaurants/a-la-francaise.jpg" alt="A la française" /></a>
-									</div>
-								</div>
-								<div class="section__list__block__content">
-									<div class="section__list__lblock__content__txt">
-										<div class="section__list__block__content__txt__title">
-											<h5><a href="carte_plats_cusines_a_la_francaise.html">A la française</a></h5>
-										</div>
-										<div class="section__list__block__content__txt__description">
-											<h6 class="section__list__block__content__txt__description__origin">Cité rouge</h6>
-										</div>
-									</div>
-									<div class="section__list__block__content__btnheart">
-										<div class="kfar"><i class="far fa-heart"></i></div><div class="kfas"><i class="fas fa-heart"></i></div>
-									</div>
 								</div>
 							</div>
+							<div class="section__list__block__content">
+								<div class="section__list__lblock__content__txt">
+									<div class="section__list__block__content__txt__title">
+										<h5><a href="carte_plats_cusines_a_la_francaise.html">A la française</a></h5>
+									</div>
+									<div class="section__list__block__content__txt__description">
+										<h6 class="section__list__block__content__txt__description__origin">Cité rouge
+										</h6>
+									</div>
+								</div>
+								<div class="section__list__block__content__btnheart">
+									<div class="kfar"><i class="far fa-heart"></i></div>
+									<div class="kfas"><i class="fas fa-heart"></i></div>
+								</div>
+							</div>
+						</div>
 
-							<div class="section__list__block" id="delice">
-								<div class="section__list__block__img">
-									<div class="section__list__block__img__image">
-										<a href="carte_plats_cusines_le_délice_des_sens.html">
-										<img src="/public/img/restaurants/le-delice-des-sens.jpg" alt="Le délice des sens" /></a>
-									</div>
-								</div>
-								<div class="section__list__block__content">
-									<div class="section__list__block__content__txt">
-										<div class="section__list__block__content__txt__title">
-											<h5><a href="carte_plats_cusines_le_délice_des_sens.html">Le délice des sens</a></h5>
-										</div>
-										<div class="section__list__block__content__txt__description">
-											<h6 class="section__list__block__content__txt__description__origin">Folie-Méricourt</h6>
-										</div>
-									</div>
-									<div class="section__list__block__content__btnheart">
-										<div class="kfar"><i class="far fa-heart"></i></div><div class="kfas"><i class="fas fa-heart"></i></div>
-									</div>
+						<div class="section__list__block" id="delice">
+							<div class="section__list__block__img">
+								<div class="section__list__block__img__image">
+									<a href="carte_plats_cusines_le_délice_des_sens.html">
+										<img src="/public/img/restaurants/le-delice-des-sens.jpg"
+											alt="Le délice des sens" /></a>
 								</div>
 							</div>
-							
+							<div class="section__list__block__content">
+								<div class="section__list__block__content__txt">
+									<div class="section__list__block__content__txt__title">
+										<h5><a href="carte_plats_cusines_le_délice_des_sens.html">Le délice des sens</a>
+										</h5>
+									</div>
+									<div class="section__list__block__content__txt__description">
+										<h6 class="section__list__block__content__txt__description__origin">
+											Folie-Méricourt</h6>
+									</div>
+								</div>
+								<div class="section__list__block__content__btnheart">
+									<div class="kfar"><i class="far fa-heart"></i></div>
+									<div class="kfas"><i class="fas fa-heart"></i></div>
+								</div>
+							</div>
 						</div>
-					</section>
-				</main>
-				<footer>
-						<div class="footer-logo">
-							<a href="index.html" title="ohmyfood">ohmyfood</a>
-						</div>
-						<div class="footer-menu">
-							<ul>
-								<li>
-									<div class="footer-menu__link-block">
-										<div class="footer-menu__link-block__icone">
-											<i class="fas fa-utensils ficone"></i>
-											<a href="proposer_un_restaurant.html" title="Proposer un restaurant">Proposer un restaurant</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="footer-menu__link-block">
-										<div class="footer-menu__link-block__icone">
-											<i class="fas fa-hands-helping ficone"></i>
-											<a href="devenir_partenaire.html" title="Devenir partenaire">Devenir partenaire</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<div class="footer-menu__link-block">
-										<a href="mentions_legales.html" title="Mention legale">Mentions légales</a>
-									</div>
-								</li>
-								<li>
-									<div class="footer-menu__link-block">
-										<a href="contact.html" title="Nous contacter">Contact</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-				</footer>
-			</div>
+
+					</div>
+				</section>
+			</main>
+			<footer>
+				<div class="footer-logo">
+					<a href="index.html" title="ohmyfood">ohmyfood</a>
+				</div>
+				<div class="footer-menu">
+					<ul>
+						<li>
+							<div class="footer-menu__link-block">
+								<div class="footer-menu__link-block__icone">
+									<i class="fas fa-utensils ficone"></i>
+									<a href="proposer_un_restaurant.html" title="Proposer un restaurant">Proposer un
+										restaurant</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="footer-menu__link-block">
+								<div class="footer-menu__link-block__icone">
+									<i class="fas fa-hands-helping ficone"></i>
+									<a href="devenir_partenaire.html" title="Devenir partenaire">Devenir partenaire</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="footer-menu__link-block">
+								<a href="mentions_legales.html" title="Mention legale">Mentions légales</a>
+							</div>
+						</li>
+						<li>
+							<div class="footer-menu__link-block">
+								<a href="contact.html" title="Nous contacter">Contact</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</div>
-		<script src="https://kit.fontawesome.com/fcbd6e51f1.js" crossorigin="anonymous"></script>
-	</body>
+	</div>
+	<script src="https://kit.fontawesome.com/fcbd6e51f1.js" crossorigin="anonymous"></script>
+</body>
+
 </html>

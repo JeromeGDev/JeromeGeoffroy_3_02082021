@@ -1,12 +1,9 @@
 @use 'sass:math';
 
-//Fonction de convertion automatique des pixels en rem
-@function rem($pixel,$px-context:$originfnt){
-  @if (unitless($px-context)){
-  $px-context:($originfnt) * 1px;}
-  @if (unitless($pixel)){
-    $pixel:($pixel) * 1px;}
-  @return math.div($pixel,$px-context) * 1rem;
+//fonction de tranformations auto des px en rem
+$pixelref:16;
+@function rem($pixel){
+  @return math.div($pixel,$pixelref) * 1rem;
 }
 
 $animations:(
@@ -42,12 +39,12 @@ $animations:(
 ;}
 
 //Keyframe réduction et runcate texte
-@keyframes desctruncate{
-  0%{
-      width:283px;
-  }
-
-  100%{
-    width:220px;
-  }
-;}
+//@keyframes desctruncate{
+ // 0%{
+ //     width:283px;
+ // }
+//
+ // 100%{
+ //   width:220px;
+ // }
+//;}

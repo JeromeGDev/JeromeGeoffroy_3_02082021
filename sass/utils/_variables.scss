@@ -1,4 +1,6 @@
 @use 'sass:math';
+//Viewport initial
+$viewport:375px;
 
 /*Taille de la police de référence*/
 $originfnt: 16;
@@ -74,4 +76,4 @@ $delay-t-1:$delay-a-1+$ecart-a;
 $delay-t-2:$delay-a-2+$ecart-a;
 
 
-$colour: linear-gradient(175deg,  #ff79da 1%,#9356dc 61%);    
+$colour: linear-gradient(175deg,#ff79da 1%,#9356dc 61%);    
