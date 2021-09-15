@@ -320,6 +320,9 @@
         transform:translate( -60px);
         cursor:$cursor;
     }
+    //&:hover > .menus__blocks__content__recipe{
+    //    animation: desctruncate 500ms ease-in-out forwards 100ms;
+    //}
     &__price{
         z-index: 0;
         background-color: transparent;
@@ -332,6 +335,9 @@
         top:0px;
         transition:transform 500ms ease-in-out 100ms;
         transition-timing-function:cubic-bezier(.5,.64,0,1);
+        &:hover > &__recipe{
+            animation: desctruncate 500ms ease-in-out forwards 100ms; 
+        }
     }
     &__validate{
         z-index: 0;
@@ -347,10 +353,14 @@
         border-radius:0 $radiusblklist $radiusblklist  0;
         transition:transform 500ms ease-in-out;
         transition-timing-function:cubic-bezier(.5,.64,0,1);
+        &:hover > &__recipe{
+            animation: desctruncate 500ms ease-in-out forwards 100ms; 
+        }
         & i{
             z-index: 500;
             color:$color-third;
-            background-color:#fff;
+            //background-color:#fff;
+            color:#fff;
             border-radius:25px;
             width: 22px;
             height: 22px;
@@ -363,12 +373,22 @@
     }  
 }
 
-@mixin truncaterecipe{
-    &:hover + .menus__blocks__content__recipe{
-        overflow:hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        text-overflow: "…";
-        background-color: transparent;
+//Mixin ellipsis : propriétés nécessaires à la mise en place de la fonction ellipsis
+@mixin ellipsis{
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+// mixin activant la fonction ellipsis sur les éléments de menu lorsque le prix se trouve décalé.
+//La mixin appelle l'animation de réduction du conteneur sur lequel il est appliqué
+@mixin activellipsis{
+    &:hover{
+        animation: desctruncate 500ms ease-in-out forwards 80ms; 
+    }
+}
+//la mixin ci-dessous est destinée à viser spécifiquement des conteneurs des textes des plats des menus
+@mixin activellipsmenu{
+    &:hover > &__recipe,&:hover > & h5,&:hover > & h6{
+        animation: desctruncate 300ms ease-in-out forwards 80ms; 
     }
 }

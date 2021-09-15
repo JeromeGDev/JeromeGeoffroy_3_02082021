@@ -9,75 +9,188 @@
 	<link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
 	<meta name="desciption" content="Un restaurant au nom savroureusement choisi qui vous propose d'emporter cgez vous votre restaurant préféré. Choisissez le plat dont vous souhaitez vous délecter, et venez le récupérer au moment qui vous conviendra le mieux.">
 	<meta name="keywords" content="ohmyfood,Le délice des sens,restaurant,commande en ligne, repas cuisinés,plats cuisinés,cuisinés par des,préparés par les plus,grands chefs de la ville,">
-    <title>Restaurant en ligne : Le délice des sens</title>
+    <title>Restaurant en ligne : La Note Enchantée</title>
 	</head>
-    <body>
-		<div class="container-fluid" >
-			<div class="page" id="page-restaurant">
+	<body>
+		<div class="container-fluid">
+			<div class="page">
 				<header>
-					<div class="header-restaurant">	
-						<div class="header-restaurant__site-title">
-							<a href="index.html" title="Retour à l'acceuil"><i class="fas fa-arrow-left"></i></a>
-							<h1 >ohmyfood</h1>
+					<div class="header-site">
+						<h1 class="header-site__site-title">ohmyfood</h1>
+					</div>
+					<div class="header-site__backicone">
+						<a href="index.html" title="Retour à l'acceuil">
+						<i class="fas fa-arrow-left"></i></a>
+					</div>	
+						<!--<h1 >ohmyfood</h1>-->
+				</header>		
+			<main>
+				<div class="top-index">
+					<div class="top-index__resto-image" id="lanoteenchantee">
+						<img src="./public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
+					</div>
+					<div class="top-index__bottom">
+						<div class="top-index__bottom__resto-name">
+							<h2>La note enchantée</h2>
+						</div>
+						<div class="top-index__bottom__resto-clic btnheart">
+							<div class="kfar"><i class="far fa-heart"></i></div>
+							<div class="kfas"><i class="fas fa-heart"></i></div>
 						</div>
 					</div>
-                </header>
-				<main>
-					<section>
-						<div class="menus">
+				</div>
+				<section>
+					<div class="menus">
+	
+						<div class="menus__blocks" id="entrees">
+							<h4>Entrées</h4>
+	
+							<div class="menus__blocks__content" id="raviolefoiegras">
+								<div class="menus__blocks__content__recipe">
+									<h5>Ravioles de foie gras</h5>
+									<h6>Accompagnés de leur crème à la truffe</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>25€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="veloute">
+								<div class="menus__blocks__content__recipe">
+									<h5>Caviar osciètre</h5>
+									<h6>Sur blini à la farine de blé noir</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>35€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="himardespuma">
+								<div class="menus__blocks__content__recipe">
+									<h5>Homard et espuma de potiron</h5>
+									<h6>Mariné aux zestes d'orange</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>20€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
 
-							<div class="menus__blocks" id="entrees">
-								<h4>entrées</h4>
-								<div class="menu__blocks__content" id="tartare3">
-									<div class="menus__blocks__content__recipe">
-										<div class="menu__blocks__content__recipe__plat">
-											<h5>Tartare de poulpe acidulé</h5>
-											<h6>Aux zests d'orange et parce qu'il faut que</h6>
-										</div>
-										<div class="menu__blocks__content__recipe__price">
-											<span>25€</span>
-											<i class="fas fa-check"></i>
-										</div>
-									</div>
+							<div class="menus__blocks__content" id="foiegrasfigue">
+								<div class="menus__blocks__content__recipe">
+									<h5>Foie gras de canard cuit entier</h5>
+									<h6>Confiture de figue et pain toasté</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>35€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
 								</div>
 							</div>
 						</div>
-				
+					</div>
+	
+					<div class="menus">
+	
+						<div class="menus__blocks" id="plats">
+							<h4>Plats</h4>
+							<div class="menus__blocks__content" id="saintjacquesceleri">
+								<div class="menus__blocks__content__recipe">
+									<h5>Noix de coquilles Saint-Jacques</h5>
+									<h6>Sur lit de purée de céleri-rave</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>40€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="langoustinepoelee">
+								<div class="menus__blocks__content__recipe">
+									<h5>Langoustine poêlée</h5>
+									<h6>Purée de patate douce</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>35€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="mijotequeue">
+								<div class="menus__blocks__content__recipe">
+									<h5>Mijoté de queue de boeuf </h5>
+									<h6>Et riz sauvage aux zestes de citron</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>44€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="menus">
+	
+						<div class="menus__blocks" id="plats">
+							<h4>Desserts</h4>
+							<div class="menus__blocks__content" id="macaroncaramelguerande">
+								<div class="menus__blocks__content__recipe">
+									<h5>Macaron noisette et chocolat</h5>
+									<h6>Glace au caramel brun et sel de Guérande</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>18€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="babacouliscitron">
+								<div class="menus__blocks__content__recipe">
+									<h5>Baba au rhum revisité</h5>
+									<h6>Avec son coulis de citron</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>22€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+	
+							<div class="menus__blocks__content" id="tartemeringuée">
+								<div class="menus__blocks__content__recipe">
+									<h5>Tarte au citron meringuée</h5>
+									<h6>Déstructurée</h6>
+								</div>
+								<div class="menus__blocks__content__price">
+									<span>23€</span>
+								</div>
+								<div class="menus__blocks__content__validate">
+									<i class="fas fa-check"></i>
+								</div>
+							</div>
+						</div>
+					</div>
 				</section>
 			</main>
 			<footer>
-					<div class="footer-logo">
-						<a href="index.html" title="ohmyfood">ohmyfood</a>
-					</div>
-					<ul>
-						<li>
-							<div class="footer-menu__link-block">
-								<div class="footer-menu__link-block__icone">
-									<i class="fas fa-utensils"></i>
-									<a href="proposer_un_restaurant.html" title="Proposer un restaurant">Proposer un restaurant</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="footer-menu__link-block">
-								<div class="footer-menu__link-block_icone">
-									<i class="fas fa-hands-helping"></i>
-									<a href="devenir_partenaire.html" title="Devenir partenaire">Devenir partenaire</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="footer-menu__link-block">
-								<a href="mentions_legales.html" title="Mention legale">Mentions légales</a>
-							</div>
-						</li>
-						<li>
-							<div class="footer-menu__link-block">
-								<a href="contact.html" title="Nous contacter">Contact</a>
-							</div>
-						</li>
-					</ul>
-			</footer>
 		</div>
 	</div>
 	<script src="https://kit.fontawesome.com/fcbd6e51f1.js" crossorigin="anonymous"></script>

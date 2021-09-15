@@ -39,25 +39,7 @@ $radiusblklist:12px;
 $radiusresto:40px;
 /*Valeur du device-width*/
 $width-ref:375px;
-/* map di'cones font-awesome)*/
-/*$mapfaicones:(
-    choose:fas fa-mobile-alt,
-    compose:fas fa-list,
-    eat-in:fas fa-store,
-    emptyheart:far fa-heart,
-    fullheart:fas fa-heart,
-    food:fas fa-utensils,
-    hands:fas fa-hands-helping
-);*/
-$mapfaicones:(
-    (choose:"public\img\visu\mobile-alt-solid.svg"),
-    (compose:"public\img\visu\mobile-alt-solid.svg"),
-    (eat-in:"public\img\visu\store-solid.svg"),
-    (emptyheart:"public\img\visu\heart-regular.svg"),
-    (fullheart:"public\img\visu\heart-solid.svg"),
-    (food:"public\img\visu\utensils-solid.svg"),
-    (hands:"public\img\visu\hands-helping-solid.svg")
-);
+
 /*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
 $cursor: pointer/*,help,grab,crosshair,not-allowed,zoom-in,grab*/;
 

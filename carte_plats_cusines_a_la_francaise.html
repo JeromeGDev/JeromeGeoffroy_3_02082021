@@ -19,21 +19,21 @@
 <body>
 	<div class="container-fluid">
 		<div class="page">
-				<header>
-					<div class="header-site">
-						<h1 class="header-site__site-title">ohmyfood</h1>
-					</div>
-					<div class="header-site__backicone">
-						<a href="index.html" title="Retour à l'acceuil">
-						<i class="fas fa-arrow-left"></i></a>
-					</div>	
-						<!--<h1 >ohmyfood</h1>-->
-					
-				</header>		
+			<header>
+				<div class="header-site">
+					<a href="index.html" title="Retour à l'acceuil">
+					<h1 class="header-site__site-title">ohmyfood</h1></a>
+				</div>
+				<div class="header-site__backicone">
+					<a href="index.html" title="Retour à l'acceuil">
+					<i class="fas fa-arrow-left"></i></a>
+				</div>	
+					<!--<h1 >ohmyfood</h1>-->
+			</header>		
 		<main>
 			<div class="top-index">
-				<div class="top-index__resto-image">
-					<img src="./public/img/restaurants/a-la-francaise.jpg" alt="A la française" />
+				<div class="top-index__resto-image" id="alafrancaise">
+					
 				</div>
 				<div class="top-index__bottom">
 					<div class="top-index__bottom__resto-name">
@@ -49,14 +49,12 @@
 				<div class="menus">
 
 					<div class="menus__blocks" id="entrees">
-						<h4>entrées</h4>
+						<h4>Entrées</h4>
 
 						<div class="menus__blocks__content" id="tartare">
-							<div class="blockellipsis">
-								<div class="menus__blocks__content__recipe">
-									<h5>Tartare de poulpe acidulé</h5>
-									<h6>Aux zests d'orange</h6>
-								</div>
+							<div class="menus__blocks__content__recipe">
+								<h5>Tartare de poulpe acidulé</h5>
+								<h6>Aux zestes d'orange</h6>
 							</div>
 							<div class="menus__blocks__content__price">
 								<span>25€</span>
@@ -69,7 +67,7 @@
 						<div class="menus__blocks__content" id="veloute">
 							<div class="menus__blocks__content__recipe">
 								<h5>Velouté de légumes d'antan</h5>
-								<h6>Carotte, pannais, tompinabour</h6>
+								<h6>Carotte, panais, topinambour</h6>
 							</div>
 							<div class="menus__blocks__content__price">
 								<span>35€</span>
@@ -97,24 +95,24 @@
 				<div class="menus">
 
 					<div class="menus__blocks" id="plats">
-						<h4>plats</h4>
-						<div class="menus__blocks__content" id="tartare">
+						<h4>Plats</h4>
+						<div class="menus__blocks__content" id="saint-jacques">
 							<div class="menus__blocks__content__recipe">
-								<h5>Tartare de poulpe acidulé</h5>
-								<h6>Aux zests d'orange</h6>
+								<h5>Coquilles Saint-Jacques</h5>
+								<h6>Accompagnées d'une purée de panais</h6>
 							</div>
 							<div class="menus__blocks__content__price">
-								<span>25€</span>
+								<span>40€</span>
 							</div>
 							<div class="menus__blocks__content__validate">
 								<i class="fas fa-check"></i>
 							</div>
 						</div>
 
-						<div class="menus__blocks__content" id="veloute">
+						<div class="menus__blocks__content" id="parmentier">
 							<div class="menus__blocks__content__recipe">
-								<h5>Velouté de légumes d'antan</h5>
-								<h6>Carotte, pannais, tompinabour</h6>
+								<h5>Magret de canard</h5>
+								<h6>Et parmentier de pommes de terre</h6>
 							</div>
 							<div class="menus__blocks__content__price">
 								<span>35€</span>
@@ -124,13 +122,58 @@
 							</div>
 						</div>
 
-						<div class="menus__blocks__content" id="soupeoignon">
+						<div class="menus__blocks__content" id="pigeonneau">
 							<div class="menus__blocks__content__recipe">
-								<h5>Soupe à l'oignon</h5>
-								<h6>Revisitée</h6>
+								<h5>Pigeonneau d’Ille-et-Vilaine</h5>
+								<h6>Sur son lit de gnocchis aux légumes</h6>
 							</div>
 							<div class="menus__blocks__content__price">
-								<span>20€</span>
+								<span>44€</span>
+							</div>
+							<div class="menus__blocks__content__validate">
+								<i class="fas fa-check"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="menus">
+
+					<div class="menus__blocks" id="plats">
+						<h4>Desserts</h4>
+						<div class="menus__blocks__content" id="violettes">
+							<div class="menus__blocks__content__recipe">
+								<h5>Pétales de violettes glacés</h5>
+								<h6>Et purée de noisettes</h6>
+							</div>
+							<div class="menus__blocks__content__price">
+								<span>18€</span>
+							</div>
+							<div class="menus__blocks__content__validate">
+								<i class="fas fa-check"></i>
+							</div>
+						</div>
+
+						<div class="menus__blocks__content" id="fondant">
+							<div class="menus__blocks__content__recipe">
+								<h5>Fondant au chocolat</h5>
+								<h6>Revisité</h6>
+							</div>
+							<div class="menus__blocks__content__price">
+								<span>22€</span>
+							</div>
+							<div class="menus__blocks__content__validate">
+								<i class="fas fa-check"></i>
+							</div>
+						</div>
+
+						<div class="menus__blocks__content" id="millefeuille">
+							<div class="menus__blocks__content__recipe">
+								<h5>Millefeuille croustillant</h5>
+								<h6>Myrtilles et pâte d’amande</h6>
+							</div>
+							<div class="menus__blocks__content__price">
+								<span>23€</span>
 							</div>
 							<div class="menus__blocks__content__validate">
 								<i class="fas fa-check"></i>

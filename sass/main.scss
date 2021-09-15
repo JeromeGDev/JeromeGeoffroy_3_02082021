@@ -1,3 +1,13 @@
+/** Concernant les breakpoints :
+ * au départ j'avais prévus 4 breakpoint, mais finalement il faut rester sur 3,
+ * donc, je place tous les grands écrans ensemble au delà.
+ * J'ai donc retenu les breakpoints suivant :
+ *      - Pour les smartphones : jusqu'à 600px - (taille d'image utilisée : 600 x 431px)
+ *      - Pour les talbette : de 600 à 992px - (taille d'image utilisée :992x713px)
+ *      - Pour les laptops : de 993 à 1200px - Je les réunis avec les desktops.
+ *      - Pour les desltop 2 au dela de 1200px
+ */
+
 *{
     padding:0;
     margin:0;
@@ -5,15 +15,15 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-@import "./utils/extensions";
+//@import "./utils/extensions";
 @import "./base/base";
 @import "./base/typography";
 @import "./components/visuels";
 @import "./components/button";
-@import "./layout/header";
-@import "./layout/nav";
+//@import "./layout/nav";
 @import "./layout/container";
-@import "./layout/form";
+//@import "./layout/form";
+@import "./layout/header";
 @import "./layout/footer";
 @import "./pages/restos";
 

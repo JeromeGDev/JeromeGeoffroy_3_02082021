@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/** Concernant les breakpoints :
+ * au départ j'avais prévus 4 breakpoint, mais finalement il faut rester sur 3,
+ * donc, je place tous les grands écrans ensemble au delà.
+ * J'ai donc retenu les breakpoints suivant :
+ *      - Pour les smartphones : jusqu'à 600px - (taille d'image utilisée : 600 x 431px)
+ *      - Pour les talbette : de 600 à 992px - (taille d'image utilisée :992x713px)
+ *      - Pour les laptops : de 993 à 1200px - Je les réunis avec les desktops.
+ *      - Pour les desltop 2 au dela de 1200px
+ */
 * {
   padding: 0;
   margin: 0;
@@ -20,16 +29,6 @@
 /*arrondis des blocs de la liste des restaurant */
 /*Arrondi fond page restaurant (sous image entete)*/
 /*Valeur du device-width*/
-/* map di'cones font-awesome)*/
-/*$mapfaicones:(
-    choose:fas fa-mobile-alt,
-    compose:fas fa-list,
-    eat-in:fas fa-store,
-    emptyheart:far fa-heart,
-    fullheart:fas fa-heart,
-    food:fas fa-utensils,
-    hands:fas fa-hands-helping
-);*/
 /*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
 @keyframes howtoshow {
   0% {
@@ -54,9 +53,16 @@
     top: -22px;
   }
 }
+@keyframes desctruncate {
+  0% {
+    width: 70%;
+  }
+  100% {
+    width: 60%;
+  }
+}
 /*Mise en page automatique DAJFCC : Flex / centrage horizontal / centrage vertical */
 /*Mixin création bouton fonctionnement index.tml*/
-/* - */
 *,
 *::after,
 *::before {
@@ -80,14 +86,6 @@ body {
   height: 100%;
   margin: auto;
   overflow: auto;
-}
-
-header {
-  width: 100vw;
-  margin: auto;
-  width: 100%;
-  height: 40px;
-  padding: 20px 20px 10px 20px;
 }
 
 section {
@@ -345,23 +343,6 @@ img {
   transform: translateY(22px);
 }
 
-.header-site {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-items: center;
-}
-.header-site__site-title {
-  padding: 0 0 12px 0;
-  margin: auto;
-}
-.header-site__site-title__backicone {
-  position: relative;
-  top: 25px;
-  left: 23px;
-}
-
 .container-fluid {
   width: 100%;
   height: 100%;
@@ -380,52 +361,24 @@ img {
   padding: 0;
 }
 
-/*
-.form {
-    width: 100%;
-    padding-bottom: $grid-gutter;
-    &__heading {
-        width: 100%;
-        color: $color-white;
-        @include heading-shadow;
-        background: $color-primary;
-        line-height: 5rem;
-        padding: $grid-gutter;
-    }
-    &__field {
-        & label {
-            color: $color-accent;
-            display: block;
-            font-size: 2rem;
-            line-height: 2rem;
-            padding-top: $grid-gutter;
-        }
-        & input {
-            width: 100%;
-            background: $color-secondary;
-            @include border;
-            padding: $grid-gutter;
-            color: $color-accent;
-            font-weight: 900;
-            font-style: italic;
-            font-size: 2.75rem;
-            @include border;
-            background-color: $color-secondary;
-            color: $color-primary;
-
-        }
-        & textarea {
-            width: 100%;
-            color: $color-primary;
-            background: $color-secondary;
-            @include border;
-            outline: none;
-            padding: $grid-gutter;
-            margin-bottom: $grid-gutter*0.5;
-        }
-    }
+header {
+  background-color: green;
+  max-width: 100vw;
+  width: 100%;
+  height: 40px;
 }
-*/
+header .header-site {
+  padding: 20px 20px 10px 20px;
+}
+header .header-site__site-title {
+  margin: auto;
+}
+header .header-site__backicone {
+  position: absolute;
+  top: 25px;
+  left: 23px;
+}
+
 .footer-logo {
   margin-bottom: 24px;
 }
@@ -471,6 +424,48 @@ img {
 }
 .top-index__resto-image img {
   max-width: 100vw;
+}
+@media screen and (max-width: 600px) {
+  .top-index__resto-image img .top-index__resto-image #alafrancaise {
+    background-image: url(public/img/restos/maxwidth600px/alafrancaise.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
+    background-image: url(/public/img/restos/maxwidth600px/lanotenechantee.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
+    background-image: url(/public/img/restos/maxwidth600px/lapalettedugout.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
+    background-image: url(/public/img/restos/maxwidth600px/ledelicedessens.jpg);
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 992px) {
+  .top-index__resto-image img .top-index__resto-image #alafrancaise {
+    background-image: url(/public/img/restos/maxwidth992px/alafrancaise.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
+    background-image: url(/public/img/restos/maxwidth992px/lanotenechantee.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
+    background-image: url(/public/img/restos/maxwidth992px/lapalettedugout.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
+    background-image: url(/public/img/restos/maxwidth992px/ledelicedessens.jpg);
+  }
+}
+@media screen and (min-width: 993px) {
+  .top-index__resto-image img .top-index__resto-image #alafrancaise {
+    background-image: url(/public/img/restos/minwidth993px/alafrancaise.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
+    background-image: url(/public/img/restos/minwidth993px/lanotenechantee.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
+    background-image: url(/public/img/restos/minwidth993px/lapalettedugout.jpg);
+  }
+  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
+    background-image: url(/public/img/restos/minwidth993px/ledelicedessens.jpg);
+  }
 }
 .top-index__bottom {
   border-radius: 40px;
@@ -521,7 +516,6 @@ img {
 .menus__blocks__content {
   width: 335px;
   height: 69px;
-  z-index: 5;
   margin-bottom: 11px;
   display: flex;
   -webkit-box-shadow: 3px 3px 10px 5px #e6e6e6;
@@ -535,7 +529,6 @@ img {
   cursor: pointer;
 }
 .menus__blocks__content__recipe {
-  z-index: 1;
   flex-wrap: nowrap;
   display: inline-flex;
   flex-direction: column;
@@ -543,31 +536,33 @@ img {
   padding: 0px;
   margin: auto 12.5px;
   position: relative;
-}
-.menus__blocks__content__recipe:hover {
-  z-index: 80;
-  width: 60%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  text-overflow: "…";
+}
+.menus__blocks__content__recipe:hover > .menus__blocks__content__recipe__recipe, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h5, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
 }
 .menus__blocks__content__recipe h5 {
   width: 283px;
   flex-wrap: nowrap;
   display: inline-flex;
   padding: 0 0 9px 0;
-  z-index: 2;
   padding: 0 0 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menus__blocks__content__recipe h6 {
   flex-wrap: nowrap;
   display: inline-flex;
   width: 283px;
-  z-index: 3;
   margin: 0;
   padding: 0;
   width: 283px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
   transform: translate(-60px);
@@ -586,6 +581,9 @@ img {
   transition: transform 500ms ease-in-out 100ms;
   transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
 }
+.menus__blocks__content__price:hover > .menus__blocks__content__price__recipe {
+  animation: desctruncate 500ms ease-in-out forwards 100ms;
+}
 .menus__blocks__content__validate {
   z-index: 0;
   position: absolute;
@@ -602,10 +600,13 @@ img {
   transition: transform 500ms ease-in-out;
   transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
 }
+.menus__blocks__content__validate:hover > .menus__blocks__content__validate__recipe {
+  animation: desctruncate 500ms ease-in-out forwards 100ms;
+}
 .menus__blocks__content__validate i {
   z-index: 500;
   color: #99E2D0;
-  background-color: #fff;
+  color: #fff;
   border-radius: 25px;
   width: 22px;
   height: 22px;
@@ -613,6 +614,113 @@ img {
   position: absolute;
   margin: 0;
   padding: 0%;
+}
+.menus__blocks__content:hover > .menus__blocks__content__recipe, .menus__blocks__content:hover > .menus__blocks__content h5, .menus__blocks__content:hover > .menus__blocks__content h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
+}
+.menus__blocks__content__blockellipsis {
+  z-index: 10;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus__blocks__content__blockellipsis:hover > .menus__blocks__content__blockellipsis__recipe, .menus__blocks__content__blockellipsis:hover > .menus__blocks__content__blockellipsis h5, .menus__blocks__content__blockellipsis:hover > .menus__blocks__content__blockellipsis h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
+}
+.menus__blocks__content__blockellipsis__recipe {
+  display: inline-block;
+  position: relative;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  flex-direction: column;
+  width: 283px;
+  padding: 15px 0 12px 11px;
+  padding: 0px;
+  margin: auto 12.5px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus__blocks__content__blockellipsis__recipe h5 {
+  z-index: 11;
+  display: inline-block;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  padding: 0 0 9px 0;
+  padding: 0 0 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus__blocks__content__blockellipsis__recipe h6 {
+  z-index: 11;
+  display: inline-block;
+  flex-wrap: nowrap;
+  display: inline-flex;
+  width: 283px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
+  transform: translate(-60px);
+  cursor: pointer;
+}
+.menus__blocks__content:hover > .menus__blocks__content__recipe, .menus__blocks__content:hover > .menus__blocks__content h5, .menus__blocks__content:hover > .menus__blocks__content h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
+}
+.menus__blocks__content__price {
+  z-index: 0;
+  background-color: transparent;
+  width: 30px;
+  position: absolute;
+  right: 22px;
+  height: 69px;
+  line-height: 69px;
+  padding-left: 10px;
+  top: 0px;
+  transition: transform 500ms ease-in-out 100ms;
+  transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
+}
+.menus__blocks__content__price:hover > .menus__blocks__content__price__recipe, .menus__blocks__content__price:hover > .menus__blocks__content__price h5, .menus__blocks__content__price:hover > .menus__blocks__content__price h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
+}
+.menus__blocks__content__validate {
+  z-index: 9;
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  background-color: #99E2D0;
+  right: -60px;
+  top: 0;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 0 12px 12px 0;
+  transition: transform 500ms ease-in-out;
+  transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
+}
+.menus__blocks__content__validate:hover > .menus__blocks__content__validate__recipe, .menus__blocks__content__validate:hover > .menus__blocks__content__validate h5, .menus__blocks__content__validate:hover > .menus__blocks__content__validate h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
+}
+.menus__blocks__content__validate i {
+  z-index: 9;
+  color: #99E2D0;
+  color: #fff;
+  border-radius: 25px;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  position: absolute;
+  margin: 0;
+  padding: 0%;
+}
+.menus__blocks__content__validate i:hover > .menus__blocks__content__validate i__recipe, .menus__blocks__content__validate i:hover > .menus__blocks__content__validate i h5, .menus__blocks__content__validate i:hover > .menus__blocks__content__validate i h6 {
+  animation: desctruncate 300ms ease-in-out forwards 80ms;
 }
 
 .top-index {
