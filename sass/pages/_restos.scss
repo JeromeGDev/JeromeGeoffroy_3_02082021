@@ -1,9 +1,24 @@
 
 .top-index{
     overflow:hidden;
-    &__resto-image img{
+    &__resto-image{
         max-width: 100vw;
-        @include restobckgrd;
+        width:100vw;
+        height:200px;
+        &__alafrancaise{
+            background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }   
+        &__lanoteenchantee{
+            background-image:url("/public/img/restos/maxwidth600px/lanotenechantee.jpg");
+        }   
+        &__lapalettedugout{
+            background-image:url("/public/img/restos/maxwidth600px/lapalettedugout.jpg");
+        }   
+        &__ledelicedessens{
+            background-image:url("/public/img/restos/maxwidth600px/ledelicedessens.jpg");
+        }   
     }
     &__bottom{
     border-radius: $radiusresto;
@@ -70,29 +85,24 @@ $functionanim:backwards;
                 flex-wrap: nowrap;
                 display: inline-flex;
                 flex-direction: column;
-                width:283px;
+                width:260px;
                 //padding: 15px 0 12px 11px;
                 padding:0px;
                 margin: auto 12.5px;
                 position:relative;
-                @include ellipsis;
                 @include activellipsmenu;
                 & h5{
-                    width:283px;
                     flex-wrap: nowrap;
-                    display: inline-flex;
+                    display: block;
                     padding:0 0 9px 0;
                     padding: 0 0 9px 0;
                     @include ellipsis;
-
                 }
                 & h6{
                     flex-wrap: nowrap;
-                    display: inline-flex;
-                    width:283px;
+                    display: block;
                     margin:0;
                     padding:0;
-                    width:283px;
                     @include ellipsis;
                 }
             }

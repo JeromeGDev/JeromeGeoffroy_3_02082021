@@ -15,54 +15,48 @@ img{
 
 
 @mixin restobckgrd{
-    @media screen and (max-width:600px){
-        .top-index{
-            &__resto-image{
-            #alafrancaise{
-                background-image: url(public/img/restos/maxwidth600px/alafrancaise.jpg);
+    //@media screen and (max-width:600px){
+                 #alafrancaise{
+                    background-image: url("public/img/restos/maxwidth600px/alafrancaise.jpg");
                 }   
-            & #lanoteenchantee{
-                background-image:url(/public/img/restos/maxwidth600px/lanotenechantee.jpg);
+                 #lanoteenchantee{
+                    background-image:url("/public/img/restos/maxwidth600px/lanotenechantee.jpg");
                 }   
-            & #lapalettedugout{
-                background-image:url(/public/img/restos/maxwidth600px/lapalettedugout.jpg);
+                 #lapalettedugout{
+                    background-image:url("/public/img/restos/maxwidth600px/lapalettedugout.jpg");
                 }   
-            & #ledelicedessens{
-                background-image:url(/public/img/restos/maxwidth600px/ledelicedessens.jpg);
+                 #ledelicedessens{
+                    background-image:url("/public/img/restos/maxwidth600px/ledelicedessens.jpg");
+                }   
+    //        }
+
+  /**  @media screen and (min-width:600px) and (max-width:992px){
+                & #alafrancaise{
+                    background-image:url(/public/img/restos/maxwidth992px/alafrancaise.jpg);
+                }   
+                & #lanoteenchantee{
+                    background-image:url(/public/img/restos/maxwidth992px/lanotenechantee.jpg);
+                }   
+                &#lapalettedugout{
+                    background-image:url(/public/img/restos/maxwidth992px/lapalettedugout.jpg);
+                }   
+                & #ledelicedessens{
+                    background-image:url(/public/img/restos/maxwidth992px/ledelicedessens.jpg);
                 }   
             }
-        }
-    }
-    @media screen and (min-width:600px) and (max-width:992px){
-        .top-index__resto-image{
-        & #alafrancaise{
-            background-image:url(/public/img/restos/maxwidth992px/alafrancaise.jpg);
-            }   
-        & #lanoteenchantee{
-            background-image:url(/public/img/restos/maxwidth992px/lanotenechantee.jpg);
-            }   
-        & #lapalettedugout{
-            background-image:url(/public/img/restos/maxwidth992px/lapalettedugout.jpg);
-            }   
-        & #ledelicedessens{
-            background-image:url(/public/img/restos/maxwidth992px/ledelicedessens.jpg);
-            }   
-        }
-    }
     @media screen and (min-width:993px){
-        .top-index__resto-image{
-        & #alafrancaise{
-            background-image:url(/public/img/restos/minwidth993px/alafrancaise.jpg);
-            }   
-        & #lanoteenchantee{
-            background-image:url(/public/img/restos/minwidth993px/lanotenechantee.jpg);
-            }   
-        & #lapalettedugout{
-            background-image:url(/public/img/restos/minwidth993px/lapalettedugout.jpg);
-            }   
-        & #ledelicedessens{
-            background-image:url(/public/img/restos/minwidth993px/ledelicedessens.jpg);
-            }   
-        }
-    }
+                & #alafrancaise{
+                    background-image:url(/public/img/restos/minwidth993px/alafrancaise.jpg);
+                    }   
+                & #lanoteenchantee{
+                    background-image:url(/public/img/restos/minwidth993px/lanotenechantee.jpg);
+                    }   
+                &#lapalettedugout{
+                    background-image:url(/public/img/restos/minwidth993px/lapalettedugout.jpg);
+                    }   
+                & #ledelicedessens{
+                    background-image:url(/public/img/restos/minwidth993px/ledelicedessens.jpg);
+                }   
+    }*/ 
+
 }

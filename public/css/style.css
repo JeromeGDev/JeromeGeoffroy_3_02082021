@@ -382,26 +382,6 @@ img {
   padding: 0;
 }
 
-header {
-  max-width: 100vw;
-  width: 100%;
-  height: 80px;
-  line-height: 27px;
-  font-size: 1.6875rem;
-}
-
-.header-site {
-  padding: 20px 20px 10px 20px;
-}
-.header-site__site-title {
-  margin: auto;
-}
-.header-site__backicone {
-  position: absolute;
-  top: 25px;
-  left: 23px;
-}
-
 .footer-logo {
   margin-bottom: 24px;
 }
@@ -445,50 +425,24 @@ header {
 .top-index {
   overflow: hidden;
 }
-.top-index__resto-image img {
+.top-index__resto-image {
   max-width: 100vw;
+  width: 100vw;
+  height: 200px;
 }
-@media screen and (max-width: 600px) {
-  .top-index__resto-image img .top-index__resto-image #alafrancaise {
-    background-image: url(public/img/restos/maxwidth600px/alafrancaise.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
-    background-image: url(/public/img/restos/maxwidth600px/lanotenechantee.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
-    background-image: url(/public/img/restos/maxwidth600px/lapalettedugout.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
-    background-image: url(/public/img/restos/maxwidth600px/ledelicedessens.jpg);
-  }
+.top-index__resto-image__alafrancaise {
+  background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-@media screen and (min-width: 600px) and (max-width: 992px) {
-  .top-index__resto-image img .top-index__resto-image #alafrancaise {
-    background-image: url(/public/img/restos/maxwidth992px/alafrancaise.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
-    background-image: url(/public/img/restos/maxwidth992px/lanotenechantee.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
-    background-image: url(/public/img/restos/maxwidth992px/lapalettedugout.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
-    background-image: url(/public/img/restos/maxwidth992px/ledelicedessens.jpg);
-  }
+.top-index__resto-image__lanoteenchantee {
+  background-image: url("/public/img/restos/maxwidth600px/lanotenechantee.jpg");
 }
-@media screen and (min-width: 993px) {
-  .top-index__resto-image img .top-index__resto-image #alafrancaise {
-    background-image: url(/public/img/restos/minwidth993px/alafrancaise.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lanoteenchantee {
-    background-image: url(/public/img/restos/minwidth993px/lanotenechantee.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #lapalettedugout {
-    background-image: url(/public/img/restos/minwidth993px/lapalettedugout.jpg);
-  }
-  .top-index__resto-image img .top-index__resto-image #ledelicedessens {
-    background-image: url(/public/img/restos/minwidth993px/ledelicedessens.jpg);
-  }
+.top-index__resto-image__lapalettedugout {
+  background-image: url("/public/img/restos/maxwidth600px/lapalettedugout.jpg");
+}
+.top-index__resto-image__ledelicedessens {
+  background-image: url("/public/img/restos/maxwidth600px/ledelicedessens.jpg");
 }
 .top-index__bottom {
   border-radius: 40px;
@@ -555,21 +509,17 @@ header {
   flex-wrap: nowrap;
   display: inline-flex;
   flex-direction: column;
-  width: 283px;
+  width: 260px;
   padding: 0px;
   margin: auto 12.5px;
   position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe__recipe, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h5, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h6 {
   animation: desctruncate 300ms ease-in-out forwards 80ms;
 }
 .menus__blocks__content__recipe h5 {
-  width: 283px;
   flex-wrap: nowrap;
-  display: inline-flex;
+  display: block;
   padding: 0 0 9px 0;
   padding: 0 0 9px 0;
   overflow: hidden;
@@ -578,11 +528,9 @@ header {
 }
 .menus__blocks__content__recipe h6 {
   flex-wrap: nowrap;
-  display: inline-flex;
-  width: 283px;
+  display: block;
   margin: 0;
   padding: 0;
-  width: 283px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
