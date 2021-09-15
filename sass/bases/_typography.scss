@@ -47,6 +47,10 @@ h6{
 a{
 	color:$color-fnt;
 	text-decoration: none;
+	:hover{
+		font-weight: 900;
+		text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+	}
 }
 
 .section__welcome__title{
@@ -96,4 +100,8 @@ footer{
 			text-shadow: rem(3) rem(3) rem(3) $ccolor-btn-index-hover;
 		}
 	}
+}
+
+.link{
+	cursor:$cursor;
 }
