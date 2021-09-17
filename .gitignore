@@ -1,9 +1,0 @@
-.sass-cache/
-/images/
-.vscode
-/dart-sass/
-/node_modules/
-/sass/
-package.json
-package-lock.json
-.gitignore
