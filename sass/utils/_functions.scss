@@ -12,7 +12,7 @@ $animations:(
 );
 
 //Animation d'apparition des boutons "fonctionnement"
-@keyframes howtoshow{
+@keyframes discovery{
     0%{
       opacity:0;
       transform:translateY(10px);
@@ -38,6 +38,16 @@ $animations:(
   }
 ;}
 
+//Keyframe pour faire disparaitre le coeur supérieur
+@keyframes disappear{
+  0%{
+      opacity:1;
+  }
+  100%{
+    opacity: 0;
+  }
+;}
+
 //Keyframe réduction et truncate texte
 @keyframes desctruncate{
   0%{
@@ -48,3 +58,239 @@ $animations:(
     width:60%;
   }
 ;}
+
+//@mixin appearanceeffect{
+//*  @for $i from 1 to 11{
+//*   #plat{
+//*      &--#{$i}{
+//*        transition:transform $duration (($delay-a-)$i + $ecart-a);
+//*        animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards ($delay-a-0 $delay-a-($i - 1) + $ecart-t);
+//*
+//*      }
+//*    }
+//* }
+//*}*/
+
+//Animations du loadspinner
+@keyframes loadspinner{
+  0%{
+      opacity: 1;
+      transform:scale(1);
+      background-color: #16a085;
+  }
+  80%{
+      opacity: 1;
+      transform:scale(1);
+      background-color: #16a085;
+  }
+  98%{
+      transform:scale(100);
+      background-color: #16a085;
+  }
+  99%{
+      opacity: 0;
+  }
+  100%{
+    transform: translateY(-100vh);
+    display:none
+}
+}
+//////////////////////////////////
+@keyframes spinloader{
+  0%{
+    z-index: -2;
+}
+100%{
+  z-index: 10;
+}
+}
+/////////////////////////////////
+@keyframes circle1-1{
+  0%{ transform:rotate(0deg); }
+  100%{ transform:rotate(360deg); }
+}
+
+@keyframes circle1-2{
+  0%{ transform:rotate(180deg); }
+  100%{ transform:rotate(540deg); }
+}
+
+@keyframes circle2-1{
+  0%{ transform:rotate(360deg); }
+  100%{ transform:rotate(0deg); }
+}
+
+@keyframes circle2-2{
+  0%{ transform:rotate(540deg); }
+  100%{ transform:rotate(180deg); }
+}
+
+@keyframes circle3{
+  0%{ 
+      opacity: 0;
+      scale: 5;
+  }
+  
+  35%{ 
+      transform:rotate(0deg);
+      opacity: 1;
+      scale: 0.5;       
+  }
+
+  40%{
+      box-shadow: 3px 3px 3px lighten($backgndclr,20);
+  }
+  45%{ 
+      transform:rotate(360deg);
+      opacity: 1;
+      scale: 0.5;
+  }
+
+  50%{ 
+      opacity: 0;
+      scale: 5;
+  }
+
+  
+  55%{ 
+      transform:rotate(0deg);
+      opacity: 1;
+      scale: 0.5;        
+  }
+
+  60%{
+      box-shadow: 3px 3px 3px lighten($backgndclr,20);
+  }
+  65%{ 
+      transform:rotate(360deg);
+      opacity: 1;
+      scale: 0.5;
+  }
+
+  100%{ 
+      opacity: 0;
+      scale: 5;
+  }
+}
+
+@keyframes countdown{
+
+  0%{
+      content:"3";
+      opacity:0;
+      color:rgba(255,255,255,0.1);
+  }
+  2%{
+      content:"3";
+      opacity:1;
+      transform: scale(15);
+      transition:all  ease ;
+      color:rgba(255,255,255,0.3);
+  }
+  10%{
+      content:"3";
+      opacity:1;
+      transform: scale(1);
+      transition:all  ease ;
+      color:rgba(255,255,255,1);
+  }
+  19%{
+      content:"3";
+      opacity:1;
+      transform: scale(1);
+      color:rgba(255,255,255,1);
+  }
+
+  20%{
+      content:"2";
+      opacity:0;
+      color:rgba(255,255,255,0.1);
+  }
+  22%{
+      content:"2";
+      opacity:1;
+      transform: scale(15);
+      transition:all  ease ;
+      color:rgba(255,255,255,0.3);
+  }
+  30%{
+      content:"2";
+      opacity:1;
+      transform: scale(1);
+      transition:all  ease ;
+      color:rgba(255,255,255,1);
+  }
+  39%{
+      content:"2";
+      opacity:1;
+      transform: scale(1);
+      color:rgba(255,255,255,1);
+  }
+
+  40%{
+      content:"1";
+      opacity:0;
+      color:rgba(255,255,255,0.1);
+  }
+  42%{
+      content:"1";
+      opacity:1;
+      transform: scale(15);
+      transition:all  ease ;
+      color:rgba(255,255,255,0.3);
+  }
+  50%{
+      content:"1";
+      opacity:1;
+      transform: scale(1);
+      transition:all  ease ;
+      color:rgba(255,255,255,1);
+  }
+  59%{
+      content:"1";
+      opacity:1;
+      transform: scale(1);
+      color:rgba(255,255,255,1);
+  }
+
+  60%{
+      content:"OK!";
+      opacity:0;
+      color:rgba(255,255,255,0.1);
+  }
+  62%{
+      content:"OK!";
+      opacity:1;
+      transform: scale(15);
+      transition:all  ease ;
+      color:rgba(255,255,255,0.3);
+  }
+  70%{
+      content:"OK!";
+      opacity:1;
+      transform: scale(1);
+      transition:all  ease ;
+      color:rgba(255,255,255,1);
+  }
+  100%{
+      content:"C'est parti!";
+      opacity:1;
+      transform: scale(0.5);
+      transition:all 700ms ease 1500ms;
+      color:rgba(255,255,255,0.7);
+      margin:auto;
+      position:absolute;
+  }
+}
+
+@keyframes moovecontainerfluid{
+  0%{
+    translate: 0;
+  }
+  99%{
+    translate:0;
+  }
+  100%{
+    transform: translateY(-100vh);
+  }
+}

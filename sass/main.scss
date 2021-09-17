@@ -15,17 +15,17 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-//@import "./utils/extensions";
 @import "./bases/base";
 @import "./bases/typography";
 @import "./components/visuels";
 @import "./components/button";
 //@import "./layout/nav";
-@import "./layout/container";
 //@import "./layout/form";
 //@import "./layout/header";
+@import "./layout/containers";
 @import "./layout/footer";
 @import "./pages/restos";
+@import "./pages/loadspinner";
 
 .top-index{
     display:flex;
@@ -53,7 +53,6 @@
                 transform:translate(2px);
             }
         }
-        
     }
 }
 .section{
@@ -98,19 +97,19 @@
                     opacity: 0;
                     top:100px;
                     transition:transform $duration $delay-t-0;
-                    animation: howtoshow $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-0;// Animation d'apparition de translation vers le haut
+                    animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-0;// Animation d'apparition de translation vers le haut
                 }
                 #compose{
                     top:100px;
                     opacity: 0;
                     transition:transform $duration $delay-t-1;
-                    animation: howtoshow $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-1;// Animation d'apparition de translation vers le haut avec un décallage
+                    animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-1;// Animation d'apparition de translation vers le haut avec un décallage
                 }
                 #eat-in{
                     top:100px;
                     opacity: 0;
                     transition:translate $duration $delay-t-2;
-                    animation: howtoshow $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-2;// Animation d'apparition de translation vers le haut avec un décallage
+                    animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-2;// Animation d'apparition de translation vers le haut avec un décallage
                 }
                 &__button{
                    @include boutonsectionfonctionnement;

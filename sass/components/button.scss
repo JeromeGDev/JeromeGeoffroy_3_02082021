@@ -3,6 +3,7 @@
     @include actionbtndgrd;
     &:hover{
         @include boxshadowhover2;
+        @include actionbtndgrdhover;
     }
 }
 
