@@ -3,18 +3,6 @@
 *.sass.map
 *.scss.map
 
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-*.code-workspace
-
-# Local History for Visual Studio Code
-.history/
-
-node_modules
-
 # no npm please.
 package-lock.json
 package.json
