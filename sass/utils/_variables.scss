@@ -48,10 +48,10 @@ $cursor: pointer/*,help,grab,crosshair,not-allowed,zoom-in,grab*/;
 //Animation bouton "fonctionnement
 $duration:1800ms;
 $ecart-a:250ms;
-$delay:5550ms;
+$delay:5200ms;
 
 $ecart-t:$ecart-a * 3;
-$delay-a-0:0ms;
+$delay-a-0:$delay + 250ms;
 $delay-a-1:$delay-a-0+$ecart-t;
 $delay-a-2:$delay-a-1+$ecart-t;
 $delay-a-3:$delay-a-2+$ecart-t;
@@ -76,22 +76,15 @@ $ldrcirclesz1:150px; // diamèetre
 //taille de la boite externe - avec la bordure
 $ldrbxwidth1:$ldrcirclesz1 * 0.06;//épaisseur
 
-//Police du compteur
-$bodyftsz:$ldrcirclesz1 * 0.45;
-//Niveau de zoom de départ
-$scalestart:7;
-// Niveau de zoom final de la police
-$scaleend:1;
-
 //Cercle 2
 $ldrcirclesz2:$ldrcirclesz1 * 1.25;
 //taille de la boite externe - avec la bordure
 $ldrbxwidth2:$ldrcirclesz2 * 0.06;//épaisseur
 
 //Cercle 3
-$ldrcirclesz3:$ldrcirclesz2 * 1.15;
+$ldrcirclesz3:$ldrcirclesz1 * 1.35;
 //taille de la boite externe - avec la bordure
-$ldrbxwidth3:$ldrcirclesz2 * 0.01;//épaisseur
+$ldrbxwidth3:$ldrcirclesz3 * 0.01;//épaisseur
 
 //taille de la boite conteneur du loader
 $ldrcrclbxwidth:$ldrcirclesz3 * 1.2;
@@ -110,5 +103,12 @@ $displayib:inline-block;
 $positionr:relative;
 $positiona:absolute;
 
+
+//Police du compteur
+$bodyftsz:$ldrcirclesz1 * 0.45;
+//Niveau de zoom de départ
+$scalestart:7;
+// Niveau de zoom final de la police
+$scaleend:1; 
 //Délais initial de calcul pour l'apparition échelonnée des éléments de menu
 $delayinitial:250ms;

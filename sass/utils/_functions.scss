@@ -131,7 +131,7 @@ $pixelref:16;
   }
 
   40%{
-      box-shadow: 3px 3px 3px lighten($backgndclr,20);
+      box-shadow: 5px 5px 5px lighten($backgndclr,30);
   }
   45%{ 
       transform:rotate(360deg);
@@ -152,7 +152,7 @@ $pixelref:16;
   }
 
   60%{
-      box-shadow: 3px 3px 3px lighten($backgndclr,20);
+      box-shadow: 5px 5px 5px lighten($backgndclr,30);
   }
   65%{ 
       transform:rotate(360deg);
