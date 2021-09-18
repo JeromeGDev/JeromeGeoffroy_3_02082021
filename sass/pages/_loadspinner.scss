@@ -9,7 +9,6 @@
     width:100%;
     height:100%;
     max-height: 100%;
-    background-color: $backgndclr;
 }
 .masterbox{ // conteneur de la partie arrière de l"animation : exemple rond blanc transparent servant de guide aux quart de cele tournant
     display: flex;
@@ -48,7 +47,7 @@
     height: 100%;
     scale:1;
     font-size: 40px;
-    animation : loadspinner 5200ms backwards 1;
+    animation : loadspinner 5500ms backwards 1;
     &__loader-container{
         z-index: 3;
         position:$positionr;
@@ -187,7 +186,6 @@
                     font-size:$bodyftsz;
                     position:$positiona;
                     margin:auto;
-                    background-color:$backgndclr;
                     opacity: 1;
                     color:rgba(255,255,255,0.7);
                     &::after{

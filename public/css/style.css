@@ -83,26 +83,32 @@
     transform: scale(1);
     background-color: #16a085;
   }
-  98% {
+  85% {
     transform: scale(100);
     background-color: #16a085;
   }
-  95% {
-    opacity: 0;
-  }
   100% {
+    opacity: 0;
     transform: translateY(-100vh);
-    transition: transform 250ms ease-in;
+    transition: all 250ms ease-in;
     display: none;
   }
 }
 @keyframes spinloader {
   0% {
     z-index: -2;
-    display: collapse;
+    visibility: collapse;
+    max-height: fit-content;
+  }
+  95% {
+    z-index: -2;
+    visibility: collapse;
+    max-height: fit-content;
+    opacity: 0;
   }
   100% {
     z-index: 10;
+    visibility: visible;
     opacity: 1;
   }
 }
@@ -183,6 +189,7 @@
     content: "3";
     opacity: 0;
     color: rgba(255, 255, 255, 0.1);
+    background-color: #16a085;
   }
   2% {
     content: "3";
@@ -190,6 +197,7 @@
     transform: scale(15);
     transition: all ease;
     color: rgba(255, 255, 255, 0.3);
+    background-color: #16a085;
   }
   10% {
     content: "3";
@@ -197,17 +205,20 @@
     transform: scale(1);
     transition: all ease;
     color: white;
+    background-color: #16a085;
   }
   19% {
     content: "3";
     opacity: 1;
     transform: scale(1);
     color: white;
+    background-color: #16a085;
   }
   20% {
     content: "2";
     opacity: 0;
     color: rgba(255, 255, 255, 0.1);
+    background-color: #16a085;
   }
   22% {
     content: "2";
@@ -215,6 +226,7 @@
     transform: scale(15);
     transition: all ease;
     color: rgba(255, 255, 255, 0.3);
+    background-color: #16a085;
   }
   30% {
     content: "2";
@@ -222,17 +234,20 @@
     transform: scale(1);
     transition: all ease;
     color: white;
+    background-color: #16a085;
   }
   39% {
     content: "2";
     opacity: 1;
     transform: scale(1);
     color: white;
+    background-color: #16a085;
   }
   40% {
     content: "1";
     opacity: 0;
     color: rgba(255, 255, 255, 0.1);
+    background-color: #16a085;
   }
   42% {
     content: "1";
@@ -240,6 +255,7 @@
     transform: scale(15);
     transition: all ease;
     color: rgba(255, 255, 255, 0.3);
+    background-color: #16a085;
   }
   50% {
     content: "1";
@@ -247,17 +263,20 @@
     transform: scale(1);
     transition: all ease;
     color: white;
+    background-color: #16a085;
   }
   59% {
     content: "1";
     opacity: 1;
     transform: scale(1);
     color: white;
+    background-color: #16a085;
   }
   60% {
     content: "OK!";
     opacity: 0;
     color: rgba(255, 255, 255, 0.1);
+    background-color: #16a085;
   }
   62% {
     content: "OK!";
@@ -265,6 +284,7 @@
     transform: scale(15);
     transition: all ease;
     color: rgba(255, 255, 255, 0.3);
+    background-color: #16a085;
   }
   70% {
     content: "OK!";
@@ -272,8 +292,9 @@
     transform: scale(1);
     transition: all ease;
     color: white;
+    background-color: #16a085;
   }
-  100% {
+  90% {
     content: "C'est parti!";
     opacity: 1;
     transform: scale(0.5);
@@ -281,6 +302,11 @@
     color: rgba(255, 255, 255, 0.7);
     margin: auto;
     position: absolute;
+    background-color: #16a085;
+  }
+  100% {
+    background-color: #16a085;
+    opacity: 0;
   }
 }
 @keyframes moovecontainerfluid {
@@ -943,7 +969,6 @@ img {
   width: 100%;
   height: 100%;
   max-height: 100%;
-  background-color: #16a085;
 }
 
 .masterbox {
@@ -983,7 +1008,7 @@ img {
   height: 100%;
   scale: 1;
   font-size: 40px;
-  animation: loadspinner 5200ms backwards 1;
+  animation: loadspinner 5500ms backwards 1;
 }
 .sectionloader__loader-container {
   z-index: 3;
@@ -1126,7 +1151,6 @@ img {
   font-size: 67.5px;
   position: absolute;
   margin: auto;
-  background-color: #16a085;
   opacity: 1;
   color: rgba(255, 255, 255, 0.7);
 }

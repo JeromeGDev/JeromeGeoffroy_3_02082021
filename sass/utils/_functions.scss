@@ -73,29 +73,38 @@ $pixelref:16;
       transform:scale(1);
       background-color: #16a085;
   }
-  98%{
+85%{
       transform:scale(100);
       background-color: #16a085;
   }
-  95%{
-      opacity: 0;
-  }
+
   100%{
+    opacity: 0;
     transform: translateY(-100vh);
-    transition: transform 250ms ease-in;
+    transition: all 250ms ease-in;
     display:none
-}
+  }
 }
 
 @keyframes spinloader{ // complète l'animation loadspinner
   0%{
     z-index: -2;
-    display:collapse;
-}
-100%{
-  z-index: 10;
-   opacity: 1;
-}
+    visibility:collapse;
+    max-height: fit-content;
+  }
+
+  95%{
+    z-index: -2;
+    visibility:collapse;
+    max-height: fit-content;
+    opacity: 0;
+  }
+
+  100%{
+    z-index: 10;
+    visibility:visible;
+    opacity: 1;
+  }
 }
 
 @keyframes circle1-1{ // animation du premier quart de cerle interne tournant
@@ -172,6 +181,7 @@ $pixelref:16;
       content:"3";
       opacity:0;
       color:rgba(255,255,255,0.1);
+      background-color:$backgndclr;
   }
   2%{
       content:"3";
@@ -179,6 +189,7 @@ $pixelref:16;
       transform: scale(15);
       transition:all  ease ;
       color:rgba(255,255,255,0.3);
+      background-color:$backgndclr;
   }
   10%{
       content:"3";
@@ -186,18 +197,21 @@ $pixelref:16;
       transform: scale(1);
       transition:all  ease ;
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
   19%{
       content:"3";
       opacity:1;
       transform: scale(1);
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
 
   20%{
       content:"2";
       opacity:0;
       color:rgba(255,255,255,0.1);
+      background-color:$backgndclr;
   }
   22%{
       content:"2";
@@ -205,6 +219,7 @@ $pixelref:16;
       transform: scale(15);
       transition:all  ease ;
       color:rgba(255,255,255,0.3);
+      background-color:$backgndclr;
   }
   30%{
       content:"2";
@@ -212,18 +227,21 @@ $pixelref:16;
       transform: scale(1);
       transition:all  ease ;
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
   39%{
       content:"2";
       opacity:1;
       transform: scale(1);
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
 
   40%{
       content:"1";
       opacity:0;
       color:rgba(255,255,255,0.1);
+      background-color:$backgndclr;
   }
   42%{
       content:"1";
@@ -231,6 +249,7 @@ $pixelref:16;
       transform: scale(15);
       transition:all  ease ;
       color:rgba(255,255,255,0.3);
+      background-color:$backgndclr;
   }
   50%{
       content:"1";
@@ -238,18 +257,21 @@ $pixelref:16;
       transform: scale(1);
       transition:all  ease ;
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
   59%{
       content:"1";
       opacity:1;
       transform: scale(1);
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
 
   60%{
       content:"OK!";
       opacity:0;
       color:rgba(255,255,255,0.1);
+      background-color:$backgndclr;
   }
   62%{
       content:"OK!";
@@ -257,6 +279,7 @@ $pixelref:16;
       transform: scale(15);
       transition:all  ease ;
       color:rgba(255,255,255,0.3);
+      background-color:$backgndclr;
   }
   70%{
       content:"OK!";
@@ -264,8 +287,9 @@ $pixelref:16;
       transform: scale(1);
       transition:all  ease ;
       color:rgba(255,255,255,1);
+      background-color:$backgndclr;
   }
-  100%{
+ 90%{
       content:"C'est parti!";
       opacity:1;
       transform: scale(0.5);
@@ -273,6 +297,12 @@ $pixelref:16;
       color:rgba(255,255,255,0.7);
       margin:auto;
       position:absolute;
+      background-color:$backgndclr;
+  }
+
+  100%{
+    background-color:$backgndclr;
+    opacity: 0;
   }
 }
 
