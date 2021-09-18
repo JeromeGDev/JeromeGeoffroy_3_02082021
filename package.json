@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Site de commande en ligne de plats à emporter",
+  "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:public/css/style.css"
+  },
+  "author": "JeromeGdev",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeromeGDev/JeromeGeoffroy_3_02082021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JeromeGDev/JeromeGeoffroy_3_02082021/issues"
+  },
+  "homepage": "https://github.com/JeromeGDev/JeromeGeoffroy_3_02082021#readme"
+}
