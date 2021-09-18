@@ -1,0 +1,40 @@
+.footer-logo{
+    margin-bottom:24px;
+	& a{/*logo ohmyfood dans le footer*/
+		font-size: rem(18);
+		font-family: 'Shrikhand', cursive;
+		color:$color-bckgr-light-dark;
+        
+	}
+}
+.footer-menu{
+    margin:0;
+    padding:0;
+    & ul{
+        margin:0;
+        padding:0;
+        & li{
+            margin-bottom:rem(12);
+        }
+    }
+    &__link-block{
+        list-style: none;
+        display:flex;
+        color:$color-bckgr-light-dark;
+        margin-left:0;
+        padding-left:0;
+        &__icone{
+            & i{
+            margin:0 10px 0 0 0;
+            width:14px;
+            height:14px;
+            font-size: rem(16.67);
+            color:$color-bckgr-light-light;
+            padding-left:0;
+            }
+            & a{
+                font-size: rem(16.67);
+            }
+        }            
+    }
+}
