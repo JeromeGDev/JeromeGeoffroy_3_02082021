@@ -112,6 +112,18 @@
     opacity: 1;
   }
 }
+@keyframes speedloader {
+  0% {
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+  }
+}
 @keyframes circle1-1 {
   0% {
     transform: rotate(0deg);
@@ -387,9 +399,7 @@ footer {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  z-index: 10 !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  animation: speedloader 100ms ease 5ms 1 both;
 }
 
 * {

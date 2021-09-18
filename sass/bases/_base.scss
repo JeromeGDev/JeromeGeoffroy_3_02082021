@@ -59,9 +59,7 @@ footer{
         flex-direction: column;
         margin:0;
         padding: 0;
-        z-index: 10 !important;
-        visibility: visible !important;
-        opacity: 1 !important;
+        animation: speedloader 100ms ease 5ms 1 both;
     }
 }
   
