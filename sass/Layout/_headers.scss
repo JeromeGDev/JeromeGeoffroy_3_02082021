@@ -1,0 +1,14 @@
+.header-site{
+  width: 100vw;
+  overflow: hidden;
+    padding: 20px 20px 12px 20px;
+    margin:0;
+    &__site-title{
+      margin:0 auto;
+    }
+    &__backicone{
+            position:absolute;
+            top: 25px;
+            left: 23px;
+    }
+  }

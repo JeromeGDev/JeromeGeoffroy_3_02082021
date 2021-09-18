@@ -1,7 +1,8 @@
-.button-action{
-    @include mix-button-action;
-    @include actionbtndgrd;
+.button-action{ // Création d'un bouton d'action
+    @include mix-button-action;// assemblage de mixins pour la création d'un bouton d'action
     &:hover{
+        cursor          : $cursor;
+        transition      : all 400ms ease-in;
         @include boxshadowhover2;
         @include actionbtndgrdhover;
     }

@@ -1,45 +1,39 @@
-//Création du dégradé de couleur du bouton action*/
+// A - MIXINS DE DECORATION
+//A 1 - 1 - Création du dégradé de couleur du bouton action
 @mixin actionbtndgrd{
     background: $color-secondary;
     background: linear-gradient(175deg, $color-secondary 1%, $color-primary 61%);
 }
+//A 1 - 2 - Création du dégradé de couleur du bouton action sur HOVER
 @mixin actionbtndgrdhover{
     background: $color-secondary-hover;
     background: linear-gradient(175deg, $color-secondary-hover 1%, $color-primary-hover 61%);
 }
-
-//Code de création du jeu d'ombre*/
+// A - 2 - Création de jeus d'ombre
+// A - 2 - 1- Ombre faible
 @mixin boxshadow{
     -webkit-box-shadow: 3px 3px 10px 5px $color-shdw;
     -moz-box-shadow   : 3px 3px 10px 5px $color-shdw;
     box-shadow        : 3px 3px 10px 5px $color-shdw;
 }
+// A - 2 - 2 - Ombre normale
 @mixin boxshadowhover{
     -webkit-box-shadow: 3px 3px 10px 5px $color-shdwhvr;
     -moz-box-shadow   : 3px 3px 10px 5px $color-shdwhvr;
     box-shadow        : 3px 3px 10px 5px $color-shdwhvr;
 }
-
+// A - 2 - 3 - Ombre Intense
 @mixin boxshadowhover2{
     -webkit-box-shadow: 3px 3px 10px 5px $color-shdwhvr2;
     -moz-box-shadow   : 3px 3px 10px 5px $color-shdwhvr2;
     box-shadow        : 3px 3px 10px 5px $color-shdwhvr2;
 }
-
-/*Mise en page automatique DAJFCC : Flex / centrage horizontal / centrage vertical */
-@mixin dajfcc{
-    display        : flex;
-    align-items    : center;
-    justify-content: center;
-}
-
-//Page indexi.html - Création du dégradé du cadre de localisation*/
+// A - 3 - 1 - Page index.html - Création du dégradé du cadre de localisation*/
 @mixin locationdgrd{
     background: rgb(234, 234, 234);
     background: linear-gradient(0deg, $color-lgray 0%, $color-lgray 88%, $color-fgray 100%);
 }
-
-//mixin propriété des images de la page d'accueil*/
+// A - 4 - 1 Propriété de mise en plage des images de la page d'accueil*/
 @mixin imgindex{
     max-width    : 89.333vw;
     max-width    : 100vw;
@@ -50,15 +44,33 @@
     margin       : auto;
     border-radius: $radiusimgindex;
 }
+// A - 5 -1 Création du dégradé pour le remplissage dégradé du coeur - Dégradé inversé de celui des boutons actions
+@mixin heartdgrd {
+    background: rgb(147,86,220);
+    background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32%, rgba(255,121,218,1) 100%);
+    background-size        : 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip   : text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color   : transparent;
+}
 
-/*Mixin création bouton fonctionnement index.tml*/
+//B - MIXIN DE MISE EN PAGE PAGE
+// B - 1 - Mise en page automatique DAJFCC : Flex / centrage horizontal / centrage vertical */
+@mixin dajfcc{
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+
+// C - MIXINS COMPLEXES DE CODE COMPLET D'ELEMENTS CONSTITUTIFS
+// C - 1 - 1 - Code pour la création bouton Action index.tml (Explorer) - Pages Restos (Commander)
 @mixin mix-button-action{
-    @include actionbtndgrd;
-    @include boxshadow;
+    @include actionbtndgrd; // intégration du dégradé de couleur
+    @include boxshadow; // Mise en place de l'ombre légère permanente
     display      : block;
     position     : relative;
-    width        : 64.776119%;
-    /* 217/335 */
+    width        : 64.776119%;    /* 217/335 */
     height       : 50px;
     margin       : auto;
     border-radius: 50px;
@@ -76,17 +88,45 @@
         line-height: 50px;
         text-align : center;
     }
-
-    
-    &:hover{
-        cursor          : $cursor;
-        background-color: $color-secondary;
-        transition      : all 400ms ease-in;
+}
+// C - 2 - Création du Bouton de la section "fonctionnement" de la page index.html
+// C - 2 - 1 - Création du Bouton fonctionnement Partie 1/3 - Aspect interne et contenu
+@mixin btnhowto-inside{
+    &__number{
+        font-family:'Roboto',sans-serif;
+        font-size: rem(15);
+        font-weight:500;
+        border-radius:50%;
+        transform: translate(-50%,0);
+        padding: 8px 10px 6px 10px;
+        background-color:$color-primary;
+        color:$color-bckgr-light-light;
+    }
+    &__icone{
+        transform: scale(1.5);
+        margin: 0 20px;
+        & #choose{
+            width:14px;
+            height:20px;
+            padding: 0 6px;
+        }
+        & #compose{
+            width:19px;
+            height:20px;
+            padding: 0 1px;
+        }
+        & #eat-in{
+            width:19px;
+            height:20px;
+            padding: 0 1px;
+        }
+    }
+    &__txt{
+        text-align:center;
     }
 }
-
-// Bouton fonctionnement partie 2 sous-partie de la partie principale - création du bouton index.tml*/
-@mixin button-fonctionnement{
+// C - 2 - 2 - Création du Bouton fonctionnement Partie 2/3 - Aspect externe du bouton
+@mixin btnhowto-outside{
     display         : flex;
     flex-direction  : row;
     flex-wrap       : nowrap;
@@ -113,73 +153,14 @@
         color:$color-primary;
     }
 }
-
-// Bouton fonctionnement partie 1 partie principale - création du bouton
+// C - 2 - 3 - Bouton fonctionnement partie 3 partie principale - Assemblage des éléments consitutifs du bouton
 @mixin boutonsectionfonctionnement{
-@include button-fonctionnement;
-@include boxshadow;
-&__number{
-    font-family:'Roboto',sans-serif;
-    font-size: rem(15);
-    font-weight:500;
-    border-radius:50%;
-    transform: translate(-50%,0);
-    padding: 8px 10px 6px 10px;
-    background-color:$color-primary;
-    color:$color-bckgr-light-light;
-}
-&__icone{
-    transform: scale(1.5);
-    margin: 0 20px;
-    & #choose{
-        width:14px;
-        height:20px;
-        padding: 0 6px;
-    }
-    & #compose{
-        width:19px;
-        height:20px;
-        padding: 0 1px;
-    }
-    & #eat-in{
-        width:19px;
-        height:20px;
-        padding: 0 1px;
-    }
-}
-&__txt{
-    text-align:center;
-}
+    @include boxshadow; // Inclusion de la mixin pour la mise en place d'une ombre légère
+    @include btnhowto-outside; //Inclusion de la mixin déterminant l'aspect extérieur du bouton
+    @include btnhowto-inside; // Inclusion de la mixin assurant la mise en page du contenu du bouton.
 }
 
-//effet d'apparition
-//@mixin appearanceeffect{
-//    opacity: 0;
- //   transition:transform $duration $delay-t-1;
-//    animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-1;// Animation d'apparition de translation vers le haut avec un décallage
-//}
-
-//Page index - Création du cadre "Nouveau" sur les images des restaurant
-@mixin newresto {
-    position      : absolute;
-    top           : 7.4285%;
-    /* 13/175 */
-    right         : 3.2835%;
-    /* 11/335 */
-    z-index       : 2;
-    color         : $color-third;
-    background    : $color-thirdtxt;
-    margin        : 10px 32px 10px 12px;
-    font-size     : rem(14);
-    font-weight   : 500;
-    line-height   : 30px;
-    text-align    : center;
-    vertical-align: middle;
-    width         : 80px;
-    height        : 30px;
-}
-
-//Page - index.html - Propriété des cadres dimage des restaurants
+// C - 3 - 1 - Page index - images d'illustration des restaurants (partie 1/2): Propriétés d'affichages des images
 @mixin imgestoindex{
     position: relative;
     overflow:hidden;
@@ -200,8 +181,25 @@
         @include newresto;
     }  
 }
+// C - 3 - 2 - Page index - images d'illustration des restaurants (partie 2/2): Création du cadre "Nouveau" affiché sur les images
+@mixin newresto {
+    position      : absolute;
+    top           : 7.4285%;    /* 13/175 */
+    right         : 3.2835%;    /* 11/335 */
+    z-index       : 2;
+    color         : $color-third;
+    background    : $color-thirdtxt;
+    margin        : 10px 32px 10px 12px;
+    font-size     : rem(14);
+    font-weight   : 500;
+    line-height   : 30px;
+    text-align    : center;
+    vertical-align: middle;
+    width         : 80px;
+    height        : 30px;
+}
 
-//Page index - Création d'un bloc restaurant contituant de la liste des restaurants
+// C - 4 - 1 - Page index - Création d'un bloc de présentation de la liste des restaurants
 @mixin blocrestaurant{
     &__block{
         background-color:$color-bckgr-light-light;
@@ -209,12 +207,12 @@
         height:252px;
         margin:18px 0 0  0;
         border-radius:$radiusblklist; //arrondis du cadre block resturant
-        @include boxshadow;
-        &:last-child{
+        @include boxshadow; // Inclusion d'une ombre légère
+        &:last-child{ // marge plus importante pour l'élément dernier descendant
             margin-bottom:18px;
         }
         &__img{
-            @include imgestoindex;
+            @include imgestoindex; // Inclusion des propriétés des images définies dans la mixin C-3-1
         }
         &__content{
             min-height: 31%;
@@ -228,7 +226,7 @@
                     padding:0;margin:0;
                         & a{
                     color:$color-fnt;
-                }
+                    }
                 }
                 &__description{
                     margin:0;
@@ -246,28 +244,16 @@
                 color:transparent;
                 background:none;
                 transform:translateY(22px);
-                @include mx-btnheart;
+                @include mx-btnheart; // Inclusion des propriété de la mixin de création du coeur
             }      
         }
         
     }    
 }
 
-//Création du dégradé pour le coeur
-@mixin heartdgrd {
-    background: rgb(147,86,220);
-background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32%, rgba(255,121,218,1) 100%);
-    background-size        : 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip   : text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color   : transparent;
-}
-
-//Page index - Création du bouton "Coeur"
+// C - 4 - 2 - Page index / restos- Création du bouton "Coeur"
 @mixin mx-btnheart{
-    .kfar{
-        //display: none;
+    .kfar{ // appéllation liée à l'affichage des icones avec la classe .fas
         transform  : translateY(-22px);
         z-index    : 5;
         position   : absolute;
@@ -283,19 +269,18 @@ background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32
         background : none;
         color      : $color-fnt;
         overflow   : hidden;
-        &:hover{
-            cursor: $cursor
+        &:hover{ // Au sruvol, affiche le curseur défini dans la variable $cursor
+            cursor: $cursor;
         }
-        &:active {
+        &:active { // au clic, déclenche l'animation de disparition progressive de l'icone de prmier plan avec les bordures boires
             animation: disappear 800ms linear forwards 1;
         }
-        &:active+.kfas::before{
+        &:active+.kfas::before{ // au cli, déclenche l'animation sur le ::before de la class kfar provoquant une transition vers le haut de l'icone intermédiaire rendu totalement blanc pour masquer l'icone dégradé $color-primary / $color-secondary caché derriere
             animation: mooveup 1200ms cubic-bezier(0.88, 0.01, 0.73, 1.38) forwards 1;
             cursor   : $cursor
         }
     }
-
-    .kfas{
+    .kfas{ // appéllation liée à l'affichage des icones avec la classe .far
         margin-top: 22px;
         overflow: hidden;
         &::before {
@@ -329,57 +314,57 @@ background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32
     }
 }
 
-// Page Restaurant mixin affichage prix et animation déplacement du prix vers la gauche
+// C - 4 - 3 - Page Restaurant mixin affichage prix et animation déplacement du prix vers la gauche
 @mixin greencheckedbtn{
-    &:hover > &__validate,&:hover > &__price{
-        transform:translate( -60px);
+    &:hover > &__validate,&:hover > &__price{ // au survol de l'élément auquel sera appliquée la mixin, les éléments "Prix" et le cadre "validation" subiront une translation horizontale négative donc vers la gauche de 60ps
+        transform:translate(-60px);
         cursor:$cursor;
+        display:flex;
     }
-    //&:hover > .menus__blocks__content__recipe{
-    //    animation: desctruncate 500ms ease-in-out forwards 100ms;
-    //}
     &__price{
         z-index: 0;
         background-color: transparent;
         width: 30px;
         position: absolute;
-        right: 22px;
+        right: rem(22);
         height: 69px;
         line-height: rem(15);
         padding-left: 10px;
         bottom: 10px;
-        transition: transform 500ms ease-in-out 100ms;
+        transition: transform 500ms ease-in-out 100ms; // Papplique la transition transform sur une durée de 500ms avec un délais de 100ms selon le mode d'affichage ease-in-out
         transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
         & span{
             position: absolute;
             line-height: rem(15);
-            bottom:11px;
+            bottom:rem(3);
+            font-size: rem(14);
         }
-        &:hover > &__recipe{
+        &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
             animation: desctruncate 500ms ease-in-out forwards 100ms; 
         }
     }
-    &__validate{
+    &__validate{ //cadre vert masqué contenant l'icone blanc "check" qui sera déplacé vers la gauche au survaol du teneur des plats
         z-index: 0;
+        display:collpase;
         position:absolute;
         width: 60px;
-        height:100%;
+        height:69px;
         background-color:$color-third;
         right: -60px;
         top:0;
-        margin:auto;align-items: center;
+        margin:auto;
+        align-items: center;
         justify-content: center;
         display:flex;
         border-radius:0 $radiusblklist $radiusblklist  0;
-        transition:transform 500ms ease-in-out;
+        transition:transform 500ms ease-in-out; // Applique exactement la même animation de celle déplaçant le dacdre du prix dervs la gauche amenant ainsi le cadre validate, initialement caché par le overflox hidden le rendant visible
         transition-timing-function:cubic-bezier(.5,.64,0,1);
-        &:hover > &__recipe{
+        &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
             animation: desctruncate 500ms ease-in-out forwards 100ms; 
         }
         & i{
             z-index: 500;
             color:$color-third;
-            //background-color:#fff;
             color:#fff;
             border-radius:25px;
             width: 22px;
@@ -393,14 +378,13 @@ background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32
     }  
 }
 
-//Mixin ellipsis : propriétés nécessaires à la mise en place de la fonction ellipsis
+// C - 4 - 4a - Mixin ellipsis : propriétés nécessaires à la mise en place de la fonction ellipsis pour masquer le texte dépassant le contenu réduit
 @mixin ellipsis{
     overflow:hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-// mixin activant la fonction ellipsis sur les éléments de menu lorsque le prix se trouve décalé.
-//La mixin appelle l'animation de réduction du conteneur sur lequel il est appliqué
+// C - 4 - 4b - mixin activant la fonction ellipsis sur les éléments de menu lorsque le prix se trouve décalé.
 @mixin activellipsis{
     &:hover{
         animation: desctruncate 500ms ease-in-out forwards 80ms; 
@@ -410,5 +394,20 @@ background: linear-gradient(175deg, rgba(147,86,220,1) 0%, rgba(147,86,220,1) 32
 @mixin activellipsmenu{
     &:hover > &__recipe,&:hover > & h5,&:hover > & h6{
         animation: desctruncate 300ms ease-in-out forwards 80ms; 
+    }
+}
+
+//apparitione échelonnée des éléments de menu
+@mixin menuechelle{
+    //Calculdu delay pour echélonner l'apparaition des éléments du menu
+    & #plat{
+        @for $i from 1 through 11{
+            &--#{$i}{
+                opacity: 0;
+                transition:all $duration ($delayinitial * $i);
+                animation: discovery $duration cubic-bezier(0.6,-0.29, 0.32, 1.26) forwards ($delayinitial * $i);
+            }
+
+        }
     }
 }

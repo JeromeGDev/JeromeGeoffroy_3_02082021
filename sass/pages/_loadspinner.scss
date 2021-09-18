@@ -1,15 +1,16 @@
-.bodyloader{
-    //z-index: 1;
+.bodyloader{ // conteneur du loader
     display: block;
     content:'';
     position: absolute;
     top:0;
     left:0;
-    width:100vw;
-    height:100vh;
-    //animation : loadspinner 5200ms forwards 1;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    background-color: $backgndclr;
 }
-.masterbox{
+.masterbox{ // conteneur de la partie arrière de l"animation : exemple rond blanc transparent servant de guide aux quart de cele tournant
     display: flex;
     width: $ldrcrclbxwidth * 2;
     height:$ldrcrclbxheight * 2;
@@ -19,7 +20,7 @@
     text-align: center;
     width:100vw;
     height: 100vh;
-    &__box{
+    &__box{ // conteneur de la partie avant de l"animation (exemple : 1/4 de cercle blanc tournant
         display: inline-flex;
         position: relative;
         width: $ldrcrclbxwidth * 2;
@@ -43,8 +44,7 @@
     scale:1;
     font-size: 40px;
     animation : loadspinner 5200ms backwards 1;
-    //animation : spinloader 5200ms backwards 1;
-    &__title{
+    &__title{ // à travailler : animation d'un texte pivotant 3D vers l'avant ou l'arrière... pas sur de le faire, donc code en attente
         opacity: 1;
         z-index: 2;
         display:block;
@@ -95,13 +95,13 @@
         width: $ldrcrclbxwidth;
         height:$ldrcrclbxheight;
         margin:auto;
-            &__loader{
+            &__loader{  // cercle interne
                 z-index: 5;
                 position:$positiona;
                 margin: auto;
                 width:$ldrcirclesz1;
                 height:$ldrcirclesz1;
-                &__loader-round{
+                &__loader-round{ 
                     z-index: 6;
                     position:$positiona;
                     margin:$ldrcrclbxheight - $ldrbxwidth1;
@@ -109,7 +109,7 @@
                     height:$ldrcirclesz1;
                     border-radius:$ldrcirclesz1;
                     border:$ldrbxwidth1 solid rgba(255,255,255,.4);
-                    &::after{
+                    &::after{ // 1/4 de cercle tournant
                         z-index: 7;
                         position:$positiona;
                         top:0;
@@ -124,7 +124,7 @@
                         border-top-color:$colour-white;
                         animation: circle1-1 1000ms linear 0s infinite;
                     }
-                    &::before{
+                    &::before{ // 1/4 de cercle tournant
                         z-index: 8;
                         position:$positiona;
                         top:0;
@@ -141,7 +141,7 @@
                     }
                 }
             }
-            &__loader2{
+            &__loader2{ // cercle externe
                 z-index: 5;
                 position:$positiona;
                 margin: auto;
@@ -155,7 +155,7 @@
                     height:$ldrcirclesz2;
                     border-radius:$ldrcirclesz2;
                     border:$ldrbxwidth2 solid rgba(255,255,255,.4);
-                    &::after{
+                    &::after{ // 1/4 de cercle tournant
                         z-index: 7;
                         position:$positiona;
                         content:" ";
@@ -169,7 +169,7 @@
                         border-top-color:$colour-white;
                         animation: circle2-1 1000ms linear 0s infinite;
                     }
-                    &::before{
+                    &::before{ // 1/4 de cercle tournant
                         z-index: 7;
                         position:$positiona;
                         content:" ";
@@ -185,7 +185,7 @@
                     }
                 }
             }
-            &__loader3{
+            &__loader3{ // bordure externe à ombre blanche tournante
                 position:$positiona;
                 margin: auto;
                 width:$ldrcirclesz3;
@@ -196,7 +196,7 @@
                     width:$ldrcirclesz3;
                     height:$ldrcirclesz3;
                     border-radius:$ldrcirclesz3;
-                    border:$ldrbxwidth3 solid rgba(255,255,255,.4);
+                    border:$ldrbxwidth3 solid rgba(255,255,255,.8);
                     &::after{
                         position:$positiona;
                         content:" ";
@@ -219,7 +219,6 @@
                     position:$positiona;
                     margin:auto;
                     background-color:$backgndclr;
-                    //background-color:brown;
                     opacity: 1;
                     color:rgba(255,255,255,0.7);
                     &::after{

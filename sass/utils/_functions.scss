@@ -1,15 +1,16 @@
-@use 'sass:math';
+@use 'sass:math'; // permet d'utiliser les fonctions de calculs mathématiques de Sass selon les dernières normes en vigueur, particlièrement pour les divisions où l'utilisation du simple "/" devient déprécié.
 
-//fonction de tranformations auto des px en rem
+//fonction de conversion automatique des px en rem (saisir les valeurs en pixel, mais sans l'unité) selon le schéma rem(valeur)
 $pixelref:16;
 @function rem($pixel){
   @return math.div($pixel,$pixelref) * 1rem;
 }
 
-$animations:(
-  animation1:scale,
-  animation2:rotate
-);
+//Maps non utilisée - devait servir à la mise en place d'une fonction.
+//$animations:(
+ // animation1:scale,
+ // animation2:rotate
+//);
 
 //Animation d'apparition des boutons "fonctionnement"
 @keyframes discovery{
@@ -48,7 +49,7 @@ $animations:(
   }
 ;}
 
-//Keyframe réduction et truncate texte
+//Animation de réduction du conteneur des textes des menus pour activer le tronquage du texte lorsque l'animation du prix se délenche
 @keyframes desctruncate{
   0%{
    width:70%;
@@ -59,19 +60,8 @@ $animations:(
   }
 ;}
 
-//@mixin appearanceeffect{
-//*  @for $i from 1 to 11{
-//*   #plat{
-//*      &--#{$i}{
-//*        transition:transform $duration (($delay-a-)$i + $ecart-a);
-//*        animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards ($delay-a-0 $delay-a-($i - 1) + $ecart-t);
-//*
-//*      }
-//*    }
-//* }
-//*}*/
-
-//Animations du loadspinner
+// LES ANIMATION QUI SUIVENT SERVENT AU LOAD SPINNER AFFICH2 SUR LA PAGE INDEX.HTML
+//Animation du loadspinner
 @keyframes loadspinner{
   0%{
       opacity: 1;
@@ -87,45 +77,48 @@ $animations:(
       transform:scale(100);
       background-color: #16a085;
   }
-  99%{
+  95%{
       opacity: 0;
   }
   100%{
     transform: translateY(-100vh);
+    transition: transform 250ms ease-in;
     display:none
 }
 }
-//////////////////////////////////
-@keyframes spinloader{
+
+@keyframes spinloader{ // complète l'animation loadspinner
   0%{
     z-index: -2;
+    display:collapse;
 }
 100%{
   z-index: 10;
+   opacity: 1;
 }
 }
-/////////////////////////////////
-@keyframes circle1-1{
+
+@keyframes circle1-1{ // animation du premier quart de cerle interne tournant
   0%{ transform:rotate(0deg); }
   100%{ transform:rotate(360deg); }
 }
 
-@keyframes circle1-2{
+@keyframes circle1-2{ // animation du deuxième quart de cerle interne tournant décalé de 180 degres par rapport au premier
   0%{ transform:rotate(180deg); }
   100%{ transform:rotate(540deg); }
 }
 
-@keyframes circle2-1{
+@keyframes circle2-1{ // animation du premier quart de cerle externe tournant
   0%{ transform:rotate(360deg); }
   100%{ transform:rotate(0deg); }
 }
 
-@keyframes circle2-2{
+@keyframes circle2-2{ // animation du deuxième quart de cerle externe tournant décalé de 180 degres par rapport au premier
   0%{ transform:rotate(540deg); }
   100%{ transform:rotate(180deg); }
 }
 
-@keyframes circle3{
+@keyframes circle3{ // animation de la bordure externe
   0%{ 
       opacity: 0;
       scale: 5;
@@ -173,7 +166,7 @@ $animations:(
   }
 }
 
-@keyframes countdown{
+@keyframes countdown{ // Animation du décompte central
 
   0%{
       content:"3";
@@ -283,7 +276,7 @@ $animations:(
   }
 }
 
-@keyframes moovecontainerfluid{
+@keyframes moovecontainerfluid{ // Animation de fermeture du loader
   0%{
     translate: 0;
   }
