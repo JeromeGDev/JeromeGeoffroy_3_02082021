@@ -183,19 +183,20 @@
 // C - 3 - 2 - Page index - images d'illustration des restaurants (partie 2/2): Création du cadre "Nouveau" affiché sur les images
 @mixin newresto {
     position      : absolute;
-    top           : 7.4285%;    /* 13/175 */
-    right         : 3.2835%;    /* 11/335 */
-    z-index       : 2;
+    top           : 12px;
+    right         : 11px;
+    z-index       : 5;
     color         : $color-third;
     background    : $color-thirdtxt;
     margin        : 10px 32px 10px 12px;
+    border-radius :2px;
     font-size     : rem(14);
     font-weight   : 500;
     line-height   : 30px;
     text-align    : center;
     vertical-align: middle;
     width         : 80px;
-    height        : 30px;
+    height        : 28px;
 }
 
 // C - 4 - 1 - Page index - Création d'un bloc de présentation de la liste des restaurants

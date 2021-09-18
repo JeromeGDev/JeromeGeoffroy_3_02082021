@@ -1380,21 +1380,20 @@ img {
 }
 .section__list__block__img__new {
   position: absolute;
-  top: 7.4285%;
-  /* 13/175 */
-  right: 3.2835%;
-  /* 11/335 */
-  z-index: 2;
+  top: 12px;
+  right: 11px;
+  z-index: 5;
   color: #99E2D0;
   background: #278870;
   margin: 10px 32px 10px 12px;
+  border-radius: 2px;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 30px;
   text-align: center;
   vertical-align: middle;
   width: 80px;
-  height: 30px;
+  height: 28px;
 }
 .section__list__block__content {
   min-height: 31%;
