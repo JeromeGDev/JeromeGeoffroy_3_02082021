@@ -21,10 +21,11 @@ section#topresto {
 section{
      margin:auto;
      padding:43px 0 55px 0;
-    &#btn-commander{
-        padding:0 0 57px 0;
-        margin: -8px auto 25px auto;
-    }
+}
+.btn-commander {
+    display: block;
+    position: relative;
+    margin: -8px auto 57px auto;
 }
 main{
     margin:0;
