@@ -96,18 +96,15 @@
                 position:relative;
                 #choose{
                     opacity: 0;
-                    top:100px;
                     transition:transform $duration $delay-t-0;
                     animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-0;// Animation d'apparition de translation vers le haut
                 }
                 #compose{
-                    top:100px;
                     opacity: 0;
                     transition:transform $duration $delay-t-1;
                     animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-1;// Animation d'apparition de translation vers le haut avec un décallage
                 }
                 #eat-in{
-                    top:100px;
                     opacity: 0;
                     transition:translate $duration $delay-t-2;
                     animation: discovery $duration cubic-bezier(0.61, 0, 0.26, 1) forwards $delay-a-2;// Animation d'apparition de translation vers le haut avec un décallage
