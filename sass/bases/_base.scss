@@ -1,19 +1,10 @@
-
-html{
-    display:block;
-    width: 100%;
-    height: auto;
-    font-size:16px;
-    margin:0;
-    padding:0;
-    overflow:auto;
-}
 body{
     background: $color-bckgr-light-dark;
     width:100%;
     height:auto;
     margin:auto;
     overflow:auto;
+    font-size:16px;
 }
 section#topresto {
     margin-top: -100px;

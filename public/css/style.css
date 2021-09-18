@@ -294,22 +294,13 @@
     transform: translateY(-100vh);
   }
 }
-html {
-  display: block;
-  width: 100%;
-  height: auto;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-}
-
 body {
   background: whitesmoke;
   width: 100%;
   height: auto;
   margin: auto;
   overflow: auto;
+  font-size: 16px;
 }
 
 section#topresto {
@@ -318,7 +309,7 @@ section#topresto {
 
 section {
   margin: auto;
-  padding: 43px 0 57px 0;
+  padding: 43px 0 55px 0;
 }
 section#btn-commander {
   padding: 0 0 57px 0;
@@ -353,7 +344,7 @@ h1:hover {
 }
 
 h2 {
-  font-size: 1.791875rem;
+  font-size: 1.790625rem;
   color: #000;
 }
 
@@ -374,7 +365,7 @@ h5 {
   color: #000;
 }
 h5:last-child h5#last-title {
-  font-size: 1.108125rem;
+  font-size: 1.0625rem;
   font-weight: 700;
 }
 h5:hover {
@@ -382,7 +373,7 @@ h5:hover {
 }
 
 h6 {
-  font-size: 0.9375rem;
+  font-size: 0.90625rem;
   color: #000;
   font-weight: 300;
 }
@@ -535,10 +526,10 @@ img {
 .btnheart .kfar:hover {
   cursor: pointer;
 }
-.btnheart .kfar:active {
+.btnheart .kfar:hover {
   animation: disappear 800ms linear forwards 1;
 }
-.btnheart .kfar:active + .kfas::before {
+.btnheart .kfar:hover + .kfas::before {
   animation: mooveup 1200ms cubic-bezier(0.88, 0.01, 0.73, 1.38) forwards 1;
   cursor: pointer;
 }
@@ -1418,10 +1409,10 @@ img {
 .section__list__block__content__btnheart .kfar:hover {
   cursor: pointer;
 }
-.section__list__block__content__btnheart .kfar:active {
+.section__list__block__content__btnheart .kfar:hover {
   animation: disappear 800ms linear forwards 1;
 }
-.section__list__block__content__btnheart .kfar:active + .kfas::before {
+.section__list__block__content__btnheart .kfar:hover + .kfas::before {
   animation: mooveup 1200ms cubic-bezier(0.88, 0.01, 0.73, 1.38) forwards 1;
   cursor: pointer;
 }

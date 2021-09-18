@@ -271,10 +271,10 @@
         &:hover{ // Au sruvol, affiche le curseur défini dans la variable $cursor
             cursor: $cursor;
         }
-        &:active { // au clic, déclenche l'animation de disparition progressive de l'icone de prmier plan avec les bordures boires
+        &:hover { // au survol, déclenche l'animation de disparition progressive de l'icone de prmier plan avec les bordures boires
             animation: disappear 800ms linear forwards 1;
         }
-        &:active+.kfas::before{ // au cli, déclenche l'animation sur le ::before de la class kfar provoquant une transition vers le haut de l'icone intermédiaire rendu totalement blanc pour masquer l'icone dégradé $color-primary / $color-secondary caché derriere
+        &:hover+.kfas::before{ // au survol, déclenche l'animation sur le ::before de la class kfar provoquant une transition vers le haut de l'icone intermédiaire rendu totalement blanc pour masquer l'icone dégradé $color-primary / $color-secondary caché derriere
             animation: mooveup 1200ms cubic-bezier(0.88, 0.01, 0.73, 1.38) forwards 1;
             cursor   : $cursor
         }
