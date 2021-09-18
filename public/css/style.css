@@ -311,10 +311,10 @@
 }
 @keyframes moovecontainerfluid {
   0% {
-    translate: 0;
+    transform: translate(0);
   }
   99% {
-    translate: 0;
+    transform: translate(0);
   }
   100% {
     transform: translateY(-100vh);
@@ -387,6 +387,9 @@ footer {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  z-index: 10 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 * {
@@ -876,7 +879,7 @@ img {
   position: relative;
 }
 .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe__recipe, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h5, .menus__blocks__content__recipe:hover > .menus__blocks__content__recipe h6 {
-  animation: desctruncate 300ms ease-in-out forwards 80ms;
+  animation: desctruncate 300ms ease-in-out forwards 120ms;
 }
 .menus__blocks__content__recipe h5 {
   flex-wrap: nowrap;
@@ -899,6 +902,7 @@ img {
   transform: translate(-60px);
   cursor: pointer;
   display: flex;
+  visibility: visible;
 }
 .menus__blocks__content__price {
   z-index: 0;
@@ -924,7 +928,7 @@ img {
 }
 .menus__blocks__content__validate {
   z-index: 0;
-  display: collpase;
+  visibility: collapse;
   position: absolute;
   width: 60px;
   height: 69px;
@@ -940,7 +944,8 @@ img {
   transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
 }
 .menus__blocks__content__validate:hover > .menus__blocks__content__validate__recipe {
-  animation: desctruncate 500ms ease-in-out forwards 100ms;
+  animation: desctruncate 500ms ease-in-out forwards 120ms;
+  visibility: visible;
 }
 .menus__blocks__content__validate i {
   z-index: 500;
@@ -955,7 +960,7 @@ img {
   padding: 0%;
 }
 .menus__blocks__content:hover > .menus__blocks__content__recipe, .menus__blocks__content:hover > .menus__blocks__content h5, .menus__blocks__content:hover > .menus__blocks__content h6 {
-  animation: desctruncate 300ms ease-in-out forwards 80ms;
+  animation: desctruncate 300ms ease-in-out forwards 120ms;
 }
 
 .bodyloader {

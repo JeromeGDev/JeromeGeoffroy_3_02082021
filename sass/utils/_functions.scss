@@ -6,12 +6,6 @@ $pixelref:16;
   @return math.div($pixel,$pixelref) * 1rem;
 }
 
-//Maps non utilisée - devait servir à la mise en place d'une fonction.
-//$animations:(
- // animation1:scale,
- // animation2:rotate
-//);
-
 //Animation d'apparition des boutons "fonctionnement"
 @keyframes discovery{
     0%{
@@ -308,10 +302,10 @@ $pixelref:16;
 
 @keyframes moovecontainerfluid{ // Animation de fermeture du loader
   0%{
-    translate: 0;
+    transform:translate(0);
   }
   99%{
-    translate:0;
+    transform:translate(0);
   }
   100%{
     transform: translateY(-100vh);

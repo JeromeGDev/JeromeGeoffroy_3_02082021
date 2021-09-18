@@ -321,6 +321,7 @@
         transform:translate(-60px);
         cursor:$cursor;
         display:flex;
+        visibility: visible;
     }
     &__price{
         z-index: 0;
@@ -346,7 +347,7 @@
     }
     &__validate{ //cadre vert masqué contenant l'icone blanc "check" qui sera déplacé vers la gauche au survaol du teneur des plats
         z-index: 0;
-        display:collpase;
+        visibility: collapse;
         position:absolute;
         width: 60px;
         height:69px;
@@ -361,7 +362,8 @@
         transition:transform 500ms ease-in-out; // Applique exactement la même animation de celle déplaçant le dacdre du prix dervs la gauche amenant ainsi le cadre validate, initialement caché par le overflox hidden le rendant visible
         transition-timing-function:cubic-bezier(.5,.64,0,1);
         &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
-            animation: desctruncate 500ms ease-in-out forwards 100ms; 
+            animation: desctruncate 500ms ease-in-out forwards 120ms;
+            visibility: visible;
         }
         & i{
             z-index: 500;
@@ -388,13 +390,13 @@
 // C - 4 - 4b - mixin activant la fonction ellipsis sur les éléments de menu lorsque le prix se trouve décalé.
 @mixin activellipsis{
     &:hover{
-        animation: desctruncate 500ms ease-in-out forwards 80ms; 
+        animation: desctruncate 500ms ease-in-out forwards 120ms; 
     }
 }
 //la mixin ci-dessous est destinée à viser spécifiquement des conteneurs des textes des plats des menus
 @mixin activellipsmenu{
     &:hover > &__recipe,&:hover > & h5,&:hover > & h6{
-        animation: desctruncate 300ms ease-in-out forwards 80ms; 
+        animation: desctruncate 300ms ease-in-out forwards 120ms; 
     }
 }
 
