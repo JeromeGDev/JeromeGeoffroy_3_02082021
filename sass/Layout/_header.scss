@@ -1,0 +1,24 @@
+.header-site{
+    margin:auto;
+    padding:0;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: baseline;
+    align-content: flex-start;
+    flex-grow: 1;
+    position: relative;
+    &__site-title{
+        display: inline-flex;
+        align-self: flex-end;
+        position: relative;
+    }
+    &__backicone{
+        position: absolute;
+        display: inline-flex;
+        align-self: flex-start;
+        top:23px;
+        left:20px;
+    }
+}

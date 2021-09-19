@@ -402,6 +402,37 @@ footer {
   animation: speedloader 100ms ease 5ms 1 both;
 }
 
+header {
+  margin: 20px 20px 12px 20px;
+}
+
+.header-site {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: flex-start;
+  flex-grow: 1;
+  position: relative;
+}
+.header-site__site-title {
+  display: inline-flex;
+  align-self: flex-end;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.header-site__backicone {
+  position: absolute;
+  display: inline-flex;
+  align-self: flex-start;
+  top: 23px;
+  left: 20px;
+}
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -646,6 +677,27 @@ img {
   transform: translateY(22px);
 }
 
+header {
+  margin: 20px 20px 12px 20px;
+}
+header .header-site {
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+  align-content: flex-start;
+  flex-grow: 1;
+}
+header .header-site__site-title {
+  align-self: flex-end;
+}
+header .header-site__backicone {
+  align-self: flex-start;
+}
+
 .footer-logo {
   margin-bottom: 24px;
 }
@@ -708,22 +760,22 @@ img {
   height: 260px;
 }
 .top-index__resto-image__alafrancaise {
-  background-image: url("public/img/restos/maxwidth600px/alafrancaise.jpg");
+  background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__lanoteenchantee {
-  background-image: url("public/img/restos/maxwidth600px/lanoteenchantee.jpg");
+  background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__lapalettedugout {
-  background-image: url("public/img/restos/maxwidth600px/lapalettedugout.jpg");
+  background-image: url("/public/img/restos/maxwidth600px/lapalettedugout.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__ledelicedessens {
-  background-image: url("public/img/restos/maxwidth600px/ledelicedessens.jpg");
+  background-image: url("/public/img/restos/maxwidth600px/ledelicedessens.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
