@@ -677,10 +677,7 @@ img {
   transform: translateY(22px);
 }
 
-header {
-  margin: 20px 20px 12px 20px;
-}
-header .header-site {
+.header-site {
   margin: auto;
   padding: 0;
   display: flex;
@@ -690,12 +687,19 @@ header .header-site {
   align-items: baseline;
   align-content: flex-start;
   flex-grow: 1;
+  position: relative;
 }
-header .header-site__site-title {
+.header-site__site-title {
+  display: inline-flex;
   align-self: flex-end;
+  position: relative;
 }
-header .header-site__backicone {
+.header-site__backicone {
+  position: absolute;
+  display: inline-flex;
   align-self: flex-start;
+  top: 23px;
+  left: 20px;
 }
 
 .footer-logo {
