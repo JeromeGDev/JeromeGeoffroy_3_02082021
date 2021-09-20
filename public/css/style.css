@@ -440,7 +440,7 @@ header {
 h1 {
   /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
   font-family: "Shrikhand", cursive;
-  font-size: 1.875rem;
+  font-size: 1.8749953125rem;
   font-weight: 700;
   text-align: center;
   margin: auto;
@@ -450,28 +450,28 @@ h1:hover {
 }
 
 h2 {
-  font-size: 1.790625rem;
+  font-size: 1.7916621875rem;
   color: #000;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.49999625rem;
   font-weight: 900;
   color: #000;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 0.9999975rem;
   color: #000;
   text-transform: uppercase;
 }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.1249971875rem;
   color: #000;
 }
 h5:last-child h5#last-title {
-  font-size: 1.0625rem;
+  font-size: 1.1083305625rem;
   font-weight: 700;
 }
 h5:hover {
@@ -479,12 +479,12 @@ h5:hover {
 }
 
 h6 {
-  font-size: 0.9375rem;
+  font-size: 1.0416640625rem;
   color: #000;
   font-weight: 300;
 }
 h6:last-child h6#last-desc {
-  font-size: 0.9375rem;
+  font-size: 1.0249974375rem;
   font-weight: 700;
 }
 h6:hover {
@@ -504,7 +504,7 @@ a :hover {
 }
 .section__welcome__title span {
   color: #000;
-  font-size: 1.083125rem;
+  font-size: 1.49999625rem;
   font-weight: 700;
 }
 .section__welcome__title a {
@@ -517,29 +517,29 @@ li {
 
 .pricefont {
   color: #000;
-  font-size: 0.916875rem;
+  font-size: 0.916664375rem;
 }
 
 .dish {
   /*plat*/
   color: #000;
-  font-size: 1rem;
+  font-size: 1.1249971875rem;
   font-weight: 500;
 }
 
 .new {
-  font-size: 1rem;
+  font-size: 0.8749978125rem;
   font-weight: 700;
 }
 
 .btntxt__nav--lnk {
   /*Bouton de navigation de la page d'accueil*/
-  font-size: 1rem;
+  font-size: 0.9999975rem;
   font-weight: 700;
 }
 .btntxt__action {
   /*Bouton d'action - explorer sur index.html et commander sur page restaurant*/
-  font-size: 0.75rem;
+  font-size: 0.9999975rem;
 }
 
 footer a {
@@ -678,28 +678,28 @@ img {
 }
 
 .header-site {
-  margin: auto;
+  margin: 0 auto;
   padding: 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: baseline;
-  align-content: flex-start;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
   flex-grow: 1;
   position: relative;
 }
 .header-site__site-title {
-  display: inline-flex;
-  align-self: flex-end;
-  position: relative;
+  display: inline-block;
+  text-align: center;
+  align-self: baseline;
 }
 .header-site__backicone {
-  position: absolute;
-  display: inline-flex;
-  align-self: flex-start;
+  align-self: center;
   top: 23px;
-  left: 20px;
+  left: 30px;
+  width: 22px;
+  height: 22px;
 }
 
 .footer-logo {

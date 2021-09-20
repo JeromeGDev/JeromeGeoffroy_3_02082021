@@ -1,24 +1,26 @@
 .header-site{
-    margin:auto;
+    margin:0 auto;
     padding:0;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: baseline;
-    align-content: flex-start;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     flex-grow: 1;
     position: relative;
     &__site-title{
-        display: inline-flex;
-        align-self: flex-end;
-        position: relative;
+        display: inline-block;
+        //position: relative;
+        text-align: center;
+        align-self: baseline;
     }
     &__backicone{
-        position: absolute;
-        display: inline-flex;
-        align-self: flex-start;
+        align-self: center;
+        //position: absolute;
         top:23px;
-        left:20px;
+        left:30px;
+        width: 22px;
+        height: 22px;
     }
 }

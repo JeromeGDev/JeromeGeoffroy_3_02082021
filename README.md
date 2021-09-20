@@ -1,10 +1,12 @@
 # Réalisation du P3 - Formation Développeur Web - OPENCLASSROOMS - 2021
 
 MESSAGE IMPORTANT CONCERNANT LES IMAGES :
-Les images sont correctement renseignées, les images sont dans les dossiers, les liens d'affichages sont correctement établi.bodyloader.btn-commanderToutes les images appariassaient correctement sur TOUTES les pages.
-Subittement, elles ont commencé à ne plus apparaitre, les unes après les autres, alors que le code ne changeait pas.
-C'est donc un grand mystère.
-Tous les navigateurs basés sur Chrome n'affichent plus les images, alors qu'un affiche de l'url https://jeromegdev.github.io/JeromeGeoffroy_3_02082021/ dans firefox, fournis de belles images bien fonctionnelles et en place.
+Il y a un problème d'origine inconnue avec les images.
+Elles s'affcihent correctement sur la page index, mais impossible de les afficher sur les pages de chaque restaurant.
+En local, elles s'affichent toutes très bien.
+
+Mais sur Github, non. Sur la page Github, c'est fabuleux. A l'inspecteur on voit non seulement que les images sont correctement insérées, que le code est correct et complet. Seullement, si on clique sur le lien de l'image qui est présenté dans les propriétés du background-image, on arrive sur une page en erreur 404, alors que si on copie et qu'on colle cette même url après l'url de ma page github.io, on tombe directement sur la bonne image. Github a ses mystère que la raison ignore...
+
 
  PREAMBULE : J'ai suivi scrupuleusement les instructions d'installation de Sass selon les modalités décrites dans le cours OCR. La procédure indiquée n'a rien à voir avec la procédure standard recommandée par le site officiel de SASS. 
  J'ai énormément des problèmes avec SASS qui ne compile pas tous les fichiers scss. J'ai à la ate du 18 septembre un mois de retard sur le planning. 15 jours minimum sont dûs à des problèmes de fonctionnement de sass.
