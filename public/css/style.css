@@ -764,22 +764,22 @@ img {
   height: 260px;
 }
 .top-index__resto-image__alafrancaise {
-  background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
+  background-image: url("../../public/img/restos/maxwidth600px/alafrancaise.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__lanoteenchantee {
-  background-image: url("/public/img/restos/maxwidth600px/alafrancaise.jpg");
+  background-image: url("../../public/img/restos/maxwidth600px/alafrancaise.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__lapalettedugout {
-  background-image: url("/public/img/restos/maxwidth600px/lapalettedugout.jpg");
+  background-image: url("../../public/img/restos/maxwidth600px/lapalettedugout.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 .top-index__resto-image__ledelicedessens {
-  background-image: url("/public/img/restos/maxwidth600px/ledelicedessens.jpg");
+  background-image: url("../../public/img/restos/maxwidth600px/ledelicedessens.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
