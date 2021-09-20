@@ -12,21 +12,21 @@
 // A - 2 - Création de jeus d'ombre
 // A - 2 - 1- Ombre faible
 @mixin boxshadow{
-    -webkit-box-shadow: 3px 3px 10px 5px $color-shdw;
-    -moz-box-shadow   : 3px 3px 10px 5px $color-shdw;
-    box-shadow        : 3px 3px 10px 5px $color-shdw;
+    -webkit-box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdw;
+    -moz-box-shadow   : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdw;
+    box-shadow        : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdw;
 }
 // A - 2 - 2 - Ombre normale
 @mixin boxshadowhover{
-    -webkit-box-shadow: 3px 3px 10px 5px $color-shdwhvr;
-    -moz-box-shadow   : 3px 3px 10px 5px $color-shdwhvr;
-    box-shadow        : 3px 3px 10px 5px $color-shdwhvr;
+    -webkit-box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr;
+    -moz-box-shadow   : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr;
+    box-shadow        : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr;
 }
 // A - 2 - 3 - Ombre Intense
 @mixin boxshadowhover2{
-    -webkit-box-shadow: 3px 3px 10px 5px $color-shdwhvr2;
-    -moz-box-shadow   : 3px 3px 10px 5px $color-shdwhvr2;
-    box-shadow        : 3px 3px 10px 5px $color-shdwhvr2;
+    -webkit-box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr2;
+    -moz-box-shadow   : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr2;
+    box-shadow        : 0.8vw 0.8vw 2.6667vw 1.3333vw $color-shdwhvr2;
 }
 // A - 3 - 1 - Page index.html - Création du dégradé du cadre de localisation*/
 @mixin locationdgrd{
@@ -70,9 +70,9 @@
     display      : block;
     position     : relative;
     width        : 64.776119%;    /* 217/335 */
-    height       : 50px;
+    height       : 13.3333vw;
     margin       : auto;
-    border-radius: 50px;
+    border-radius: 13.3333vw;
     position     : relative;
     flex-wrap    : nowrap;
     text-align : center;
@@ -84,7 +84,7 @@
         margin     : auto;
         color      : #fff;
         font-size  : rem(16);
-        line-height: 50px;
+        line-height: 13.3333vw;
         text-align : center;
     }
 }
@@ -97,27 +97,27 @@
         font-weight:500;
         border-radius:50%;
         transform: translate(-50%,0);
-        padding: 8px 10px 6px 10px;
+        padding: 2.1333vw 2.6667vw 1.6vw 2.6667vw;
         background-color:$color-primary;
         color:$color-bckgr-light-light;
     }
     &__icone{
         transform: scale(1.5);
-        margin: 0 20px;
+        margin: 0 5.3333vw;
         & #choose{
-            width:14px;
-            height:20px;
-            padding: 0 6px;
+            width:3.7333vw;
+            height:5.3333vw;
+            padding: 0 1.6vw;
         }
         & #compose{
-            width:19px;
-            height:20px;
-            padding: 0 1px;
+            width:5.0667vw;
+            height:5.3333vw;
+            padding: 0 0.2667vw;
         }
         & #eat-in{
-            width:19px;
-            height:20px;
-            padding: 0 1px;
+            width:5.0667vw;
+            height:5.3333vw;
+            padding: 0 0.2667vw;
         }
     }
     &__txt{
@@ -129,24 +129,24 @@
     display         : flex;
     flex-direction  : row;
     flex-wrap       : nowrap;
-    height          : 72px;
-    width           : 323px;
-    padding         : 0px;
+    height          : 19.2vw;
+    width           : 86.1333vw;
+    padding         : 0vw;
     margin          : auto;
     background-color: $color-bckgr-light-dark;
-    box-shadow      : 5px 5px 5px $color-shdw;
+    box-shadow      : 1.3333vw 1.3333vw 1.3333vw $color-shdw;
     border-radius   : $rdsbtnfidx;
     align-items     : center;
     background      : $color-lgray;
     opacity         : 1;
     font-weight     : 700;
-    max-width       : 323px;
+    max-width       : 86.1333vw;
 
     &:hover{
         cursor          : $cursor;
         background-color: $ccolor-btn-index-hover;
         transition      : all 700ms cubic-bezier(0.61, 0, 0.26, 1);
-        box-shadow      : 5px 5px 25px $color-shdwhvr;
+        box-shadow      : 1.3333vw 1.3333vw 6.6667vw $color-shdwhvr;
     }
     &:hover > &__icone{
         color:$color-primary;
@@ -163,9 +163,9 @@
 @mixin imgestoindex{
     position: relative;
     overflow:hidden;
-    width: 335px;
-    height: 174px ;
-    border-radius:12px 12px 0 0;
+    width: 89.3333vw;
+    height: 46.4vw ;
+    border-radius:3.2vw 3.2vw 0 0;
     align-items: baseline;
     display: flex;
     &__image{
@@ -183,19 +183,19 @@
 // C - 3 - 2 - Page index - images d'illustration des restaurants (partie 2/2): Création du cadre "Nouveau" affiché sur les images
 @mixin newresto {
     position      : absolute;
-    top           : 12px;
-    right         : 11px;
+    top           : 3.2vw;
+    right         : 2.9333vw;
     z-index       : 5;
     color         : $color-third;
     background    : $color-thirdtxt;
-    border-radius :2px;
+    border-radius : 0.5333vw;
     font-size     : rem(14);
     font-weight   : 500;
-    line-height   : 30px;
+    line-height   : 8vw;
     text-align    : center;
     vertical-align: middle;
-    width         : 80px;
-    height        : 28px;
+    width         : 21.3333vw;
+    height        : 7.4667vw;
     user-select     : none;
 }
 
@@ -203,20 +203,20 @@
 @mixin blocrestaurant{
     &__block{
         background-color:$color-bckgr-light-light;
-        box-shadow: 5px 5px $color-shdw;
-        height:252px;
-        margin:18px 0 0  0;
+        box-shadow: 1.3333vw 1.3333vw $color-shdw;
+        height:67.2vw;
+        margin:4.8vw 0 0  0;
         border-radius:$radiusblklist; //arrondis du cadre block resturant
         @include boxshadow; // Inclusion d'une ombre légère
         &:last-child{ // marge plus importante pour l'élément dernier descendant
-            margin-bottom:18px;
+            margin-bottom:4.8vw;
         }
         &__img{
             @include imgestoindex; // Inclusion des propriétés des images définies dans la mixin C-3-1
         }
         &__content{
             min-height: 31%;
-            padding-left: 14px;
+            padding-left: 3.7333vw;
             display: grid;
             grid-template-columns: 9fr 1fr;
             align-items: center;
@@ -238,12 +238,12 @@
                 position:relative;
                 padding: 0;
                 margin:0;
-                width:22px;
-                height:22px;
-                line-height: 22px;
+                width:5.8667vw;
+                height:5.8667vw;
+                line-height: 5.8667vw;
                 color:transparent;
                 background:none;
-                transform:translateY(22px);
+                transform:translateY(5.8667vw);
                 @include mx-btnheart; // Inclusion des propriété de la mixin de création du coeur
             }      
         }
@@ -254,7 +254,7 @@
 // C - 4 - 2 - Page index / restos- Création du bouton "Coeur"
 @mixin mx-btnheart{
     .kfar{ // appéllation liée à l'affichage des icones avec la classe .fas
-        transform  : translateY(-22px);
+        transform  : translateY(-5.8667vw);
         z-index    : 5;
         position   : absolute;
         margin     : 0;
@@ -262,10 +262,10 @@
         right      : 0;
         bottom     : 0;
         left       : 0;
-        width      : 27px;
-        height     : 25px;
-        line-height: 22px;
-        font-size  : 22px;
+        width      : 7.2vw;
+        height     : 6.6667vw;
+        line-height: 5.8667vw;
+        font-size  : 5.8667vw;
         background : none;
         color      : $color-fnt;
         overflow   : hidden;
@@ -281,35 +281,35 @@
         }
     }
     .kfas{ // appéllation liée à l'affichage des icones avec la classe .far
-        margin-top: 22px;
+        margin-top: 5.8667vw;
         overflow: hidden;
         &::before {
             content         : '';
             z-index         : 4;
             position        : absolute;
-            margin          : -22px 0 0 0;
+            margin          : -5.8667vw 0 0 0;
             top             : 0;
-            width           : 27px;
-            height          : 27px;
-            line-height     : 22px;
-            font-size       : 22px;
+            width           : 7.2vw;
+            height          : 7.2vw;
+            line-height     : 5.8667vw;
+            font-size       : 5.8667vw;
             background-color: #fff;
-            transform       : translateY(22px);
+            transform       : translateY(5.8667vw);
         }
 
         z-index    : 3;
         position   : absolute;
         padding    : 0;
         margin     : 0;
-        top        : 0px;
+        top        : 0vw;
         right      : 0;
         bottom     : 0;
         left       : 0;
-        width      : 27px;
-        height     : 27px;
-        line-height: 22px;
-        font-size  : 22px;
-        transform  : translateY(-22px);
+        width      : 7.2vw;
+        height     : 7.2vw;
+        line-height: 5.8667vw;
+        font-size  : 5.8667vw;
+        transform  : translateY(-5.8667vw);
         @include heartdgrd;
     }
 }
@@ -317,22 +317,25 @@
 // C - 4 - 3 - Page Restaurant mixin affichage prix et animation déplacement du prix vers la gauche
 @mixin greencheckedbtn{
     &:hover > &__validate,&:hover > &__price{ // au survol de l'élément auquel sera appliquée la mixin, les éléments "Prix" et le cadre "validation" subiront une translation horizontale négative donc vers la gauche de 60ps
-        transform:translate(-60px);
+        transform:translate(-16vw);
         cursor:$cursor;
         display:flex;
         visibility: visible;
     }
+    &:hover >  &__validate .fas{
+        animation:rollicone 750ms ease-in-out; ;
+    }
     &__price{
         z-index: 0;
         background-color: transparent;
-        width: 30px;
+        width: 8vw;
         position: absolute;
         right: rem(22);
-        height: 69px;
+        height: 18.4vw;
         line-height: rem(15);
-        padding-left: 10px;
-        bottom: 10px;
-        transition: transform 500ms ease-in-out 100ms; // Papplique la transition transform sur une durée de 500ms avec un délais de 100ms selon le mode d'affichage ease-in-out
+        padding-left: 2.6667vw;
+        bottom: 2.6667vw;
+        transition: transform 750ms ease-in-out 100ms; // Papplique la transition transform sur une durée de 500ms avec un délais de 100ms selon le mode d'affichage ease-in-out
         transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
         & span{
             position: absolute;
@@ -341,45 +344,53 @@
             font-size: rem(14);
         }
         &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
-            animation: desctruncate 500ms ease-in-out forwards 100ms; 
+            animation: desctruncate 750ms ease-in-out forwards 100ms; 
         }
     }
     &__validate{ //cadre vert masqué contenant l'icone blanc "check" qui sera déplacé vers la gauche au survaol du teneur des plats
         z-index: 0;
         visibility: collapse;
         position:absolute;
-        width: 60px;
-        height:69px;
+        width: 16vw;
+        height:18.4vw;
         background-color:$color-third;
-        right: -60px;
+        right: -16vw;
         top:0;
         margin:auto;
         align-items: center;
         justify-content: center;
         display:flex;
         border-radius:0 $radiusblklist $radiusblklist  0;
-        transition:transform 500ms ease-in-out; // Applique exactement la même animation de celle déplaçant le dacdre du prix dervs la gauche amenant ainsi le cadre validate, initialement caché par le overflox hidden le rendant visible
+        transition:transform 750ms ease-in-out; // Applique exactement la même animation de celle déplaçant le dacdre du prix dervs la gauche amenant ainsi le cadre validate, initialement caché par le overflox hidden le rendant visible
         transition-timing-function:cubic-bezier(.5,.64,0,1);
         &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
-            animation: desctruncate 500ms ease-in-out forwards 120ms;
+            animation: desctruncate 750ms ease-in-out forwards 120ms;
             visibility: visible;
         }
         & i{
             z-index: 500;
             color:$color-third;
             color:#fff;
-            border-radius:25px;
-            width: 22px;
-            height: 22px;
+            border-radius:6.6667vw;
+            width: 5.8667vw;
+            height: 5.8667vw;
             text-align: center;
             position: absolute;
             margin:0;
             padding:0%;
-
+            rotate:0;
         }
     }  
 }
 
+@keyframes rollicone{
+    0%{
+        transform:rotate(-360deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+}
 // C - 4 - 4a - Mixin ellipsis : propriétés nécessaires à la mise en place de la fonction ellipsis pour masquer le texte dépassant le contenu réduit
 @mixin ellipsis{
     overflow:hidden;
@@ -403,7 +414,7 @@
 @mixin menuechelle{
     //Calculdu delay pour echélonner l'apparaition des éléments du menu
     & #plat{
-        @for $i from 1 through 11{
+        @for $i from 1 through 20{
             &--#{$i}{
                 opacity: 0;
                 transition:all $duration ($delayinitial * $i);

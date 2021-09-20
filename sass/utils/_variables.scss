@@ -12,6 +12,7 @@ $rgba-0-50-color-primary: rgba(147, 86, 220,1);
 $rgba-50-0-color-secondary: rgba(255, 121, 218,1);
 $color-third: #99E2D0;
 $color-thirdtxt: darken($color-third,40);/*originel : #d1d1d1*/
+$color-third-title: lighten($color-third,2);/*originel : #d1d1d1*/
 /*Couleurs supplémentaires*/
 $color-new:darken($color-third,35);
 $color-fnt: #000;
@@ -31,9 +32,9 @@ $color-inactive:#BFBFBF;
 /*shadow*/
 $heading-shadow-size: rem(4px);
 /*Arrondis des coins des boutons de la section fonctionnement de la page d'accueil*/
-$rdsbtnfidx:12px;
+$rdsbtnfidx:3.2vw;
 /*Arrondis des coins des images de la page d'accueil*/
-$radiusimgindex:12px 12px 0 0;
+$radiusimgindex:3.2vw 3.2vw 0 0;
 /*arrondis des blocs de la liste des restaurant */
 $radiusblklist:12px;
 /*Arrondi fond page restaurant (sous image entete)*/

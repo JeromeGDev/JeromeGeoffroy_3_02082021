@@ -15,26 +15,26 @@ $pixelref:16;
 @keyframes discovery{
     0%{
       opacity:0;
-      transform:translateY(10px);
+      transform:translateY(2.6667vw);
     }
     100%{
       opacity:1;
-      transform:translateY(-10px);
+      transform:translateY(-2.6667vw);
     }
 }
 
 //Keyframe animation remplissage des coeurs
 @keyframes mooveup{
   0%{
-      transform:translateY(22px);
+      transform:translateY(5.8667vw);
   }
   50%{
-      transform:translateY(-22px);
+      transform:translateY(-5.8667vw);
   }
   100%{
     transform-origin:0 -200%;
-    transform:translateY(-22px);
-    top:-22px;
+    transform:translateY(-5.8667vw);
+    top:-5.8667vw;
   }
 ;}
 
@@ -153,7 +153,7 @@ $pixelref:16;
   }
 
   40%{
-      box-shadow: 5px 5px 5px lighten($backgndclr,30);
+      box-shadow: 1.3333vw 1.3333vw 1.3333vw lighten($backgndclr,30);
   }
   45%{ 
       transform:rotate(360deg);
@@ -174,7 +174,7 @@ $pixelref:16;
   }
 
   60%{
-      box-shadow: 5px 5px 5px lighten($backgndclr,30);
+      box-shadow: 1.3333vw 1.3333vw 1.3333vw lighten($backgndclr,30);
   }
   65%{ 
       transform:rotate(360deg);

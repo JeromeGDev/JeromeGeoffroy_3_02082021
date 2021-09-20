@@ -1,10 +1,14 @@
+.loaderbox{
+         margin:auto;
+     padding:43px 0 14.6667vw 0;
+}
 .bodyloader{ // conteneur du loader
     display: block;
     content:'';
     position: absolute;
     top:0;
     left:0;
-    margin:0;
+    margin:auto;
     padding:0;
     width:100%;
     height:100%;
@@ -46,15 +50,33 @@
     width: 100%;
     height: 100%;
     scale:1;
-    font-size: 40px;
+    font-size: rem(40);
     animation : loadspinner 5500ms backwards 1;
     &__loader-container{
+        padding-top:$ldrcrclbxheight;
         z-index: 3;
         position:$positionr;
         border-radius:$ldrbxradius;
         width: $ldrcrclbxwidth;
         height:$ldrcrclbxheight;
-        margin:auto;
+        margin: auto;
+        padding:10vw;
+        &::before{
+            display: inline-block;
+            content: 'Loading';
+            margin:2vw auto;
+            padding:10vw;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            position:static;
+            color:$color-third-title;
+            rotate: 0;
+            transform: rotateY(1080deg);
+            transform-origin: left;
+            transition: transform 500ms;
+        }
         &__loader-box{
             z-index: 4;
             position:$positionr;
