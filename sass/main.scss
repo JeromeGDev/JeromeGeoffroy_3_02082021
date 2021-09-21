@@ -18,7 +18,7 @@
 
 @import "./bases/base";
 @import "./bases/typography";
-//@import "./bases/mediaQueries";
+@import "./bases/mediaQueries";
 
 @import "./components/visuels";
 @import "./components/button";
@@ -123,8 +123,8 @@
             padding:2.4vw 0;
             &__title{
                 margin-bottom:7.2vw;
-            }      
-            @include blocrestaurant;
+            }
+                @include blocrestaurant;
         }
     }
 

@@ -372,7 +372,9 @@ section {
 .btn-commander {
   display: block;
   position: relative;
-  margin: -2.1333vw auto 15.2vw auto;
+  background-color: #fff;
+  margin: -2.1333vw auto 0 auto;
+  padding-bottom: 15.2vw;
 }
 
 main {
@@ -542,6 +544,115 @@ footer a:hover {
   cursor: pointer;
 }
 
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .page {
+    max-width: 1200px;
+    width: 100%;
+    min-width: 601px;
+  }
+
+  .section__howto {
+    background-color: #FFFFFF;
+    padding: 13.3333vw 5.3333vw 0 5.3333vw;
+    display: block;
+    width: 100%;
+    width: 89.3333vw;
+  }
+  .section__howto__title {
+    padding: 0 5.3333vw 15.2vw 5.3333vw;
+  }
+  .section__howto__level {
+    display: grid;
+    grid-template-columns: 3fr;
+    position: relative;
+  }
+  .section__howto__level #choose {
+    opacity: 0;
+    transition: transform 1800ms 5700ms;
+    animation: discovery 1800ms cubic-bezier(0.61, 0, 0.26, 1) forwards 5450ms;
+  }
+  .section__howto__level #compose {
+    opacity: 0;
+    transition: transform 1800ms 6450ms;
+    animation: discovery 1800ms cubic-bezier(0.61, 0, 0.26, 1) forwards 6200ms;
+  }
+  .section__howto__level #eat-in {
+    opacity: 0;
+    transition: translate 1800ms 7200ms;
+    animation: discovery 1800ms cubic-bezier(0.61, 0, 0.26, 1) forwards 6950ms;
+  }
+  .section__howto__level__button {
+    max-width: 25%;
+    -webkit-box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw #e6e6e6;
+    -moz-box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw #e6e6e6;
+    box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 19.2vw;
+    width: 86.1333vw;
+    padding: 0vw;
+    margin: auto;
+    background-color: whitesmoke;
+    box-shadow: 1.3333vw 1.3333vw 1.3333vw #e6e6e6;
+    border-radius: 3.2vw;
+    align-items: center;
+    background: #ebebeb;
+    opacity: 1;
+    font-weight: 700;
+    max-width: 86.1333vw;
+  }
+  .section__howto__level__button:hover {
+    cursor: pointer;
+    background-color: #F4EEFB;
+    transition: all 700ms cubic-bezier(0.61, 0, 0.26, 1);
+    box-shadow: 1.3333vw 1.3333vw 6.6667vw #cccccc;
+  }
+  .section__howto__level__button:hover > .section__howto__level__button__icone {
+    color: #9356dc;
+  }
+  .section__howto__level__button__number {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    border-radius: 50%;
+    transform: translate(-50%, 0);
+    padding: 2.1333vw 2.6667vw 1.6vw 2.6667vw;
+    background-color: #9356dc;
+    color: #FFFFFF;
+  }
+  .section__howto__level__button__icone {
+    transform: scale(1.5);
+    margin: 0 5.3333vw;
+  }
+  .section__howto__level__button__icone #choose {
+    width: 3.7333vw;
+    height: 5.3333vw;
+    padding: 0 1.6vw;
+  }
+  .section__howto__level__button__icone #compose {
+    width: 5.0667vw;
+    height: 5.3333vw;
+    padding: 0 0.2667vw;
+  }
+  .section__howto__level__button__icone #eat-in {
+    width: 5.0667vw;
+    height: 5.3333vw;
+    padding: 0 0.2667vw;
+  }
+  .section__howto__level__button__txt {
+    text-align: center;
+  }
+  .section__list__title {
+    margin-bottom: 7.2vw;
+  }
+  .section__list__group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+  }
+}
 img {
   max-width: 100%;
 }
