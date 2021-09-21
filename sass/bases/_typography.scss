@@ -12,8 +12,10 @@ h1{ /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 }
 
 h2{
-	font-size: rempts(21.5);
+	font-size: rempts(21);
 	color:$color-fnt;
+	font-family: 'Shrikhand', cursive;
+	font-weight: 300;
 	}
 h3{
 	font-size: rempts(18);

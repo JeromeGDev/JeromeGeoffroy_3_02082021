@@ -6,6 +6,7 @@ html{
     margin:0;
     padding:0;
     overflow:auto;
+    background-color: $backgndclr;
 }
 body{
     background: $color-bckgr-light-dark;
@@ -20,6 +21,7 @@ section#topresto {
 section{
      margin:auto;
      padding:43px 0 14.6667vw 0;
+    background-color: $color-bckgr-light-light;
 }
 .btn-commander {
     display: block;
@@ -52,40 +54,17 @@ footer{
     margin:0;
     padding: 0;
     width:100vw;
+    background-color: $color-bckgr-light-light;
     &#page-restaurant{
         display: flex;
         flex-direction: column;
         margin:0;
         padding: 0;
         animation: speedloader 100ms ease 5ms 1 both;
+        background-color: $color-bckgr-light-dark;       
     }
 }
 header{
-    margin:5.3333vw 5.3333vw 3.2vw 5.3333vw;
-}
-.header-site{
-    margin:auto;
-    padding:0;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: baseline;
-    align-content: flex-start;
-    flex-grow: 1;
-    position: relative;
-    &__site-title{
-        display: inline-flex;
-        align-self: flex-end;
-        position: relative;
-        margin:0;
-        padding:0;
-    }
-    &__backicone{
-        position: absolute;
-        display: inline-flex;
-        align-self: flex-start;
-        top:6.1333vw;
-        left:5.3333vw;
-    }
+    padding:5.3333vw 5.3333vw 3.2vw 5.3333vw;
+    background-color: $color-bckgr-light-light;
 }

@@ -1,6 +1,4 @@
 .sass-cache/
-*.sass.map
-*.scss.map
 sass/**
 package-lock.json
 package.json
