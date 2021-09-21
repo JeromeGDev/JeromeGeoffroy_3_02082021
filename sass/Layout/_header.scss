@@ -7,17 +7,24 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    flex-grow: 1;
+    //flex-grow: 1;
     position: relative;
+    background-color: $color-bckgr-light-light;
     &__site-title{
         display: inline-block;
-        //position: relative;
+        position: relative;
         text-align: center;
         align-self: baseline;
+        background-color: $color-bckgr-light-light;
     }
     &__backicone{
+        position: absolute;
+        display: inline-flex;
+        align-self: flex-start;
+        top:6.1333vw;
+        left:5.3333vw;
         align-self: center;
-        //position: absolute;
+        position: absolute;
         top:6.1333vw;
         left:8vw;
         width: 5.8667vw;
