@@ -1,0 +1,65 @@
+@media screen and (min-width: 1200px){
+    //Sur le page d'accueil
+    h1{
+        font-size: rempts(50);
+    }
+    h3{
+        font-size: rempts(50);
+    }
+
+    .link{
+        &:hover{
+            cursor:$cursor;
+        }
+    }
+        
+    .btnheart{
+        @include mx-btnheart;
+    }
+    .button-action{ 
+            &__explore a {
+            font-size  : rempts(25);
+        }
+    }
+
+    body{
+        min-width: 1200px;
+        max-width: 100vw;
+        background-color: $color-bckgr-light-light;
+    }
+    header{
+        width:100%;
+        max-width: 100vw;
+    }
+    main{
+        max-width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: stretch;
+    }
+
+.section{
+    max-width: 100vw;
+    width:100;
+    margin:0 20px;
+    &__howto{
+        display:grid;
+        grid-template-columns: 1FR 1FR;
+        grid-template-rows: 1FR 1FR;
+    }
+    &__list{
+        &__title{display:block;
+        }
+        &__group{
+            display:grid;
+            grid-template-columns: 1FR 1FR;
+            grid-template-rows: 1FR 1FR;
+            @include blocrestaurant;
+        }
+    }
+    }
+}
+
+
