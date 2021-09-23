@@ -15,7 +15,7 @@
 	<title>OhMyFood</title>
 </head>
 <body>
-	<section>
+	<div class="loaderbox">
 		<div class="bodyloader">
 			<div class="sectionloader">
 				<!--<div class="sectionloader__title"><span>CHARGEMENT EN COURS</span></div>-->
@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<div class="container-fluid" id="pageindex">
 		<div class="page">
 			<header>
@@ -46,87 +46,96 @@
 					Etant donné que le logo est contitué de la police non modifiée,j'ai opté pour réécrire le logoc directement avec la police adéquat.
 					Procéder ainsi, permet d'alléger le fichier à charger et de gagner du temps de chargement, et donc, du positionnement internet.
 					Le chargement de la page étant accélé l'expérience client n'en sera qu'améliorée.-->
-				<div class="header-site">
-					<h1 class="header-site__site-title">ohmyfood</h1>
+				<div class="header-site mqd-hs">
+					<h1 class="header-site__site-title mqd-hs__st">ohmyfood</h1>
 				</div>
 			</header>
 			<main>
-				<div class="top-index">
-					<div class="top-index__location">
-						<div class="top-index__location__city">
-							<div class="top-index__location__city__icone">
-								<i class="fas fa-map-marker-alt"></i>
+				<div class="mdq3-top">
+					<div class="mdq3-top__1">
+						<div class="top-index mdq3-top__1__ti">
+							<div class="top-index__location mdq3-top__1__ti__loc">
+								<div class="top-index__location__city mdq3-top__1__ti__loc__cy">
+									<div class="top-index__location__city__icone mdq3-top__1__ti__loc__cy__ic">
+										<i class="fas fa-map-marker-alt"></i>
+									</div>
+									Paris, Bellevile
+								</div>
 							</div>
-							Paris, Bellevile
+						</div>
+						<section class="section__welcome  mdq3-top__1__w" id="welcome">
+						<div class="section__welcome__txtcontent mdq3-top-1__w__tc">
+							<h3 class="section__welcome__txtcontent__title mdq3-top-1__w__tc__ttl">Réservez le menu qui vous convient</h3>
+							<span class="section__welcome__txtcontent__slug mdq3-top-1__w__tc__sg">Découvrez des restaurants d'exeption
+								sélectionnés par nos soins</span>
+						</div>
+						<div class="button-action">
+							<div class="button-action__explore mqd-ba__explr">
+								<a href="index.html">Explorer nos restaurants</a>
+							</div>
+						</div>
+						</section>
+					</div>
+					<div class="mdq3-top__2">
+						<div class="mdq3-top__2__howto">
+							<section class="section__howto" id="howto">
+								<div class="section__howto__title mdq3-top__2__howto__title">
+									<h3>Fonctionnement</h3>
+								</div>
+								<div class="mdq3-top__2__howto__levels">
+									<div class="section__howto__level mdq3-top__2__howto__levels__level">
+										<a href="index.html" title="Choisissez un restaurant">
+											<div class="section__howto__level__button mdq3-top__2__howto__levels__level__btn" id="choose">
+												<div class="section__howto__level__button__number mdq3-top__2__howto__levels__level__btn__nbr">
+													1
+												</div>
+												<div class="section__howto__level__button__icone mdq3-top__2__howto__levels__level__btn__icn">
+													<i class="fas fa-mobile-alt"></i>
+												</div>
+												<div class="section__howto__level__button__text mdq3-top__2__howto__levels__level__btn__txt">
+													Choisissez un restaurant
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="section__howto__level mdq3-top__2__howto__levels__level">
+										<a href="index.html" title="Composez votre menu">
+											<div class="section__howto__level__button mdq3-top__2__howto__levels__level__btn" id="compose">
+												<div class="section__howto__level__button__number mdq3-top__2__howto__levels__level__btn__nbr">
+													2
+												</div>
+												<div class="section__howto__level__button__icone mdq3-top__2__howto__levels__level__btn__icn">
+													<i class="fas fa-list"></i>
+												</div>
+												<div class="section__howto__level__button__text mdq3-top__2__howto__levels__level__btn__txt">
+													Composez votre menu
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="section__howto__level mdq3-top__2__howto__levels__level">
+										<a href="index.html" title="Dégustez au restaurant">
+											<div class="section__howto__level__button mdq3-top__2__howto__levels__level__btn" id="eat-in">
+												<div class="section__howto__level__button__number mdq3-top__2__howto__levels__level__btn__nbr">
+													3
+												</div>
+												<div class="section__howto__level__button__icone mdq3-top__2__howto__levels__level__btn__icn">
+													<i class="fas fa-store-alt"></i>
+												</div>
+												<div class="section__howto__level__button__text mdq3-top__2__howto__levels__level__btn__txt">
+													Dégustez au restaurant
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</section>
 						</div>
 					</div>
 				</div>
-				<section class="section__welcome" id="welcome">
-					<div class="section__welcome__txtcontent">
-						<h3 class="section__welcome__txtcontent__title">Réservez le menu qui vous convient</h3>
-						<span class="section__welcome__txtcontent__slug">Découvrez des restaurants d'exeption
-							sélectionnés par nos soins</span>
-					</div>
-					<div class="button-action">
-						<div class="button-action__explore">
-							<a href="index.html">Explorer nos restaurants</a>
-						</div>
-					</div>
-				</section>
-				<section class="section__howto" id="howto">
-					<!--/ section howto test/-->
-					<div class="section__howto__title">
-						<h3>Fonctionnement</h3>
-					</div>
-					<div class="section__howto__level">
-						<a href="index.html" title="Choisissez un restaurant">
-							<div class="section__howto__level__button" id="choose">
-								<div class="section__howto__level__button__number">
-									1
-								</div>
-								<div class="section__howto__level__button__icone">
-									<i class="fas fa-mobile-alt"></i>
-								</div>
-								<div class="section__howto__level__button__text">
-									Choisissez un restaurant
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="section__howto__level">
-						<a href="index.html" title="Composez votre menu">
-							<div class="section__howto__level__button" id="compose">
-								<div class="section__howto__level__button__number">
-									2
-								</div>
-								<div class="section__howto__level__button__icone">
-									<i class="fas fa-list"></i>
-								</div>
-								<div class="section__howto__level__button__text">
-									Composez votre menu
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="section__howto__level">
-						<a href="index.html" title="Dégustez au restaurant">
-							<div class="section__howto__level__button" id="eat-in">
-								<div class="section__howto__level__button__number">
-									3
-								</div>
-								<div class="section__howto__level__button__icone">
-									<i class="fas fa-store-alt"></i>
-								</div>
-								<div class="section__howto__level__button__text">
-									Dégustez au restaurant
-								</div>
-							</div>
-						</a>
-					</div>
-				</section>
+				<section class="section__list" id="restaurant-list">
+					<!--<div class="section__list" id="restaurant-list">-->
 
-				<section>
-					<div class="section__list" id="restaurant-list">
 						<div class="section__list__title">
 							<h3>Restaurants</h3>
 						</div>
@@ -203,7 +212,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="section__list__block" id="delice">
 							<div class="section__list__block__img">
 								<div class="section__list__block__img__image">
@@ -226,8 +234,7 @@
 								</div>
 							</div>
 						</div>
-
-					</div>
+					<!--</div>-->
 				</section>
 			</main>
 			<footer>

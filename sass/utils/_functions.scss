@@ -6,7 +6,7 @@ $pixelref:16;
   @return math.div($pixel,$pixelref) * 1rem;
 }
 
-//fonction de conversion automatique des pt en rem (saisir les valeurs en pixel, mais sans l'unité) selon le schéma rem(valeur)
+//fonction de conversion automatique des pt en rem (saisir les valeurs en points, mais sans l'unité) selon le schéma rempts(valeur)
 @function rempts($pts){
   $ptsref:math.div($pixelref,1.33333);
   @return math.div($pts,$ptsref) * 1rem};

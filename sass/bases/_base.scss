@@ -19,8 +19,8 @@ section#topresto {
     margin-top: -26.6667vw;
 }
 section{
-     margin:auto;
-     padding:43px 0 14.6667vw 0;
+    margin:auto;
+    padding:43px 0 14.6667vw 0;
     background-color: $color-bckgr-light-light;
 }
 .btn-commander {
@@ -29,10 +29,6 @@ section{
     background-color: #fff;
     margin: -2.1333vw auto 0 auto;
     padding-bottom: 15.2vw;
-}
-main{
-    margin:0;
-    padding:0;
 }
 footer{
     background:#535353;
@@ -55,7 +51,7 @@ footer{
   .page{
     margin:0;
     padding: 0;
-    width:100vw;
+    width:100%;
     background-color: $color-bckgr-light-light;
     &#page-restaurant{
         display: flex;
