@@ -28,7 +28,7 @@ $pixelref:16;
   0%{
       transform:translateY(5.8667vw);
   }
-  50%{
+  70%{
       transform:translateY(-5.8667vw);
   }
   100%{
@@ -42,6 +42,9 @@ $pixelref:16;
 @keyframes disappear{
   0%{
       opacity:1;
+  }
+  50%{
+    transform: lighten($color-fnt,50);
   }
   100%{
     opacity: 0;
