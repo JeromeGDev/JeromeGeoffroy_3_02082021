@@ -35,10 +35,9 @@
 }
 // A - 4 - 1 Propriété de mise en plage des images de la page d'accueil*/
 @mixin imgindex{
-    max-width    : 89.333vw;
     max-width    : 100%;
     width        : 100%;
-    max-height   : 46.4vw;
+    max-height   : 100%;
     overflow     : hidden;
     height       : auto;
     margin       : auto;
@@ -170,11 +169,69 @@
     display: flex;
     &__image{
         position: absolute;
-        right:0;
         bottom:0;
+        right:0;
         @include imgindex;
         z-index:1;
         max-width:100%;
+        &#imglapalettedugout{
+            z-index: 10;
+            background-image: url("../../public/img/restos/maxwidth600px/lapalettedugout.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top:0;
+        }
+        &#imglanotenechantee{
+            z-index: 10;
+            background-image: url("../../public/img/restos/maxwidth600px/lanoteenchantee.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top:0;
+        }
+        &#imgalafrancaise{
+            z-index: 10;
+            background-image: url("../../public/img/restos/maxwidth600px/alafrancaise.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top:0;
+        }
+        &#imgdelicedessens{
+            z-index: 10;
+            background-image: url("../../public/img/restos/maxwidth600px/ledelicedessens.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            top:0;
+        }
+          @media screen and (min-width: 1200px){
+            &#imglapalettedugout{
+                z-index: 10;
+                background-image: url("../../public/img/restos/minwidth993px/lapalettedugout.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top:0;
+            }
+            &#imglanotenechantee{
+                z-index: 10;
+                background-image: url("../../public/img/restos/minwidth993px/lanoteenchantee.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top:0;
+            }
+            &#imgalafrancaise{
+                z-index: 10;
+                background-image: url("../../public/img/restos/minwidth993px/alafrancaise.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top:0;
+            }
+            &#imgdelicedessens{
+                z-index: 10;
+                background-image: url("../../public/img/restos/minwidth993px/ledelicedessens.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                top:0;
+            }
+          }
     }
     &__new{
         @include newresto;
@@ -313,7 +370,6 @@
         @include heartdgrd;
     }
 }
-
 // C - 4 - 3 - Page Restaurant mixin affichage prix et animation déplacement du prix vers la gauche
 @mixin greencheckedbtn{
     &:hover > &__validate,&:hover > &__price{ // au survol de l'élément auquel sera appliquée la mixin, les éléments "Prix" et le cadre "validation" subiront une translation horizontale négative donc vers la gauche de 60ps
