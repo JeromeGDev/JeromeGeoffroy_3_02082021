@@ -63,7 +63,18 @@ $delay-t-2:$delay-a-2+$ecart-a;
 $delay-t-3:$delay-a-3+$ecart-a;
 
 //dégradé de couleur pour le bouton action
-$gradient1colour: linear-gradient(175deg,#ff79da 1%,#9356dc 61%);    
+$gradient1colour: linear-gradient(175deg,#ff79da 31%,#9356dc 71%);    
+
+//Varaibles pour l'animation du coeur
+// 1 - Version mobile first (code de basse)
+/**cette premiere variable coorespond à la valeur obtenue pour la taille
+ * de la polide de licone du coeur. pour le version mobile first elle
+ * est obtenu par la fonction rem(22) e une fois convertie, elle donne
+ * une valeur que l'on reconvertie en vw pour avoir une police relative.
+ * Cette valeur est utilisée dans la fonction mooveup pour obtenir
+ * la valeur de translate du coeur*/
+$moove:5.8667vw;
+$moove-d: $moove * .3125;
 
 /*************************************************/
 /********Variables propres au Load spienner*******/
@@ -73,7 +84,8 @@ $bodyftclr:hsl(150,57%,97%);
 
 //taille du cercle : seule valeur de référence à modifier !
 //Cercle 1
-$ldrcirclesz1:150px; // diamèetre
+$ldrcirclesz1:150px; // diamètre
+
 //taille de la boite externe - avec la bordure
 $ldrbxwidth1:$ldrcirclesz1 * 0.06;//épaisseur
 

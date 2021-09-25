@@ -1,11 +1,5 @@
 .footer-logo{
     margin-bottom:6.4vw;
-	& a{/*logo ohmyfood dans le footer*/
-		font-size: rempts(13.5);
-		font-family: 'Shrikhand', cursive;
-		color:$color-bckgr-light-dark;
-        
-	}
 }
 .footer-menu{
     margin:0;
@@ -39,7 +33,7 @@
     }
 }
 @media screen and (min-width: 1200px){
-    footer{
+footer{
         padding: 2vw 5vw;
         display:flex;
         flex-direction: column-reverse;
@@ -49,7 +43,7 @@
         margin: 1.5vw auto;
         //margin-bottom:6.4vw;
         //margin-right: 5vw;
-        & a{/*logo ohmyfood dans le footer*/
+        & a{//logo ohmyfood dans le footer
             font-size: rempts(43.5);
             font-family: 'Shrikhand', cursive;
             color:$color-bckgr-light-dark;

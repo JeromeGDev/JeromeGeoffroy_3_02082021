@@ -26,17 +26,42 @@ $pixelref:16;
 //Keyframe animation remplissage des coeurs
 @keyframes mooveup{
   0%{
-      transform:translateY(5.8667vw);
+      transform:translateY($moove);
+      @media screen and (min-width: 1200px){
+        transform:translateY($moove-d);
+      }
   }
   70%{
-      transform:translateY(-5.8667vw);
+      transform:translateY(-$moove);
+      @media screen and (min-width: 1200px){
+        transform:translateY($moove-d);
+      }
   }
   100%{
     transform-origin:0 -200%;
-    transform:translateY(-5.8667vw);
-    top:-5.8667vw;
+    transform:translateY(-$moove);
+    top:-$moove;
+    @media screen and (min-width: 1200px){
+      transform-origin:0 -200%;
+      transform:translateY(-$moove-d);
+      top:-$moove-d;
+    }
   }
 ;}
+    @keyframes mooveup-d{
+    0%{
+      transform:translateY($moove-d);
+    }
+    70%{
+        transform:translateY(-$moove-d);
+    }
+    100%{
+      transform-origin:0 -200%;
+      transform:translateY(-$moove-d);
+      top:-$moove-d;
+    }
+ ;}
+
 
 //Keyframe pour faire disparaitre le coeur supérieur
 @keyframes disappear{
