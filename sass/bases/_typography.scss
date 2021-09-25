@@ -54,8 +54,99 @@ a{
 		font-weight: 900;
 	}
 }
+.top-index{
+    &__location{
+        &__city{
+            font-family:'Roboto',sans-serif;
+            font-size: rem(16);
+            font-weight:700;
+            line-height:rem(16);
+            &__icone{
+                line-height:rem(17);
+                font-size: rem(17);
+            }
+        }
+    }
+	&__bottom{5.8667vw
+		&__resto-clic{
+			& i{
+				font-size: rem(22);
+			}
+		}
+	}
+}
 
-.section__welcome__title{
+
+.section{
+        &__welcome{
+			&__title{
+				& h3{
+					color:$color-fnt;
+				}
+				& span{
+					color:$color-fnt;
+					font-size: rempts(18);
+					font-weight:700;
+				}
+				& a{
+					color:$color-fnt;
+				}
+			}
+			&__txtcontent{
+				&__title{
+				}
+				&__slug{
+					font-size: rem(17);
+					}
+	& span{
+		color:$color-fnt;
+		font-size: rempts(18);
+		font-weight:700;
+	}
+	& a{
+		color:$color-fnt;
+	}
+                }
+        }
+        &__howto{
+            &__level{
+                &__button{
+					&__number{
+						font-family:'Roboto',sans-serif;
+				        font-size: rem(15);
+				        font-weight:500;
+		            }
+            }
+        }
+        &__list{
+			&__block{
+				&__content{
+					&__btnheart{}
+				}				
+			}
+            @include blocrestaurant;
+        }
+}
+}
+.kfar{
+	line-height: rem(22);
+    font-size  : rem(22);
+}
+.kfas{
+	line-height: rem(22);
+    font-size  : rem(22);
+	&::before{
+		line-height: rem(22);
+		font-size  : rem(22);	
+	}
+}
+
+
+
+
+
+
+/**.section__welcome__title{
 	& h3{
 		color:$color-fnt;
 	}
@@ -66,8 +157,8 @@ a{
 	}
 	& a{
 		color:$color-fnt;
-	}	
-}
+	}
+}*/
 li{
 	list-style: none;
 }
@@ -93,15 +184,45 @@ li{
 		font-size: rempts(12);
 	}
 }
+.button-action{
+	&__explore a {
+		font-size  : rempts(25);
+		line-height: rempts(25);
+	}
+}
 footer{
 	& a{
 		color:$color-bckgr-light-dark;
-		&:hover{
-			cursor:$cursor;
-			//text-decoration: underline;
-			text-shadow: rem(3) rem(3) rem(3) $ccolor-btn-index-hover;
-		}
 	}
+}
+
+.footer-logo{
+	& a{/*logo ohmyfood dans le footer*/
+		font-size: rempts(13.5);
+		font-family: 'Shrikhand', cursive;
+		color:$color-bckgr-light-dark;
+        text-align: left;
+	}
+    &:hover{
+        transform: scale(1.1);
+        transition: all 400ms ease;
+    }
+}
+.footer-menu{
+    &__link-block{
+        color:$color-bckgr-light-dark;
+        &__icone{
+            & i{
+            font-size: rem(16.67);
+            color:$color-bckgr-light-light;
+            }
+            & a{
+                font-size: rempts(12);
+            }
+        }&:hover{
+		text-shadow: rempts(3) rempts(3) rempts(3) $color-bckgr-light-light;
+	}            
+    }
 }
 
 .link{
