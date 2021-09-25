@@ -451,7 +451,7 @@ header {
 
 @media all and (min-width: 1200px) {
   html {
-    font-size: 70px;
+    font-size: 25px;
   }
 }
 * {
