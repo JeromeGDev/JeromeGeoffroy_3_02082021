@@ -16,4 +16,7 @@
 
 .btnheart{
     @include mx-btnheart;
+    @media screen and (min-width: 1200px){
+        display: none;
+    }
 }

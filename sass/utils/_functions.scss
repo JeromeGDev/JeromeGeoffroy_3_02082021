@@ -48,7 +48,7 @@ $pixelref:16;
     }
   }
 ;}
-    @keyframes mooveup-d{
+@keyframes mooveup-d{
     0%{
       transform:translateY($moove-d);
     }
@@ -86,7 +86,37 @@ $pixelref:16;
     width:60%;
   }
 ;}
+@keyframes rollicone{
+  0%{
+      transform:rotate(-360deg);
+  }
+  100%{
+      transform:rotate(0deg);
+  }
+;}
+@media screen and (min-width: 1200px){
+@keyframes desctruncate{
+  0%{
+   width:70%;
+  }
 
+  100%{
+    width:52%;
+  }
+;}
+
+@keyframes rollicone{
+  0%{
+      transform:rotate(-360deg);
+      transform-origin: math.div($moove-d,2);
+  }
+  100%{
+      transform:rotate(0deg);
+      transform-origin: math.div($moove-d,2);
+
+  }
+;}
+}
 // LES ANIMATION QUI SUIVENT SERVENT AU LOAD SPINNER AFFICH2 SUR LA PAGE INDEX.HTML
 //Animation du loadspinner
 @keyframes loadspinner{

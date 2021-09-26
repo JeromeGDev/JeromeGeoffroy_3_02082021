@@ -1,3 +1,4 @@
+@use 'sass:math';
 // A - MIXINS DE DECORATION
 //A 1 - 1 - Création du dégradé de couleur du bouton action
 @mixin actionbtndgrd{
@@ -518,8 +519,7 @@
         transform  : translateY(-$moove);
         @include heartdgrd;
     }
-    @media screen and (min-width: 601px) and (max-width: 1200px){
-    }
+
     @media screen and (min-width: 1200px){
         .kfar{ // appéllation liée à l'affichage des icones avec la classe .fas
             transform  : translateY(-$moove-d);
@@ -551,25 +551,11 @@
         .kfas{ // appéllation liée à l'affichage des icones avec la classe .far
             margin-top: $moove-d;
             overflow: hidden;
-            &::before {
-                content         : '';
-                z-index         : 4;
-                position        : absolute;
-                margin          : -$moove-d 0 0 0;
-                top             : 0;
-                width           : 7.2vw * .3125;
-                height          : 7.2vw * .3125;
-                line-height     : $moove-d;
-                font-size       : $moove-d;
-                background-color: #fff;
-                transform       : translateY($moove-d);
-            }
-    
             z-index    : 3;
             position   : absolute;
             padding    : 0;
             margin     : 0;
-            top        : 0vw;
+            top        : 0;
             right      : 0;
             bottom     : 0;
             left       : 0;
@@ -579,7 +565,22 @@
             font-size  : $moove-d;
             transform  : translateY(-$moove-d);
             @include heartdgrd;
+            &::before {
+            content         : '';
+            z-index         : 4;
+            position        : absolute;
+            margin          : -$moove-d 0 0 0;
+            top             : 0;
+            width           : 7.2vw * .3125;
+            height          : 7.2vw * .3125;
+            line-height     : $moove-d;
+            font-size       : $moove-d;
+            background-color: #fff;
+            transform       : translateY($moove-d);
+            }
         }
+    }
+    @media screen and (min-width: 601px) and (max-width: 1200px){
     }
 }
 // C - 4 - 3 - Page Restaurant mixin affichage prix et animation déplacement du prix vers la gauche
@@ -591,7 +592,8 @@
         visibility: visible;
     }
     &:hover >  &__validate .fas{
-        animation:rollicone 750ms ease-in-out; ;
+        animation:rollicone 750ms ease-in-out;
+        transform-origin: math.div($moove,2);
     }
     &__price{
         z-index: 0;
@@ -609,7 +611,6 @@
             position: absolute;
             line-height: rem(15);
             bottom:rem(3);
-            font-size: rem(14);
         }
         &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
             animation: desctruncate 750ms ease-in-out forwards 100ms; 
@@ -652,16 +653,76 @@
     @media screen and (min-width: 601px) and (max-width: 1200px){
     }
     @media screen and (min-width: 1200px){
+        &:hover > &__validate,&:hover > &__price{ // au survol de l'élément auquel sera appliquée la mixin, les éléments "Prix" et le cadre "validation" subiront une translation horizontale négative donc vers la gauche de 60ps
+            transform:translate(-8vw);
+            cursor:$cursor;
+            display:flex;
+            visibility: visible;
+        }
+        &:hover >  &__validate .fas{
+            animation:rollicone 750ms ease-in-out;
+            transform-origin: math.div($moove-d,-2);
+        }
+        &__price{
+            z-index: 0;
+            background-color: transparent;
+            width: 8vw;
+            position: absolute;
+            right: rem(22);
+            height: 8vw;
+            line-height: rem(12);
+            padding-left: 2.6667vw;
+            //bottom: 2.6667vw;
+            padding:0 0 0.7vw 0;
+            transition: transform 750ms ease-in-out 100ms; // Papplique la transition transform sur une durée de 500ms avec un délais de 100ms selon le mode d'affichage ease-in-out
+            transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
+            & span{
+                position: absolute;
+                line-height: rem(12);
+                bottom:rem(-6);
+                right:rem(3);
+                padding:0;
+            }
+            &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
+                animation: desctruncate 750ms ease-in-out forwards 100ms; 
+            }
+        }
+        &__validate{ //cadre vert masqué contenant l'icone blanc "check" qui sera déplacé vers la gauche au survaol du teneur des plats
+            z-index: 0;
+            visibility: collapse;
+            position:absolute;
+            width: 8vw;
+            height:8vw;
+            background-color:$color-third;
+            right: -8vw;
+            top:0;
+            margin:auto;
+            align-items: center;
+            justify-content: center;
+            display:flex;
+            border-radius:0 $radiusblklist $radiusblklist  0;
+            transition:transform 750ms ease-in-out; // Applique exactement la même animation de celle déplaçant le dacdre du prix dervs la gauche amenant ainsi le cadre validate, initialement caché par le overflox hidden le rendant visible
+            transition-timing-function:cubic-bezier(.5,.64,0,1);
+            &:hover > &__recipe{ // Applique l'animation de tronquage du texte sur l'élement récipe (cadre contenant le nom et la description des plats
+                animation: desctruncate 750ms ease-in-out forwards 120ms;
+                visibility: visible;
+            }
+            & i{
+                z-index: 500;
+                color:$color-third;
+                color:#fff;
+                border-radius:6.6667vw;
+                width: $moove-d;
+                height: $moove-d;
+                text-align: center;
+                position: absolute;
+                margin:0;
+                padding:0%;
+                rotate:0;
+            }
+        }  
     }
-}
-
-@keyframes rollicone{
-    0%{
-        transform:rotate(-360deg);
-    }
-    100%{
-        transform:rotate(0deg);
-    }
+ 
 }
 // C - 4 - 4a - Mixin ellipsis : propriétés nécessaires à la mise en place de la fonction ellipsis pour masquer le texte dépassant le contenu réduit
 @mixin ellipsis{

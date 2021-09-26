@@ -66,8 +66,25 @@ header{
     padding:5.3333vw 5.3333vw 3.2vw 5.3333vw;
     background-color: $color-bckgr-light-light;
 }
+/**@media screen and (min-width: 601px) and (max-width: 1200px){
+    html{
+        font-size:20px;
+    }
+}*/
 @media all and (min-width: 1200px){
     html{
-        font-size:25px;
+        font-size:24px;
+    }
+    main{
+        min-width: 1200px;
+        max-width: 100%;
+        width: 100%;
+    }
+    section{
+        margin:auto 0;
+        padding:3vw 1vw;
+    }
+    .btn-commander{
+        padding: 4vw 28vw 4vw 28vw;
     }
 }
