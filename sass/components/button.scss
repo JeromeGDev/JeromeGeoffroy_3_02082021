@@ -20,3 +20,20 @@
         display: none;
     }
 }
+
+@media all and (min-width: 1200px){
+        //Police du action-btn : bouton explorer de la page index.html
+    .button-action{ 
+        height: 8vw;
+        @include dajfcc;
+            &__explore a {
+            //font-size  : rempts(25);
+            //line-height: rempts(25);
+            display    : inline-block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            margin     : auto;
+        text-align : center;          
+        }
+    }
+}

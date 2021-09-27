@@ -479,7 +479,28 @@ header {
     font-size: 24px;
   }
 
+  body {
+    z-index: -1;
+    min-width: 1200px;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #FFFFFF;
+  }
+
+  header {
+    display: block;
+    position: relative;
+    min-width: 1200px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
   main {
+    min-width: 1200px;
     min-width: 1200px;
     max-width: 100%;
     width: 100%;
@@ -1637,14 +1658,7 @@ footer a {
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   h1 {
     /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
-    font-family: "Shrikhand", cursive;
     font-size: 1.8749953125rem;
-    font-weight: 700;
-    text-align: center;
-    margin: auto;
-  }
-  h1:hover {
-    cursor: pointer;
   }
 
   h2 {
@@ -2793,7 +2807,8 @@ footer a {
 @media screen and (min-width: 1200px) {
   h1 {
     /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
-    font-size: 1.8749953125rem;
+    font-size: 3.16665875rem;
+    font-weight: 300;
   }
 
   h2 {
@@ -4115,6 +4130,21 @@ img {
   }
 }
 
+@media all and (min-width: 1200px) {
+  .button-action {
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .button-action__explore a {
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    margin: auto;
+    text-align: center;
+  }
+}
 .header-site {
   margin: auto;
   padding: 0;
@@ -4145,6 +4175,33 @@ img {
   height: 5.8667vw;
 }
 
+@media all and (min-width: 1200px) {
+  .header-site {
+    display: flex;
+    min-width: 1200px;
+    max-width: 80%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+  .header-site__site-title {
+    display: inline-flex;
+    position: relative;
+    margin: auto;
+    padding: 0;
+  }
+  .header-site__backicone {
+    display: inline-flex;
+    position: absolute;
+    align-self: flex-start;
+    top: 2vw;
+    left: 8vw;
+  }
+  .header-site__backicone i {
+    font-size: 2.49999375rem;
+    color: #99E2D0;
+  }
+}
 .footer-logo {
   margin-bottom: 6.4vw;
 }
@@ -4608,7 +4665,8 @@ img {
 @media all and (min-width: 1200px) {
   .page {
     width: 100%;
-    padding: 1vw 2vw;
+    padding: 1vw;
+    margin: auto;
   }
 
   .btnheart {
@@ -6545,66 +6603,6 @@ img {
   }
 }
 @media all and (min-width: 1200px) {
-  .button-action {
-    height: 8vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .button-action__explore a {
-    display: inline-block;
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    margin: auto;
-    text-align: center;
-  }
-
-  body {
-    z-index: -1;
-    min-width: 1200px;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #FFFFFF;
-  }
-
-  header {
-    display: block;
-    position: relative;
-    min-width: 1200px;
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 40px 20px 40px;
-  }
-
-  .header-site {
-    display: block;
-    min-width: 1120px;
-    width: 100%;
-    margin: auto;
-    padding: 0;
-  }
-  .header-site__site-title {
-    display: block;
-    position: relative;
-    margin: auto;
-    padding: 0;
-  }
-  main {
-    min-width: 1200px;
-  }
-
-  .section__howto {
-    background-color: transparent;
-    padding: 0;
-    margin: auto;
-    display: block;
-    max-width: 100%;
-    width: 100%;
-  }
-
   .mdq3-top {
     display: grid;
     max-width: 100%;

@@ -126,8 +126,9 @@ $functionanim:backwards;
 //Mediaquery pour les pages des restaurants
 @media all and (min-width: 1200px){
     .page{
-        width:100%;
-        padding:1vw 2vw;
+        width: 100%;
+        padding: 1vw;
+        margin: auto;
     }
     .btnheart{
         display:none;

@@ -27,3 +27,31 @@
         height: 5.8667vw;
     }
 }
+@media all and (min-width: 1200px){
+    .header-site{
+        display: flex;
+        min-width: 1200px;
+        max-width: 80%;
+        width: 100%;
+        margin: auto;
+        padding: 0;
+        &__site-title{
+            display: inline-flex;
+            position: relative;
+            margin: auto;
+            padding:0;
+        }
+            &__backicone{
+                display: inline-flex;
+                position: absolute;
+                align-self: flex-start;
+                top:2vw;
+                left:8vw;
+                & i{
+                    font-size: rempts(30);
+                    color: $color-third;
+                }
+            }
+        
+    }
+}

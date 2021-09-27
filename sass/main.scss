@@ -137,66 +137,9 @@
     //Mediaquery pour la page index.html
 @media all and (min-width: 1200px){
     //** Définition des polices de cracatères spécifiques*/
-    //Sur la page d'accueil
-    //Plocice du action-btn : bouton explorer de la page index.html
-        .button-action{ 
-            height: 8vw;
-            @include dajfcc;
-                &__explore a {
-                //font-size  : rempts(25);
-                //line-height: rempts(25);
-                display    : inline-block;
-                font-family: 'Roboto', sans-serif;
-                font-weight: 500;
-                margin     : auto;
-            text-align : center;          
-            }
-        }
-    //Définition des propriétés des polices propres à cette mdiaquery
-    body{
-        z-index: -1;
-        min-width: 1200px;
-        width: 100vw;
-        height:100%;
-        position:absolute;
-        top:0;
-        left:0;
-        background-color: $color-bckgr-light-light;
-    }
-    header{
-        display: block;
-        position:relative;
-        min-width: 1200px;
-        width:100%;
-        max-width: 100%;
-        padding: 20px 40px 20px 40px;
-    }
-    .header-site{
-        display: block;
-        min-width: 1120px;
-        width:100%;
-        margin: auto;
-        padding:0;
-        &__site-title{
-            display: block;
-            position: relative;
-            margin: auto;
-            padding:0;
-            &__backicone{
-            }
-        }
-    }
-    main{
-        min-width: 1200px;
-    }
-    .section__howto{
-        background-color: transparent;
-        padding: 0;
-        margin:auto;
-        display: block;
-        max-width: 100%;
-        width: 100%;
-    }
+    //Sur la page d'accueil 
+
+    //remplace le top-index de la version mobile-first
     .mdq3-top{
         display: grid;
         max-width: 100%;
