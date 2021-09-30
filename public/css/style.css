@@ -9216,6 +9216,7 @@ img {
   padding: 0;
   margin: auto;
   transform: scale(1);
+  overflow: hidden;
 }
 .hearts-cointainer::after {
   content: "\f004";
