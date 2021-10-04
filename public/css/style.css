@@ -6241,38 +6241,48 @@ readers do not read off random characters that represent icons */
 @keyframes rollicone {
   0% {
     transform: rotate(-360deg);
+    margin: auto;
   }
   100% {
     transform: rotate(0deg);
+    margin: auto;
   }
 }
 /** ==================== Tablette ===================== **/
 /** ============= Tablette 601px à 900 px ============= **/
-@media screen and (min-width: 601px) and (max-width: 900px) {
-  @keyframes rollicone {
-    0% {
-      transform: rotate(-360deg);
-      transform-origin: 2.93335vw 2.93335vw;
-    }
-    100% {
-      transform: rotate(0deg);
-      transform-origin: 2.93335vw 2.93335vw;
-    }
+/**@media screen and (min-width: 601px) and (max-width: 900px){
+//Keyframe animation rotation de l'icone à l'arrivée du bouton vert page restaurant survol des menus
+@keyframes rollicone{
+  0%{
+      transform:rotate(-360deg);
+      //transform-origin:  math.div($heartscontainer,2) math.div($heartscontainer,2);
+      margin:auto;
   }
-}
+  100%{
+      transform:rotate(0deg);
+      //transform-origin:  math.div($heartscontainer,2) math.div($heartscontainer,2);
+      margin:auto;
+
+  }
+;}
+}*/
 /** ============= Tablette 901 1200 ============= **/
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  @keyframes rollicone {
-    0% {
-      transform: rotate(-360deg);
-      transform-origin: 2.93335vw 2.93335vw;
+/**@media screen and (min-width: 901px) and (max-width: 1200px){
+//Keyframe animation rotation de l'icone à l'arrivée du bouton vert page restaurant survol des menus
+  @keyframes rollicone{
+    0%{
+        transform:rotate(-360deg);
+        margin:auto;
+        //transform-origin:  math.div($heartscontainer,2) math.div($heartscontainer,2);
     }
-    100% {
-      transform: rotate(0deg);
-      transform-origin: 2.93335vw 2.93335vw;
+    100%{
+        transform:rotate(0deg);
+        margin:auto;
+        //transform-origin:  math.div($heartscontainer,2) math.div($heartscontainer,2);
+
     }
-  }
-}
+  ;}
+}*/
 /** ================= Desktop ================= **/
 @media screen and (min-width: 1200px) {
   @keyframes desctruncate {
@@ -6283,16 +6293,19 @@ readers do not read off random characters that represent icons */
       width: 52%;
     }
   }
-  @keyframes rollicone {
-    0% {
-      transform: rotate(-360deg);
-      transform-origin: 2.93335vw 2.93335vw;
+  /**@keyframes rollicone{
+    0%{
+        transform:rotate(-360deg);
+        margin:auto;
+        //transform-origin: math.div($heartscontainer,2) math.div($heartscontainer,2);
     }
-    100% {
-      transform: rotate(0deg);
-      transform-origin: 2.93335vw 2.93335vw;
+
+    100%{
+        transform:rotate(0deg);
+        margin:auto;
+        //transform-origin: math.div($heartscontainer,2) math.div($heartscontainer,2);
     }
-  }
+  ;}*/
 }
 /** ==================== Loadspinner ===================== **/
 @keyframes loadspinner {
@@ -6832,6 +6845,8 @@ body::after .sectionloader__loader-container__loader-box__counter-box__counter >
 }
 
 header {
+  max-width: 100%;
+  width: 100%;
   z-index: 0;
   display: flex;
   flex-wrap: nowrap;
@@ -6847,6 +6862,8 @@ header {
 }
 
 main {
+  max-width: 100%;
+  width: 100%;
   z-index: 0;
   display: block;
   position: relative;
@@ -6856,6 +6873,8 @@ main {
 }
 
 section {
+  max-width: 100%;
+  width: 100%;
   z-index: 0;
   display: block;
   position: relative;
@@ -6907,18 +6926,28 @@ footer {
 }
 @media screen and (min-width: 901px) and (max-width: 1200px) {
   section {
-    margin: 6vw 0;
-    padding: 4vw 4vw;
+    margin: 0;
+    padding: 0;
     background-color: transparent;
+  }
+
+  main {
+    z-index: 0;
+    display: flex;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+    background-color: #FFFFFF;
+    gap: 13vw;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
   }
 }
 @media all and (min-width: 1201px) {
-  main {
-    max-width: 100%;
-    width: 100%;
-    background-color: #FFFFFF;
-  }
-
   section {
     margin: auto 0;
     padding: 3vw 0;
@@ -6928,7 +6957,7 @@ footer {
     max-width: 100%;
     width: 100%;
     padding: 0 0 5vw 0;
-    margin: 0vw 0 5vw 0;
+    margin: 0;
     width: 100%;
   }
   section#restaurant-list {
@@ -7522,7 +7551,7 @@ footer a {
   }
 
   h4 {
-    font-size: 0.9999975rem;
+    font-size: 1.583329375rem;
   }
 
   h5 {
@@ -8029,21 +8058,21 @@ $heartscontainer:$heartbasicsize * .3125;
   padding: 22vw 0 22vw 0;
 }
 
-/**@media screen and (min-width: 601px) and (max-width: 900px){
-    .page{
-        width: 100%;
-        padding: 0;
-        margin: auto;
-    }
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .btn-commander {
+    padding: 2.6vw 15vw 19.5vw 15vw;
+  }
 }
-@media screen and (min-width: 901px) and (max-width: 1200px){
-
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .btn-commander {
+    padding: 5.5vw 15vw 11vw 15vw;
+  }
 }
-@media all and (min-width: 1201px){
-    .btn-commander{
-        padding: 4vw 28vw 4vw 28vw;
-    }
-}*/
+@media all and (min-width: 1201px) {
+  .btn-commander {
+    padding: 5.25vw 15vw 7vw 15vw;
+  }
+}
 .top-index__resto-image {
   display: inline-block;
   width: 100%;
@@ -8224,7 +8253,6 @@ $heartscontainer:$heartbasicsize * .3125;
 .menus__blocks__content {
   width: 89.3333vw;
   height: 18.4vw;
-  max-height: 18.4vw;
   margin: 2.4vw auto 2.4vw auto;
   display: flex;
   box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw #e6e6e6;
@@ -8264,18 +8292,18 @@ $heartscontainer:$heartbasicsize * .3125;
   text-overflow: ellipsis;
 }
 .menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
-  transform: translate(-16vw);
+  transform: translate(-18.4vw);
   cursor: pointer;
   display: flex;
   visibility: visible;
 }
 .menus__blocks__content:hover > .menus__blocks__content__validate .fas, .menus__blocks__content:hover > .menus__blocks__content__validate .top-index__location__city::before, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer::after, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer__heart i, .hearts-cointainer__heart .menus__blocks__content:hover > .menus__blocks__content__validate i, .menus__blocks__content:hover > .menus__blocks__content__validate .header-site__site-title#presto::before {
   animation: rollicone 750ms ease-in-out;
-  transform-origin: 2.93335vw;
+  transform-origin: 1.84vw 1.84vw;
 }
 .menus__blocks__content__price {
   background-color: transparent;
-  width: 8vw;
+  width: 8.096vw;
   position: absolute;
   right: 1.375rem;
   height: 18.4vw;
@@ -8296,10 +8324,10 @@ $heartscontainer:$heartbasicsize * .3125;
 .menus__blocks__content__validate {
   visibility: collapse;
   position: absolute;
-  width: 16vw;
+  width: 18.4vw;
   height: 18.4vw;
   background-color: #99E2D0;
-  right: -16vw;
+  right: -18.4vw;
   top: 0;
   margin: auto;
   align-items: center;
@@ -8316,16 +8344,16 @@ $heartscontainer:$heartbasicsize * .3125;
 .menus__blocks__content__validate i {
   color: #fff;
   border-radius: 6.6667vw;
-  width: 4.10669vw;
-  height: 4.10669vw;
-  font-size: 4.10669vw;
+  width: 4.6vw;
+  height: 4.6vw;
+  font-size: 4.6vw;
   align-self: center;
   text-align: center;
   position: absolute;
   margin: auto;
   padding: 0%;
 }
-@media screen and (min-width: 601px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
   .menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
     transform: translate(-13vw);
     cursor: pointer;
@@ -8334,14 +8362,12 @@ $heartscontainer:$heartbasicsize * .3125;
   }
   .menus__blocks__content:hover > .menus__blocks__content__validate .fas, .menus__blocks__content:hover > .menus__blocks__content__validate .top-index__location__city::before, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer::after, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer__heart i, .hearts-cointainer__heart .menus__blocks__content:hover > .menus__blocks__content__validate i, .menus__blocks__content:hover > .menus__blocks__content__validate .header-site__site-title#presto::before {
     animation: rollicone 750ms ease-in-out;
-    transform-origin: 2.93335vw;
+    transform-origin: 1.3vw 1.3vw;
   }
   .menus__blocks__content__price {
     background-color: transparent;
-    width: 8vw;
     position: absolute;
     right: 1.375rem;
-    height: 13vw;
     line-height: 0.9375rem;
     padding-left: 2.6667vw;
     bottom: 2.6667vw;
@@ -8380,42 +8406,40 @@ $heartscontainer:$heartbasicsize * .3125;
     color: #99E2D0;
     color: #fff;
     border-radius: 6.6667vw;
-    width: 3.52002vw;
-    height: 3.52002vw;
-    font-size: 3.52002vw;
+    width: 3.25vw;
+    height: 3.25vw;
+    font-size: 3.25vw;
     text-align: center;
     position: absolute;
     margin: auto;
     padding: 0%;
   }
 }
-@media all and (min-width: 1201px) {
+@media screen and (min-width: 901px) and (max-width: 1200px) {
   .menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
-    transform: translate(-8vw);
+    transform: translate(-11vw);
     cursor: pointer;
     display: flex;
     visibility: visible;
   }
   .menus__blocks__content:hover > .menus__blocks__content__validate .fas, .menus__blocks__content:hover > .menus__blocks__content__validate .top-index__location__city::before, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer::after, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer__heart i, .hearts-cointainer__heart .menus__blocks__content:hover > .menus__blocks__content__validate i, .menus__blocks__content:hover > .menus__blocks__content__validate .header-site__site-title#presto::before {
     animation: rollicone 750ms ease-in-out;
-    transform-origin: -2.93335vw;
+    transform-origin: 1.1vw 1.1vw;
   }
   .menus__blocks__content__price {
     background-color: transparent;
-    width: 8vw;
     position: absolute;
-    top: 0;
-    height: 8vw;
-    padding: 0 0 0.7vw 2.6667vw;
+    right: 1.375rem;
+    line-height: 0.9375rem;
+    padding-left: 2.6667vw;
+    bottom: 2.6667vw;
     transition: transform 750ms ease-in-out 100ms;
     transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
   }
   .menus__blocks__content__price span {
     position: absolute;
-    line-height: 0.75rem;
-    right: 0.1875rem;
-    padding: 0;
-    bottom: 2.6667vw;
+    line-height: 0.9375rem;
+    bottom: 0.1875rem;
   }
   .menus__blocks__content__price:hover > .menus__blocks__content__price__recipe {
     animation: desctruncate 750ms ease-in-out forwards 100ms;
@@ -8423,10 +8447,10 @@ $heartscontainer:$heartbasicsize * .3125;
   .menus__blocks__content__validate {
     visibility: collapse;
     position: absolute;
-    width: 8vw;
-    height: 8vw;
+    width: 11vw;
+    height: 11vw;
     background-color: #99E2D0;
-    right: -8vw;
+    right: -11vw;
     top: 0;
     margin: auto;
     align-items: center;
@@ -8444,9 +8468,72 @@ $heartscontainer:$heartbasicsize * .3125;
     color: #99E2D0;
     color: #fff;
     border-radius: 6.6667vw;
-    width: 3.52002vw;
-    height: 3.52002vw;
-    font-size: 3.52002vw;
+    width: 2.75vw;
+    height: 2.75vw;
+    font-size: 2.75vw;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    padding: 0%;
+  }
+}
+@media all and (min-width: 1201px) {
+  .menus__blocks__content:hover > .menus__blocks__content__validate, .menus__blocks__content:hover > .menus__blocks__content__price {
+    transform: translate(-7vw);
+    cursor: pointer;
+    display: flex;
+    visibility: visible;
+  }
+  .menus__blocks__content:hover > .menus__blocks__content__validate .fas, .menus__blocks__content:hover > .menus__blocks__content__validate .top-index__location__city::before, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer::after, .menus__blocks__content:hover > .menus__blocks__content__validate .hearts-cointainer__heart i, .hearts-cointainer__heart .menus__blocks__content:hover > .menus__blocks__content__validate i, .menus__blocks__content:hover > .menus__blocks__content__validate .header-site__site-title#presto::before {
+    animation: rollicone 750ms ease-in-out;
+    transform-origin: 0.7vw 0.7vw;
+  }
+  .menus__blocks__content__price {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    height: 7vw;
+    padding: 0 0 0.7vw 2.6667vw;
+    transition: transform 750ms ease-in-out 100ms;
+    transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
+  }
+  .menus__blocks__content__price span {
+    position: absolute;
+    line-height: 0.75rem;
+    right: 0.1875rem;
+    padding: 0;
+    bottom: 2.6667vw;
+  }
+  .menus__blocks__content__price:hover > .menus__blocks__content__price__recipe {
+    animation: desctruncate 750ms ease-in-out forwards 100ms;
+  }
+  .menus__blocks__content__validate {
+    visibility: collapse;
+    position: absolute;
+    width: 7vw;
+    height: 7vw;
+    background-color: #99E2D0;
+    right: -7vw;
+    top: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 0 12px 12px 0;
+    transition: transform 750ms ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 0.64, 0, 1);
+  }
+  .menus__blocks__content__validate:hover > .menus__blocks__content__validate__recipe {
+    animation: desctruncate 750ms ease-in-out forwards 120ms;
+    visibility: visible;
+  }
+  .menus__blocks__content__validate i {
+    color: #99E2D0;
+    color: #fff;
+    border-radius: 6.6667vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    font-size: 1.4vw;
     text-align: center;
     position: absolute;
     margin: 0;
@@ -8525,17 +8612,17 @@ $heartscontainer:$heartbasicsize * .3125;
   }
 
   #entrees h4, #entrees h5 {
-    color: #9356dc;
+    color: #99E2D0;
   }
   #entrees .menus__blocks__content::before {
-    background-color: #9356dc;
+    background-color: #99E2D0;
   }
 
   #plats h4, #plats h5 {
-    color: #99E2D0;
+    color: #9356dc;
   }
   #plats .menus__blocks__content::before {
-    background-color: #99E2D0;
+    background-color: #9356dc;
   }
 
   #desserts h4, #desserts h5 {
@@ -8557,8 +8644,11 @@ $heartscontainer:$heartbasicsize * .3125;
   .menus__blocks {
     max-width: 90%;
     width: 100%;
-    padding: 0 0.5vw;
-    margin: -5vw 0.5vw;
+    padding: 13vw 0.5vw 13vw 0.5vw;
+    margin: 6.5vw 0.5vw;
+  }
+  .menus__blocks:first-child {
+    margin: -13vw 0.5vw;
   }
   .menus__blocks__title {
     display: inline-flex;
@@ -8582,8 +8672,8 @@ $heartscontainer:$heartbasicsize * .3125;
     content: "";
     display: inline-block;
     position: absolute;
-    width: 13.1vw;
-    height: 13.1vw;
+    width: 14.3vw;
+    height: 13vw;
     left: 0;
     bottom: 0;
     background-color: #FFFFFF;
@@ -8618,7 +8708,6 @@ $heartscontainer:$heartbasicsize * .3125;
     overflow: hidden;
     max-width: 100%;
     position: relative;
-    margin: 0 0 5vw 0;
   }
   .top-index__resto-image {
     max-width: 100%;
@@ -8680,17 +8769,17 @@ $heartscontainer:$heartbasicsize * .3125;
   }
 
   #entrees h4, #entrees h5 {
-    color: #9356dc;
+    color: #99E2D0;
   }
   #entrees .menus__blocks__content::before {
-    background-color: #9356dc;
+    background-color: #99E2D0;
   }
 
   #plats h4, #plats h5 {
-    color: #99E2D0;
+    color: #9356dc;
   }
   #plats .menus__blocks__content::before {
-    background-color: #99E2D0;
+    background-color: #9356dc;
   }
 
   #desserts h4, #desserts h5 {
@@ -8714,21 +8803,21 @@ $heartscontainer:$heartbasicsize * .3125;
     max-width: 90%;
     width: 100%;
     padding: 0 0.5vw;
-    margin: 5vw 0.5vw;
+    margin: 1.1vw 0.5vw;
   }
   .menus__blocks__title {
     display: inline-flex;
     max-width: 100%;
     width: fit-content;
-    padding: 0 0 2vw 1vw;
-    margin: 0 0 5vw 0;
+    margin: 2.2vw auto;
+    padding: 1vw 0 2.2vw 0;
   }
   .menus__blocks__content {
     z-index: 10;
     display: inline-flex;
     max-width: 100%;
     width: 100%;
-    height: 13vw;
+    height: 11vw;
     margin: 3vw;
     overflow: visible;
     border-radius: 0 12px 12px 0;
@@ -8738,8 +8827,8 @@ $heartscontainer:$heartbasicsize * .3125;
     content: "";
     display: inline-block;
     position: absolute;
-    width: 13.1vw;
-    height: 13.1vw;
+    width: 12.1vw;
+    height: 11vw;
     left: 0;
     bottom: 0;
     background-color: #FFFFFF;
@@ -8749,8 +8838,8 @@ $heartscontainer:$heartbasicsize * .3125;
     z-index: 5;
     content: "";
     display: inline-flex;
-    width: 14vw;
-    height: 14vw;
+    width: 12vw;
+    height: 12vw;
     position: absolute;
     left: -1vw;
     bottom: 0;
@@ -8777,17 +8866,17 @@ $heartscontainer:$heartbasicsize * .3125;
   }
 
   #entrees h4, #entrees h5 {
-    color: #9356dc;
+    color: #99E2D0;
   }
   #entrees .menus__blocks__content::before {
-    background-color: #9356dc;
+    background-color: #99E2D0;
   }
 
   #plats h4, #plats h5 {
-    color: #99E2D0;
+    color: #9356dc;
   }
   #plats .menus__blocks__content::before {
-    background-color: #99E2D0;
+    background-color: #9356dc;
   }
 
   #desserts h4, #desserts h5 {
@@ -8882,14 +8971,14 @@ $heartscontainer:$heartbasicsize * .3125;
     display: inline-flex;
     max-width: 100%;
     width: fit-content;
-    padding: auto;
-    margin: 1vw 0 3vw 0;
+    margin: 1.4vw auto;
+    padding: 1vw 0 1.4vw 0;
   }
   .menus__blocks__content {
     display: inline-flex;
     max-width: 100%;
     width: 100%;
-    height: 8vw;
+    height: 7vw;
     margin: 0.75vw;
     overflow: visible;
     border-radius: 0 12px 12px 0;
@@ -8898,10 +8987,10 @@ $heartscontainer:$heartbasicsize * .3125;
     z-index: 99999;
     content: "";
     display: inline-block;
-    width: 1vw;
-    height: 8vw;
+    width: 1.4vw;
+    height: 7vw;
     position: absolute;
-    left: -1vw;
+    left: -1.4vw;
     top: 0;
     border-radius: 12px 0 0 12px;
   }
@@ -9786,11 +9875,18 @@ $heartscontainer:$heartbasicsize * .3125;
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
+  .top-index {
+    width: 100%;
+    padding: 0 4vw;
+    margin: auto;
+    max-width: 92%;
+  }
+
   .section__welcome {
     width: 100%;
     padding: 12vw 4vw;
     margin: auto;
-    max-width: 92vw;
+    max-width: 92%;
   }
   .section__list {
     background-color: whitesmoke;
@@ -10526,6 +10622,12 @@ $heartscontainer:$heartbasicsize * .3125;
   }
 }
 @media screen and (min-width: 901px) and (max-width: 1200px) {
+  .top-index {
+    width: 100%;
+    padding: 0 4vw;
+    margin: auto;
+  }
+
   .top-index__location__cityspecial {
     opacity: 1;
   }
