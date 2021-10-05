@@ -8919,6 +8919,18 @@ $heartscontainer:$heartbasicsize * .3125;
     top: 0;
     border-radius: 12px 0 0 12px;
   }
+  .menus__blocks__content::after {
+    z-index: 11;
+    content: "";
+    display: inline-block;
+    width: 1.4vw;
+    height: 7vw;
+    position: absolute;
+    left: 0.7vw;
+    top: 0;
+    border-radius: 13px 0 0 13px;
+    background-color: #fff;
+  }
   .menus__blocks__content__recipe {
     display: inline-flex;
     max-width: 69%;
