@@ -7874,6 +7874,7 @@ $heartscontainer:$heartbasicsize * .3125;
   margin: auto;
   position: absolute;
   left: 0;
+  margin-top: 100%;
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
