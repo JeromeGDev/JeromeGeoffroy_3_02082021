@@ -6675,17 +6675,19 @@ footer {
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
   section {
+    padding: 0 2.665vw 0 1.3325vw;
+    margin: 0 auto;
     max-width: 100%;
     width: auto;
   }
   section#topresto {
-    padding: 0 0 14.6667vw 0;
+    padding: 0 0 14vw 0;
     display: block;
     position: relative;
     max-width: 100%;
     width: 100%;
     margin: 0 auto 0 auto;
-    box-shadow: 0vw 2vw 2vw rgba(0, 0, 0, 0.1);
+    box-shadow: 0vw 0vw 2vw rgba(0, 0, 0, 0.1);
   }
 }
 @media screen and (min-width: 901px) and (max-width: 1200px) {
@@ -7867,7 +7869,7 @@ $heartscontainer:$heartbasicsize * .3125;
 .btn-commander::before {
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: whitesmoke;
   display: block;
   content: "";
   margin: auto;
@@ -7879,6 +7881,16 @@ $heartscontainer:$heartbasicsize * .3125;
   .btn-commander {
     padding: 10.4vw 15vw 19.5vw 15vw;
     background: #fff;
+  }
+  .btn-commander::before {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: block;
+    content: "";
+    margin: auto;
+    position: absolute;
+    left: 0;
   }
 }
 @media screen and (min-width: 901px) and (max-width: 1200px) {
@@ -8431,7 +8443,6 @@ $heartscontainer:$heartbasicsize * .3125;
     position: relative;
     margin: auto;
     align-items: start;
-    box-shadow: 0vw 2vw 1vw rgba(0, 0, 0, 0.1);
   }
 
   #entrees h4, #entrees h5 {
@@ -8512,7 +8523,6 @@ $heartscontainer:$heartbasicsize * .3125;
     left: -1vw;
     bottom: 0;
     border-radius: 13px 12px 0 12px;
-    box-shadow: -0.249999375rem -0.249999375rem 0.249999375rem #cccccc;
   }
   .menus__blocks__content__recipe {
     z-index: 15;
