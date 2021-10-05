@@ -8753,6 +8753,8 @@ $heartscontainer:$heartbasicsize * .3125;
     line-height: 4.16665625rem;
     height: 8.3333125rem;
     transform: translateY(-4.16665625rem);
+    max-width: 100%;
+    width: auto;
     margin: 0;
   }
   .top-index__bottom__resto-name {
