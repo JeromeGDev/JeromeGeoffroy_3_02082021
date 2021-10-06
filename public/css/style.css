@@ -6748,7 +6748,7 @@ footer {
 
 /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 h1 {
-  font-family: "shrikhandregular", cursive;
+  font-family: "shrikhand", cursive;
   font-size: 1.8749953125rem;
   font-weight: 700;
   text-align: center;
@@ -6761,7 +6761,7 @@ h1:hover {
 h2 {
   font-size: 1.749995625rem;
   color: #000;
-  font-family: "shrikhandregular", cursive;
+  font-family: "shrikhand", cursive;
   font-weight: 300;
   margin: 0;
   padding: 0;
