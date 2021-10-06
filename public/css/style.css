@@ -18,6 +18,11 @@
     font-size: 19px;
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+}
+
 /** Fichier fixant les règles donctionnement du site "OhMyFood"
  * Ce site est le projet 3 de la formation Déveoppeur Web d'OpenClassrooms.
  *          Auteur Jérôme GEOFFROY - 2021
@@ -26,11 +31,6 @@
  *          GitPage : https://jeromegdev.github.io/JeromeGeoffroy_3_02082021
  *          Page :Index.html - Page d'accueil 
 */
-* {
-  padding: 0;
-  margin: 0;
-}
-
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -6799,7 +6799,7 @@ footer {
 
 /*pseudo.classes : respecter l'ordre : "LiViHoFoAct"*/
 h1 {
-  font-family: "Shrikhand", cursive;
+  font-family: "shrikhandregular", cursive;
   font-size: 1.8749953125rem;
   font-weight: 700;
   text-align: center;
@@ -6812,7 +6812,7 @@ h1:hover {
 h2 {
   font-size: 1.749995625rem;
   color: #000;
-  font-family: "Shrikhand", cursive;
+  font-family: "shrikhandregular", cursive;
   font-weight: 300;
   margin: 0;
   padding: 0;
