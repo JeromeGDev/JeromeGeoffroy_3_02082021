@@ -6326,39 +6326,25 @@ readers do not read off random characters that represent icons */
   85% {
     z-index: 3;
     height: 100vh;
-    transform: scale(100);
+    transform: scale(1);
     background-color: #16a085;
   }
   100% {
     z-index: -50;
     height: 0;
     opacity: 0;
-    transform: translateX(-100%);
-    transition: all 250ms ease-in;
-    visibility: collapse;
+    transform: scale(0);
   }
 }
 @keyframes spinloader {
   0% {
-    z-index: -2;
-    visibility: hidden;
-    height: 0vw;
-    max-height: 0vw;
-    display: none;
-    opacity: 0;
+    transform: scale(0);
   }
   95% {
-    z-index: -2;
-    visibility: hidden;
-    height: 0vw;
-    max-height: 0vw;
-    display: none;
-    opacity: 0;
+    transform: scale(0);
   }
   100% {
-    z-index: 0;
-    visibility: visible;
-    opacity: 1;
+    transform: scale(1);
   }
 }
 @keyframes speedloader {
@@ -6668,9 +6654,9 @@ footer {
   background: #535353;
   padding: 6.6667vw 5.33vw 6.6667vw 5.33vw;
   margin: 0;
-  width: 100%;
+  width: auto;
   max-width: 100%;
-  height: fit-content;
+  height: auto;
 }
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -7504,7 +7490,7 @@ img {
 /*FIN SCROLLBAR*/
 .button-action {
   display: flex;
-  background: #ff79da;
+  background-color: #ff79da;
   background: linear-gradient(175deg, #ff79da 1%, #9356dc 61%);
   box-shadow: 0.8vw 0.8vw 2.6667vw 1.3333vw #e6e6e6;
   display: inline-flex;
@@ -8955,6 +8941,7 @@ $heartscontainer:$heartbasicsize * .3125;
   max-height: 100vh;
   padding: 0;
   margin: 0;
+  overflow-y: hidden;
   scale: 1;
   transform: scale(0);
   transition: transform 200ms 5600ms;
@@ -8971,8 +8958,8 @@ $heartscontainer:$heartbasicsize * .3125;
   padding: 0;
   max-width: 100vw;
   width: 100%;
-  height: 100vh;
-  max-height: 100%;
+  height: 100%;
+  max-height: 100vh;
   scale: 1;
   transform: scale(0);
   transition: transform 200ms 5600ms;
@@ -8981,16 +8968,19 @@ $heartscontainer:$heartbasicsize * .3125;
 .masterbox {
   display: flex;
   z-index: 15;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 486px;
   height: 486px;
   align-items: center;
   justify-content: center;
   text-align: center;
   align-self: center;
-  height: auto;
-  max-width: 100%;
+  max-width: 100vw;
   width: 100%;
-  max-height: max-content;
+  height: 100%;
+  max-height: 100vh;
   padding: 20vw 0 0 0;
 }
 .masterbox__box {
@@ -9011,10 +9001,10 @@ $heartscontainer:$heartbasicsize * .3125;
   opacity: 0;
   z-index: 15;
   margin: 0;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100vw;
   width: 100%;
   height: 100%;
+  max-height: 100vh;
   transform: scale(1);
   font-size: 40px;
   animation: loadspinner 5500ms backwards 1;
