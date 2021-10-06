@@ -7690,6 +7690,8 @@ img {
   margin: auto;
   background-color: whitesmoke;
   overflow: hidden;
+}
+.container-fluid#pageindex {
   animation: spinloader 110ms 5600ms backwards 1;
 }
 
@@ -8987,6 +8989,7 @@ img {
 .top-index__location__city {
   align-self: center;
   display: inline-flex;
+  align-items: center;
   font-family: "Roboto", sans-serif;
   margin: auto;
   transform: translate(-5vw);
