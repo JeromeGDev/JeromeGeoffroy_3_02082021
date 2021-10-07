@@ -6737,8 +6737,8 @@ footer {
   font-style: normal;
 }
 @font-face {
-  font-family: "shrikhandregular";
-  src: url("/public/fonts/shrikhand-regular-webfont.woff2") format("woff2"), url("/public/fonts/shrikhand-regular-webfont.woff") format("woff");
+  font-family: "shrikhand";
+  src: url("/public/fonts/shrikhand-webfont.woff2") format("woff2"), url("/public/fonts/shrikhand-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
