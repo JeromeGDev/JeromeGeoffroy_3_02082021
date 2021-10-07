@@ -6182,6 +6182,7 @@ readers do not read off random characters that represent icons */
 /*correction de la couleur de fond bouton hover pour fonctionnement - mesurée à la pipette*/
 /*shadow*/
 /*Choix du curseur : pointer = doigt / help =fleche et ? / wait = anneau tournant / crosshair = croix style viseur / not/allowed = panneau interdit/ zoom-in = loupe ave +/ grab = main-ouvert*/
+/*,help,grab,crosshair,not-allowed,zoom-in,grab*/
 /** $heartbasicsize : cette variable permet d'établir les dimensions du coeur, mais aussi les valeur des déplacements des cadres perttant de
  * créer l'illusion du remplissage du coeur. Cette variable évolue pour chaque mediaquery Etant donné que nous partons sur la créationd'une
  *  version mobilefirst la première valeur de cette variable est fournie par la variableci dessous : $heartscontainer.
