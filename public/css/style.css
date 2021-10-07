@@ -7692,7 +7692,7 @@ img {
   overflow: hidden;
 }
 .container-fluid#pageindex {
-  animation: spinloader 110ms 5600ms backwards 1;
+  animation: spinloader 110ms 5600ms forwards 1;
 }
 
 .page {
