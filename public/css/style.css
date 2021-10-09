@@ -7497,7 +7497,7 @@ img {
   opacity: 1;
   overflow: hidden;
   background: #9356dc;
-  background: linear-gradient(175deg, #ff79da 31%, #9356dc 71%);
+  background: linear-gradient(175deg, #9356dc 31%, #ff79da 71%);
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
