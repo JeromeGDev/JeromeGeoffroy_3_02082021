@@ -6654,6 +6654,9 @@ footer {
     margin: auto 0;
     padding: 0;
   }
+  section#welcome {
+    max-height: 55vw;
+  }
   section#topresto {
     padding: 0 0 5vw 0;
     margin: 0;
@@ -6661,7 +6664,8 @@ footer {
   section#restaurant-list {
     background-color: whitesmoke;
     margin-bottom: 0;
-    padding: 4vw 0 0 0;
+    padding: 4vw 5.33vw 0 5.33vw;
+    margin-top: 4vw;
   }
 
   footer {
@@ -11395,30 +11399,16 @@ img {
   }
 }
 @media all and (min-width: 1201px) {
-  /**.section{
-      &__w{
-          &__txt{
-              &__title {
-                  padding-top: 0;
-                  &__slug{
-                      padding:0;
-                  }
-              }
-          }
-      }
-  }*/
   .mdq3-top {
     display: grid;
     max-width: 94%;
     width: 100%;
-    max-height: 53vw;
-    height: 100%;
     overflow: hidden;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
     margin: auto;
-    padding: 0;
+    padding: 0 0 3vw 0;
   }
   .mdq3-top__1 {
     z-index: 2;
@@ -11426,6 +11416,7 @@ img {
     padding: 0;
     border-bottom: thin solid #353535;
     background-color: whitesmoke;
+    height: 55vw;
   }
   .mdq3-top__1__ti {
     display: inline-flex;
@@ -11488,7 +11479,8 @@ img {
     background-color: whitesmoke;
     flex-direction: column;
     text-align: center;
-    padding: 4.1vw 6w 15.2vw 6vw;
+    padding: 2vw 5.33vw 2vw 5.33vw;
+    height: 42vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11513,6 +11505,7 @@ img {
   .mdq3-top__1__w__btnexplore {
     max-height: 7vw;
     width: 120%;
+    margin-bottom: 7vw;
   }
   .mdq3-top__2 {
     z-index: 2;
@@ -11525,6 +11518,7 @@ img {
     position: relative;
     border-top: thin solid #353535;
     border-bottom: thin solid #353535;
+    height: 55vw;
   }
   .mdq3-top__2::before {
     z-index: 1;
@@ -11535,8 +11529,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: 55vw;
   }
   .mdq3-top__2__howto {
     background-color: transparent;
@@ -11554,7 +11547,7 @@ img {
     z-index: 4;
     padding: 0;
     display: block;
-    margin: 0 auto 4.16vw auto;
+    margin: 0 auto 0 auto;
     border-bottom: thin solid #353535;
     width: 100%;
     line-height: 7vw;
@@ -11759,8 +11752,8 @@ img {
   .section__list#restaurant-list {
     max-width: 94%;
     width: 100%;
-    padding: 0;
-    margin: 0 auto 0 auto;
+    padding: 2vw 0;
+    margin: 5vw auto;
   }
   .section__list__title {
     grid-column: 1/5;
